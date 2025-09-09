@@ -1,0 +1,76 @@
+{
+  "project_title": "Industrial Vibration Prediction System",
+  "execution_date": "2025-09-09",
+  "total_execution_time": "0.0 seconds",
+  "key_results": {
+    "recommended_model": "catboost",
+    "model_performance": {
+      "accuracy": "84.2%",
+      "error_rate": "0.7266",
+      "overall_score": "70.8/100"
+    },
+    "business_impact": {
+      "annual_savings": "$1,045,723",
+      "roi_percentage": "677.1%",
+      "payback_period": "1.8 months"
+    },
+    "deployment_readiness": {
+      "status": "NOT_READY",
+      "message": "Model requires improvement before deployment"
+    }
+  },
+  "technical_summary": {
+    "data_processing": {
+      "steps_completed": "5/6",
+      "features_engineered": 20,
+      "data_quality": "High"
+    },
+    "model_comparison": {
+      "models_trained": 15,
+      "performance_distribution": {
+        "excellent": [],
+        "good": [
+          "catboost"
+        ],
+        "fair": [
+          "lasso_regression",
+          "decision_tree",
+          "random_forest",
+          "gradient_boosting",
+          "knn_regressor",
+          "xgboost"
+        ],
+        "poor": [
+          "linear_regression",
+          "ridge_regression",
+          "huber_regressor",
+          "decision_tree_scaled",
+          "random_forest_scaled",
+          "gradient_boosting_scaled",
+          "xgboost_scaled",
+          "catboost_scaled"
+        ]
+      },
+      "best_performing_category": "poor"
+    },
+    "feature_engineering": {
+      "total_features": 158,
+      "feature_types": {
+        "rolling_mean": 30,
+        "rolling_std": 30,
+        "temporal": 5,
+        "lag": 0,
+        "original": 0,
+        "other": 93
+      },
+      "selected_features": 20
+    }
+  },
+  "recommendations": [
+    "\u26a0\ufe0f Model suitable for production with enhanced monitoring",
+    "Expected ROI: 677.1% annually",
+    "Implement gradual rollout with pilot equipment",
+    "Establish performance monitoring thresholds",
+    "Plan for model retraining every 3-6 months"
+  ]
+}

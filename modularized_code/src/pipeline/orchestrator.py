@@ -399,10 +399,14 @@ class PipelineOrchestrator:
         best_model = recommendation.get('recommended_model', 'Unknown')
         model_scores = recommendation.get('model_scores', {})
         
+        # Safe access to execution metadata
+        total_duration = self.execution_metadata.get('total_duration', 0.0) or 0.0
+        start_time = self.execution_metadata.get('start_time')
+        
         executive_report = {
             'project_title': 'Industrial Vibration Prediction System',
-            'execution_date': self.execution_metadata['start_time'].strftime("%Y-%m-%d"),
-            'total_execution_time': f"{self.execution_metadata['total_duration']:.1f} seconds",
+            'execution_date': start_time.strftime("%Y-%m-%d") if start_time else datetime.now().strftime("%Y-%m-%d"),
+            'total_execution_time': f"{total_duration:.1f} seconds",
             
             # Key Results
             'key_results': {
@@ -431,10 +435,16 @@ class PipelineOrchestrator:
             return {}
         
         scores = model_scores[model_name]
+        
+        # Safe access to model scores
+        test_r2 = scores.get('test_r2') or 0
+        test_rmse = scores.get('test_rmse') or 0
+        composite_score = scores.get('composite_score') or 0
+        
         return {
-            'accuracy': f"{scores.get('test_r2', 0)*100:.1f}%",
-            'error_rate': f"{scores.get('test_rmse', 0):.4f}",
-            'overall_score': f"{scores.get('composite_score', 0):.1f}/100"
+            'accuracy': f"{test_r2*100:.1f}%",
+            'error_rate': f"{test_rmse:.4f}",
+            'overall_score': f"{composite_score:.1f}/100"
         }
     
     def _get_business_impact_summary(self, ml_results: Dict) -> Dict[str, Any]:
@@ -450,10 +460,15 @@ class PipelineOrchestrator:
         roi_info = business_impact.get('roi', {})
         cost_savings = business_impact.get('cost_savings', {})
         
+        # Safe access to business impact values
+        total_savings = cost_savings.get('total_annual_savings') or 0
+        roi_percentage = roi_info.get('roi_percentage') or 0
+        payback_period = roi_info.get('payback_period_months') or 0
+        
         return {
-            'annual_savings': f"${cost_savings.get('total_annual_savings', 0):,.0f}",
-            'roi_percentage': f"{roi_info.get('roi_percentage', 0):.1f}%",
-            'payback_period': f"{roi_info.get('payback_period_months', 0):.1f} months"
+            'annual_savings': f"${total_savings:,.0f}",
+            'roi_percentage': f"{roi_percentage:.1f}%",
+            'payback_period': f"{payback_period:.1f} months"
         }
     
     def _get_deployment_readiness_summary(self, ml_results: Dict) -> Dict[str, str]:

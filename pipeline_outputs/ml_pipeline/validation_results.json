@@ -2,7 +2,7 @@
   "linear_regression": {
     "model_name": "linear_regression",
     "feature_count": 20,
-    "validation_timestamp": "2025-09-09T18:18:00.529732",
+    "validation_timestamp": "2025-09-09T18:23:31.060934",
     "validations": {
       "basic_performance": {
         "dataset": "test",
@@ -138,7 +138,7 @@
   "ridge_regression": {
     "model_name": "ridge_regression",
     "feature_count": 20,
-    "validation_timestamp": "2025-09-09T18:18:01.320011",
+    "validation_timestamp": "2025-09-09T18:23:31.847318",
     "validations": {
       "basic_performance": {
         "dataset": "test",
@@ -274,7 +274,7 @@
   "lasso_regression": {
     "model_name": "lasso_regression",
     "feature_count": 20,
-    "validation_timestamp": "2025-09-09T18:18:02.107556",
+    "validation_timestamp": "2025-09-09T18:23:32.617544",
     "validations": {
       "basic_performance": {
         "dataset": "test",
@@ -408,7 +408,7 @@
   "huber_regressor": {
     "model_name": "huber_regressor",
     "feature_count": 20,
-    "validation_timestamp": "2025-09-09T18:18:02.912705",
+    "validation_timestamp": "2025-09-09T18:23:33.388902",
     "validations": {
       "basic_performance": {
         "dataset": "test",
@@ -544,7 +544,7 @@
   "decision_tree": {
     "model_name": "decision_tree",
     "feature_count": 20,
-    "validation_timestamp": "2025-09-09T18:18:03.732909",
+    "validation_timestamp": "2025-09-09T18:23:34.158733",
     "validations": {
       "basic_performance": {
         "dataset": "test",
@@ -680,7 +680,7 @@
   "decision_tree_scaled": {
     "model_name": "decision_tree_scaled",
     "feature_count": 20,
-    "validation_timestamp": "2025-09-09T18:18:04.503388",
+    "validation_timestamp": "2025-09-09T18:23:34.900095",
     "validations": {
       "basic_performance": {
         "dataset": "test",
@@ -814,7 +814,7 @@
   "random_forest": {
     "model_name": "random_forest",
     "feature_count": 20,
-    "validation_timestamp": "2025-09-09T18:18:05.300192",
+    "validation_timestamp": "2025-09-09T18:23:35.681324",
     "validations": {
       "basic_performance": {
         "dataset": "test",
@@ -840,9 +840,9 @@
         "train_r2": 0.9775778349593804,
         "test_r2": 0.7517526421508436,
         "overfitting_r2": 0.22582519280853686,
-        "train_rmse": 0.36789280218882664,
+        "train_rmse": 0.3678928021888267,
         "test_rmse": 0.9093765015431184,
-        "rmse_ratio": 2.471851844158579,
+        "rmse_ratio": 2.4718518441585786,
         "checks": {
           "overfitting_acceptable": {
             "passed": false,
@@ -852,7 +852,7 @@
           },
           "rmse_degradation_acceptable": {
             "passed": false,
-            "actual": 2.471851844158579,
+            "actual": 2.4718518441585786,
             "threshold": 1.5,
             "message": "RMSE degradation too high"
           }
@@ -862,31 +862,31 @@
       "residual_distribution": {
         "dataset": "test",
         "residual_stats": {
-          "mean": -0.03232301174561611,
-          "std": 0.9088018730562202,
-          "skewness": -0.6222571833370696,
-          "kurtosis": 0.7833348455891809,
+          "mean": -0.03232301174561604,
+          "std": 0.9088018730562201,
+          "skewness": -0.6222571833370698,
+          "kurtosis": 0.7833348455891831,
           "min": -3.07616049538374,
           "max": 4.370076423703089
         },
         "checks": {
           "residuals_centered": {
             "passed": false,
-            "actual": -0.03232301174561611,
+            "actual": -0.03232301174561604,
             "threshold": 0.001,
             "message": "Residuals are not centered around zero"
           },
           "skewness_acceptable": {
             "passed": true,
-            "actual": -0.6222571833370696,
+            "actual": -0.6222571833370698,
             "threshold": 2.0,
             "message": "Residual skewness acceptable"
           }
         },
         "normality_test": {
           "test": "shapiro-wilk",
-          "statistic": 0.9577069836599509,
-          "p_value": 6.02438251543467e-35,
+          "statistic": 0.9577069836599513,
+          "p_value": 6.024382515436479e-35,
           "is_normal": false
         },
         "overall_residuals_acceptable": false
@@ -913,16 +913,16 @@
         "checks": {
           "temporal_stability": {
             "passed": false,
-            "actual": 1.4399244206197495,
+            "actual": 1.4399244206197497,
             "threshold": 0.1,
             "message": "Temporal stability concerning"
           }
         },
         "temporal_stats": {
-          "rolling_r2_mean": -0.4708814890211814,
-          "rolling_r2_std": 1.4399244206197495,
-          "rolling_r2_range": 10.50012089159959,
-          "rolling_r2_min": -9.511267222769613,
+          "rolling_r2_mean": -0.4708814890211816,
+          "rolling_r2_std": 1.4399244206197497,
+          "rolling_r2_range": 10.500120891599591,
+          "rolling_r2_min": -9.511267222769614,
           "rolling_r2_max": 0.9888536688299773
         },
         "overall_temporal_stability_acceptable": false
@@ -950,7 +950,7 @@
   "random_forest_scaled": {
     "model_name": "random_forest_scaled",
     "feature_count": 20,
-    "validation_timestamp": "2025-09-09T18:18:06.082235",
+    "validation_timestamp": "2025-09-09T18:23:36.465232",
     "validations": {
       "basic_performance": {
         "dataset": "test",
@@ -998,7 +998,7 @@
       "residual_distribution": {
         "dataset": "test",
         "residual_stats": {
-          "mean": 0.13596456620013447,
+          "mean": 0.1359645662001345,
           "std": 1.8132799330277198,
           "skewness": -1.2806818253737375,
           "kurtosis": 1.0801693584294982,
@@ -1008,7 +1008,7 @@
         "checks": {
           "residuals_centered": {
             "passed": false,
-            "actual": 0.13596456620013447,
+            "actual": 0.1359645662001345,
             "threshold": 0.001,
             "message": "Residuals are not centered around zero"
           },
@@ -1049,14 +1049,14 @@
         "checks": {
           "temporal_stability": {
             "passed": false,
-            "actual": 1626.2856885969943,
+            "actual": 1626.285688596994,
             "threshold": 0.1,
             "message": "Temporal stability concerning"
           }
         },
         "temporal_stats": {
           "rolling_r2_mean": -186.03952705101773,
-          "rolling_r2_std": 1626.2856885969943,
+          "rolling_r2_std": 1626.285688596994,
           "rolling_r2_range": 20707.453552232142,
           "rolling_r2_min": -20707.444118327265,
           "rolling_r2_max": 0.009433904876357202
@@ -1084,7 +1084,7 @@
   "gradient_boosting": {
     "model_name": "gradient_boosting",
     "feature_count": 20,
-    "validation_timestamp": "2025-09-09T18:18:06.899485",
+    "validation_timestamp": "2025-09-09T18:23:37.227374",
     "validations": {
       "basic_performance": {
         "dataset": "test",
@@ -1220,7 +1220,7 @@
   "gradient_boosting_scaled": {
     "model_name": "gradient_boosting_scaled",
     "feature_count": 20,
-    "validation_timestamp": "2025-09-09T18:18:07.791323",
+    "validation_timestamp": "2025-09-09T18:23:37.986214",
     "validations": {
       "basic_performance": {
         "dataset": "test",
@@ -1354,7 +1354,7 @@
   "knn_regressor": {
     "model_name": "knn_regressor",
     "feature_count": 20,
-    "validation_timestamp": "2025-09-09T18:18:08.917939",
+    "validation_timestamp": "2025-09-09T18:23:39.047307",
     "validations": {
       "basic_performance": {
         "dataset": "test",
@@ -1490,7 +1490,7 @@
   "xgboost": {
     "model_name": "xgboost",
     "feature_count": 20,
-    "validation_timestamp": "2025-09-09T18:18:09.698299",
+    "validation_timestamp": "2025-09-09T18:23:39.800921",
     "validations": {
       "basic_performance": {
         "dataset": "test",
@@ -1626,7 +1626,7 @@
   "xgboost_scaled": {
     "model_name": "xgboost_scaled",
     "feature_count": 20,
-    "validation_timestamp": "2025-09-09T18:18:10.513554",
+    "validation_timestamp": "2025-09-09T18:23:40.563252",
     "validations": {
       "basic_performance": {
         "dataset": "test",
@@ -1760,7 +1760,7 @@
   "catboost": {
     "model_name": "catboost",
     "feature_count": 20,
-    "validation_timestamp": "2025-09-09T18:18:11.293194",
+    "validation_timestamp": "2025-09-09T18:23:41.341456",
     "validations": {
       "basic_performance": {
         "dataset": "test",
@@ -1893,7 +1893,7 @@
   "catboost_scaled": {
     "model_name": "catboost_scaled",
     "feature_count": 20,
-    "validation_timestamp": "2025-09-09T18:18:12.100657",
+    "validation_timestamp": "2025-09-09T18:23:42.089166",
     "validations": {
       "basic_performance": {
         "dataset": "test",
