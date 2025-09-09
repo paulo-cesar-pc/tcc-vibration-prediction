@@ -1,0 +1,68 @@
+This is BibTeX, Version 0.99d (TeX Live 2023/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: documento.aux
+The style file: lib/abntex2-alf.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: abntex2-options.bib
+Database file #2: 3-pos-textuais/referencias.bib
+Warning--entry type for "Yan2016" isn't style-file defined
+--line 39 of file 3-pos-textuais/referencias.bib
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=200001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
++---------------------------------------------------------+
+| Estilo bibliográfico abntex2-alf.bst versão v-1.9.7           |
+| Em caso de dúvidas ou problemas com este estilo procure |
+| http://www.abntex.net.br/                               |
++---------------------------------------------------------+
+You've used 70 entries,
+            6855 wiz_defined-function locations,
+            1625 strings with 21289 characters,
+and the built_in function-call counts, 66392 in all, are:
+= -- 5304
+> -- 2389
+< -- 512
++ -- 1358
+- -- 690
+* -- 4859
+:= -- 8467
+add.period$ -- 245
+call.type$ -- 72
+change.case$ -- 811
+chr.to.int$ -- 212
+cite$ -- 65
+duplicate$ -- 4099
+empty$ -- 4237
+format.name$ -- 3568
+if$ -- 15191
+int.to.chr$ -- 5
+int.to.str$ -- 3
+missing$ -- 1330
+newline$ -- 338
+num.names$ -- 320
+pop$ -- 1566
+preamble$ -- 1
+purify$ -- 285
+quote$ -- 0
+skip$ -- 4385
+stack$ -- 1
+substring$ -- 2451
+swap$ -- 1966
+text.length$ -- 99
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 479
+width$ -- 0
+write$ -- 1084
+(There was 1 warning)

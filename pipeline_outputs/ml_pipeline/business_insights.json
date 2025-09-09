@@ -1,0 +1,1366 @@
+{
+  "linear_regression": {
+    "performance_assessment": {
+      "performance_level": "Poor",
+      "business_confidence": "Not suitable for production deployment",
+      "deployment_recommendation": "NOT_SUITABLE",
+      "test_r2": -1.8192485881041627,
+      "test_rmse": 3.064559770240831,
+      "rmse_acceptable": false,
+      "rmse_threshold": 0.005
+    },
+    "business_impact": {
+      "performance_metrics": {
+        "r2_score": -1.8192485881041627,
+        "rmse": 3.064559770240831,
+        "accuracy_improvement": -1.8192485881041627
+      },
+      "cost_savings": {
+        "annual_maintenance_savings": -136443.6441078122,
+        "downtime_cost_savings": -2183098.305724995,
+        "total_annual_savings": -2575851.7804053067
+      },
+      "cost_avoidance": {
+        "false_alarm_cost": 26000.0,
+        "missed_detection_cost": 230309.83057249952,
+        "total_cost_avoidance": 256309.83057249952
+      },
+      "investment": {
+        "implementation_cost": 150000.0,
+        "annual_operating_cost": 30000.0,
+        "net_annual_benefit": -2605851.7804053067
+      },
+      "roi": {
+        "roi_percentage": -1737.2345202702047,
+        "payback_period_months": Infinity
+      }
+    },
+    "deployment_recommendations": {
+      "model_name": "linear_regression",
+      "deployment_status": "NOT_SUITABLE",
+      "recommendations": [
+        "\u274c Model not suitable for production deployment",
+        "Insufficient ROI: -1737.2%",
+        "Fundamental model architecture review required",
+        "Consider alternative modeling approaches",
+        "Reassess data quality and feature engineering",
+        "\ud83c\udfaf Improve RMSE from 3.0646 to below 0.005",
+        "\ud83d\udcca Target R\u00b2 improvement from -1.819 to above 0.80"
+      ],
+      "operational_recommendations": [
+        "Monitor key performance indicators: R\u00b2 > 0.60, RMSE < 0.005",
+        "Establish automated retraining pipeline",
+        "Set up data quality monitoring",
+        "Document model assumptions and limitations"
+      ]
+    },
+    "executive_summary": {
+      "report_title": "linear_regression - Business Impact Assessment",
+      "generated_date": "2025-09-09 18:18:12",
+      "model_name": "linear_regression",
+      "key_metrics": {
+        "prediction_accuracy": "-181.9%",
+        "performance_level": "Poor",
+        "features_analyzed": 20,
+        "data_samples_used": "18,830"
+      },
+      "business_impact": {
+        "annual_cost_savings": "$-2,575,852",
+        "roi_percentage": "-1737.2%",
+        "payback_period": "Not achievable",
+        "net_present_value_3yr": "$-7,967,555"
+      },
+      "risk_assessment": {
+        "technical_risk": "Very High - Model not suitable for production",
+        "business_risk": "Very High - Negative or insufficient returns",
+        "implementation_complexity": "Low - Simple feature set, easy to implement"
+      },
+      "strategic_recommendation": {
+        "decision": "NOT RECOMMENDED",
+        "reasoning": "Insufficient returns or poor model performance",
+        "timeline": "Reassess in 12 months",
+        "investment_priority": "Low"
+      }
+    },
+    "analysis_metadata": {
+      "model_name": "linear_regression",
+      "analysis_date": "2025-09-09T18:18:12.859965",
+      "training_samples": 18830,
+      "test_samples": 4708,
+      "feature_count": 20
+    }
+  },
+  "ridge_regression": {
+    "performance_assessment": {
+      "performance_level": "Poor",
+      "business_confidence": "Not suitable for production deployment",
+      "deployment_recommendation": "NOT_SUITABLE",
+      "test_r2": -1.8215023785379958,
+      "test_rmse": 3.06578447523576,
+      "rmse_acceptable": false,
+      "rmse_threshold": 0.005
+    },
+    "business_impact": {
+      "performance_metrics": {
+        "r2_score": -1.8215023785379958,
+        "rmse": 3.06578447523576,
+        "accuracy_improvement": -1.8215023785379958
+      },
+      "cost_savings": {
+        "annual_maintenance_savings": -136612.6783903497,
+        "downtime_cost_savings": -2185802.8542455947,
+        "total_annual_savings": -2578995.818060504
+      },
+      "cost_avoidance": {
+        "false_alarm_cost": 26000.0,
+        "missed_detection_cost": 230580.28542455952,
+        "total_cost_avoidance": 256580.28542455952
+      },
+      "investment": {
+        "implementation_cost": 150000.0,
+        "annual_operating_cost": 30000.0,
+        "net_annual_benefit": -2608995.818060504
+      },
+      "roi": {
+        "roi_percentage": -1739.330545373669,
+        "payback_period_months": Infinity
+      }
+    },
+    "deployment_recommendations": {
+      "model_name": "ridge_regression",
+      "deployment_status": "NOT_SUITABLE",
+      "recommendations": [
+        "\u274c Model not suitable for production deployment",
+        "Insufficient ROI: -1739.3%",
+        "Fundamental model architecture review required",
+        "Consider alternative modeling approaches",
+        "Reassess data quality and feature engineering",
+        "\ud83c\udfaf Improve RMSE from 3.0658 to below 0.005",
+        "\ud83d\udcca Target R\u00b2 improvement from -1.822 to above 0.80"
+      ],
+      "operational_recommendations": [
+        "Monitor key performance indicators: R\u00b2 > 0.60, RMSE < 0.005",
+        "Establish automated retraining pipeline",
+        "Set up data quality monitoring",
+        "Document model assumptions and limitations"
+      ]
+    },
+    "executive_summary": {
+      "report_title": "ridge_regression - Business Impact Assessment",
+      "generated_date": "2025-09-09 18:18:12",
+      "model_name": "ridge_regression",
+      "key_metrics": {
+        "prediction_accuracy": "-182.2%",
+        "performance_level": "Poor",
+        "features_analyzed": 20,
+        "data_samples_used": "18,830"
+      },
+      "business_impact": {
+        "annual_cost_savings": "$-2,578,996",
+        "roi_percentage": "-1739.3%",
+        "payback_period": "Not achievable",
+        "net_present_value_3yr": "$-7,976,987"
+      },
+      "risk_assessment": {
+        "technical_risk": "Very High - Model not suitable for production",
+        "business_risk": "Very High - Negative or insufficient returns",
+        "implementation_complexity": "Low - Simple feature set, easy to implement"
+      },
+      "strategic_recommendation": {
+        "decision": "NOT RECOMMENDED",
+        "reasoning": "Insufficient returns or poor model performance",
+        "timeline": "Reassess in 12 months",
+        "investment_priority": "Low"
+      }
+    },
+    "analysis_metadata": {
+      "model_name": "ridge_regression",
+      "analysis_date": "2025-09-09T18:18:12.865993",
+      "training_samples": 18830,
+      "test_samples": 4708,
+      "feature_count": 20
+    }
+  },
+  "lasso_regression": {
+    "performance_assessment": {
+      "performance_level": "Fair",
+      "business_confidence": "Requires improvement before production",
+      "deployment_recommendation": "IMPROVE_BEFORE_DEPLOY",
+      "test_r2": 0.6019146460081171,
+      "test_rmse": 1.1515677933065882,
+      "rmse_acceptable": false,
+      "rmse_threshold": 0.005
+    },
+    "business_impact": {
+      "performance_metrics": {
+        "r2_score": 0.6019146460081171,
+        "rmse": 1.1515677933065882,
+        "accuracy_improvement": 0.6019146460081171
+      },
+      "cost_savings": {
+        "annual_maintenance_savings": 45143.59845060878,
+        "downtime_cost_savings": 722297.5752097404,
+        "total_annual_savings": 740241.1736603492
+      },
+      "cost_avoidance": {
+        "false_alarm_cost": 26000.0,
+        "missed_detection_cost": 1200.0000000000002,
+        "total_cost_avoidance": 27200.0
+      },
+      "investment": {
+        "implementation_cost": 150000.0,
+        "annual_operating_cost": 30000.0,
+        "net_annual_benefit": 710241.1736603492
+      },
+      "roi": {
+        "roi_percentage": 473.4941157735661,
+        "payback_period_months": 2.5343503963919645
+      }
+    },
+    "deployment_recommendations": {
+      "model_name": "lasso_regression",
+      "deployment_status": "IMPROVE_BEFORE_DEPLOY",
+      "recommendations": [
+        "\ud83d\udd04 Model requires improvement before production deployment",
+        "Current ROI: 473.5% (target: >100%)",
+        "Collect additional training data",
+        "Explore advanced feature engineering",
+        "Consider ensemble methods or hyperparameter optimization",
+        "\ud83c\udfaf Improve RMSE from 1.1516 to below 0.005",
+        "\ud83d\udcca Target R\u00b2 improvement from 0.602 to above 0.80"
+      ],
+      "operational_recommendations": [
+        "Monitor key performance indicators: R\u00b2 > 0.60, RMSE < 0.005",
+        "Establish automated retraining pipeline",
+        "Set up data quality monitoring",
+        "Document model assumptions and limitations"
+      ]
+    },
+    "executive_summary": {
+      "report_title": "lasso_regression - Business Impact Assessment",
+      "generated_date": "2025-09-09 18:18:12",
+      "model_name": "lasso_regression",
+      "key_metrics": {
+        "prediction_accuracy": "60.2%",
+        "performance_level": "Fair",
+        "features_analyzed": 20,
+        "data_samples_used": "18,830"
+      },
+      "business_impact": {
+        "annual_cost_savings": "$740,241",
+        "roi_percentage": "473.5%",
+        "payback_period": "2.5 months",
+        "net_present_value_3yr": "$1,980,724"
+      },
+      "risk_assessment": {
+        "technical_risk": "High - Model needs improvement before deployment",
+        "business_risk": "Low - Strong financial case with high returns",
+        "implementation_complexity": "Low - Simple feature set, easy to implement"
+      },
+      "strategic_recommendation": {
+        "decision": "CONDITIONAL APPROVAL",
+        "reasoning": "Marginal returns, proceed with caution",
+        "timeline": "Pilot project in 6-12 months",
+        "investment_priority": "Medium"
+      }
+    },
+    "analysis_metadata": {
+      "model_name": "lasso_regression",
+      "analysis_date": "2025-09-09T18:18:12.869888",
+      "training_samples": 18830,
+      "test_samples": 4708,
+      "feature_count": 20
+    }
+  },
+  "huber_regressor": {
+    "performance_assessment": {
+      "performance_level": "Poor",
+      "business_confidence": "Not suitable for production deployment",
+      "deployment_recommendation": "NOT_SUITABLE",
+      "test_r2": -1.5932430860551126,
+      "test_rmse": 2.9391586201347004,
+      "rmse_acceptable": false,
+      "rmse_threshold": 0.005
+    },
+    "business_impact": {
+      "performance_metrics": {
+        "r2_score": -1.5932430860551126,
+        "rmse": 2.9391586201347004,
+        "accuracy_improvement": -1.5932430860551126
+      },
+      "cost_savings": {
+        "annual_maintenance_savings": -119493.23145413343,
+        "downtime_cost_savings": -1911891.7032661352,
+        "total_annual_savings": -2260574.1050468823
+      },
+      "cost_avoidance": {
+        "false_alarm_cost": 26000.0,
+        "missed_detection_cost": 203189.17032661353,
+        "total_cost_avoidance": 229189.17032661353
+      },
+      "investment": {
+        "implementation_cost": 150000.0,
+        "annual_operating_cost": 30000.0,
+        "net_annual_benefit": -2290574.1050468823
+      },
+      "roi": {
+        "roi_percentage": -1527.0494033645882,
+        "payback_period_months": Infinity
+      }
+    },
+    "deployment_recommendations": {
+      "model_name": "huber_regressor",
+      "deployment_status": "NOT_SUITABLE",
+      "recommendations": [
+        "\u274c Model not suitable for production deployment",
+        "Insufficient ROI: -1527.0%",
+        "Fundamental model architecture review required",
+        "Consider alternative modeling approaches",
+        "Reassess data quality and feature engineering",
+        "\ud83c\udfaf Improve RMSE from 2.9392 to below 0.005",
+        "\ud83d\udcca Target R\u00b2 improvement from -1.593 to above 0.80"
+      ],
+      "operational_recommendations": [
+        "Monitor key performance indicators: R\u00b2 > 0.60, RMSE < 0.005",
+        "Establish automated retraining pipeline",
+        "Set up data quality monitoring",
+        "Document model assumptions and limitations"
+      ]
+    },
+    "executive_summary": {
+      "report_title": "huber_regressor - Business Impact Assessment",
+      "generated_date": "2025-09-09 18:18:12",
+      "model_name": "huber_regressor",
+      "key_metrics": {
+        "prediction_accuracy": "-159.3%",
+        "performance_level": "Poor",
+        "features_analyzed": 20,
+        "data_samples_used": "18,830"
+      },
+      "business_impact": {
+        "annual_cost_savings": "$-2,260,574",
+        "roi_percentage": "-1527.0%",
+        "payback_period": "Not achievable",
+        "net_present_value_3yr": "$-7,021,722"
+      },
+      "risk_assessment": {
+        "technical_risk": "Very High - Model not suitable for production",
+        "business_risk": "Very High - Negative or insufficient returns",
+        "implementation_complexity": "Low - Simple feature set, easy to implement"
+      },
+      "strategic_recommendation": {
+        "decision": "NOT RECOMMENDED",
+        "reasoning": "Insufficient returns or poor model performance",
+        "timeline": "Reassess in 12 months",
+        "investment_priority": "Low"
+      }
+    },
+    "analysis_metadata": {
+      "model_name": "huber_regressor",
+      "analysis_date": "2025-09-09T18:18:12.875468",
+      "training_samples": 18830,
+      "test_samples": 4708,
+      "feature_count": 20
+    }
+  },
+  "decision_tree": {
+    "performance_assessment": {
+      "performance_level": "Fair",
+      "business_confidence": "Requires improvement before production",
+      "deployment_recommendation": "IMPROVE_BEFORE_DEPLOY",
+      "test_r2": 0.6645098768406221,
+      "test_rmse": 1.057161357227321,
+      "rmse_acceptable": false,
+      "rmse_threshold": 0.005
+    },
+    "business_impact": {
+      "performance_metrics": {
+        "r2_score": 0.6645098768406221,
+        "rmse": 1.057161357227321,
+        "accuracy_improvement": 0.6645098768406221
+      },
+      "cost_savings": {
+        "annual_maintenance_savings": 49838.24076304666,
+        "downtime_cost_savings": 797411.8522087466,
+        "total_annual_savings": 820050.0929717933
+      },
+      "cost_avoidance": {
+        "false_alarm_cost": 26000.0,
+        "missed_detection_cost": 1200.0000000000002,
+        "total_cost_avoidance": 27200.0
+      },
+      "investment": {
+        "implementation_cost": 150000.0,
+        "annual_operating_cost": 30000.0,
+        "net_annual_benefit": 790050.0929717933
+      },
+      "roi": {
+        "roi_percentage": 526.7000619811955,
+        "payback_period_months": 2.2783365460147658
+      }
+    },
+    "deployment_recommendations": {
+      "model_name": "decision_tree",
+      "deployment_status": "IMPROVE_BEFORE_DEPLOY",
+      "recommendations": [
+        "\ud83d\udd04 Model requires improvement before production deployment",
+        "Current ROI: 526.7% (target: >100%)",
+        "Collect additional training data",
+        "Explore advanced feature engineering",
+        "Consider ensemble methods or hyperparameter optimization",
+        "\ud83c\udfaf Improve RMSE from 1.0572 to below 0.005",
+        "\ud83d\udcca Target R\u00b2 improvement from 0.665 to above 0.80"
+      ],
+      "operational_recommendations": [
+        "Monitor key performance indicators: R\u00b2 > 0.60, RMSE < 0.005",
+        "Establish automated retraining pipeline",
+        "Set up data quality monitoring",
+        "Document model assumptions and limitations"
+      ]
+    },
+    "executive_summary": {
+      "report_title": "decision_tree - Business Impact Assessment",
+      "generated_date": "2025-09-09 18:18:12",
+      "model_name": "decision_tree",
+      "key_metrics": {
+        "prediction_accuracy": "66.5%",
+        "performance_level": "Fair",
+        "features_analyzed": 20,
+        "data_samples_used": "18,830"
+      },
+      "business_impact": {
+        "annual_cost_savings": "$820,050",
+        "roi_percentage": "526.7%",
+        "payback_period": "2.3 months",
+        "net_present_value_3yr": "$2,220,150"
+      },
+      "risk_assessment": {
+        "technical_risk": "High - Model needs improvement before deployment",
+        "business_risk": "Low - Strong financial case with high returns",
+        "implementation_complexity": "Low - Simple feature set, easy to implement"
+      },
+      "strategic_recommendation": {
+        "decision": "CONDITIONAL APPROVAL",
+        "reasoning": "Marginal returns, proceed with caution",
+        "timeline": "Pilot project in 6-12 months",
+        "investment_priority": "Medium"
+      }
+    },
+    "analysis_metadata": {
+      "model_name": "decision_tree",
+      "analysis_date": "2025-09-09T18:18:12.879732",
+      "training_samples": 18830,
+      "test_samples": 4708,
+      "feature_count": 20
+    }
+  },
+  "decision_tree_scaled": {
+    "performance_assessment": {
+      "performance_level": "Poor",
+      "business_confidence": "Not suitable for production deployment",
+      "deployment_recommendation": "NOT_SUITABLE",
+      "test_r2": 0.16625931800579097,
+      "test_rmse": 1.6665444702868994,
+      "rmse_acceptable": false,
+      "rmse_threshold": 0.005
+    },
+    "business_impact": {
+      "performance_metrics": {
+        "r2_score": 0.16625931800579097,
+        "rmse": 1.6665444702868994,
+        "accuracy_improvement": 0.16625931800579097
+      },
+      "cost_savings": {
+        "annual_maintenance_savings": 12469.448850434323,
+        "downtime_cost_savings": 199511.1816069492,
+        "total_annual_savings": 184780.63045738352
+      },
+      "cost_avoidance": {
+        "false_alarm_cost": 26000.0,
+        "missed_detection_cost": 1200.0000000000002,
+        "total_cost_avoidance": 27200.0
+      },
+      "investment": {
+        "implementation_cost": 150000.0,
+        "annual_operating_cost": 30000.0,
+        "net_annual_benefit": 154780.63045738352
+      },
+      "roi": {
+        "roi_percentage": 103.187086971589,
+        "payback_period_months": 11.629362115149172
+      }
+    },
+    "deployment_recommendations": {
+      "model_name": "decision_tree_scaled",
+      "deployment_status": "NOT_SUITABLE",
+      "recommendations": [
+        "\u274c Model not suitable for production deployment",
+        "Insufficient ROI: 103.2%",
+        "Fundamental model architecture review required",
+        "Consider alternative modeling approaches",
+        "Reassess data quality and feature engineering",
+        "\ud83c\udfaf Improve RMSE from 1.6665 to below 0.005",
+        "\ud83d\udcca Target R\u00b2 improvement from 0.166 to above 0.80"
+      ],
+      "operational_recommendations": [
+        "Monitor key performance indicators: R\u00b2 > 0.60, RMSE < 0.005",
+        "Establish automated retraining pipeline",
+        "Set up data quality monitoring",
+        "Document model assumptions and limitations"
+      ]
+    },
+    "executive_summary": {
+      "report_title": "decision_tree_scaled - Business Impact Assessment",
+      "generated_date": "2025-09-09 18:18:12",
+      "model_name": "decision_tree_scaled",
+      "key_metrics": {
+        "prediction_accuracy": "16.6%",
+        "performance_level": "Poor",
+        "features_analyzed": 20,
+        "data_samples_used": "18,830"
+      },
+      "business_impact": {
+        "annual_cost_savings": "$184,781",
+        "roi_percentage": "103.2%",
+        "payback_period": "11.6 months",
+        "net_present_value_3yr": "$314,342"
+      },
+      "risk_assessment": {
+        "technical_risk": "Very High - Model not suitable for production",
+        "business_risk": "Medium - Positive ROI with acceptable returns",
+        "implementation_complexity": "Low - Simple feature set, easy to implement"
+      },
+      "strategic_recommendation": {
+        "decision": "CONDITIONAL APPROVAL",
+        "reasoning": "Marginal returns, proceed with caution",
+        "timeline": "Pilot project in 6-12 months",
+        "investment_priority": "Medium"
+      }
+    },
+    "analysis_metadata": {
+      "model_name": "decision_tree_scaled",
+      "analysis_date": "2025-09-09T18:18:12.883627",
+      "training_samples": 18830,
+      "test_samples": 4708,
+      "feature_count": 20
+    }
+  },
+  "random_forest": {
+    "performance_assessment": {
+      "performance_level": "Fair",
+      "business_confidence": "Requires improvement before production",
+      "deployment_recommendation": "IMPROVE_BEFORE_DEPLOY",
+      "test_r2": 0.7517526421508436,
+      "test_rmse": 0.9093765015431183,
+      "rmse_acceptable": false,
+      "rmse_threshold": 0.005
+    },
+    "business_impact": {
+      "performance_metrics": {
+        "r2_score": 0.7517526421508436,
+        "rmse": 0.9093765015431183,
+        "accuracy_improvement": 0.7517526421508436
+      },
+      "cost_savings": {
+        "annual_maintenance_savings": 56381.44816131327,
+        "downtime_cost_savings": 902103.1705810124,
+        "total_annual_savings": 931284.6187423257
+      },
+      "cost_avoidance": {
+        "false_alarm_cost": 26000.0,
+        "missed_detection_cost": 1200.0000000000002,
+        "total_cost_avoidance": 27200.0
+      },
+      "investment": {
+        "implementation_cost": 150000.0,
+        "annual_operating_cost": 30000.0,
+        "net_annual_benefit": 901284.6187423257
+      },
+      "roi": {
+        "roi_percentage": 600.8564124948838,
+        "payback_period_months": 1.9971493605557846
+      }
+    },
+    "deployment_recommendations": {
+      "model_name": "random_forest",
+      "deployment_status": "IMPROVE_BEFORE_DEPLOY",
+      "recommendations": [
+        "\ud83d\udd04 Model requires improvement before production deployment",
+        "Current ROI: 600.9% (target: >100%)",
+        "Collect additional training data",
+        "Explore advanced feature engineering",
+        "Consider ensemble methods or hyperparameter optimization",
+        "\ud83c\udfaf Improve RMSE from 0.9094 to below 0.005",
+        "\ud83d\udcca Target R\u00b2 improvement from 0.752 to above 0.80"
+      ],
+      "operational_recommendations": [
+        "Monitor key performance indicators: R\u00b2 > 0.60, RMSE < 0.005",
+        "Establish automated retraining pipeline",
+        "Set up data quality monitoring",
+        "Document model assumptions and limitations"
+      ]
+    },
+    "executive_summary": {
+      "report_title": "random_forest - Business Impact Assessment",
+      "generated_date": "2025-09-09 18:18:12",
+      "model_name": "random_forest",
+      "key_metrics": {
+        "prediction_accuracy": "75.2%",
+        "performance_level": "Fair",
+        "features_analyzed": 20,
+        "data_samples_used": "18,830"
+      },
+      "business_impact": {
+        "annual_cost_savings": "$931,285",
+        "roi_percentage": "600.9%",
+        "payback_period": "2.0 months",
+        "net_present_value_3yr": "$2,553,854"
+      },
+      "risk_assessment": {
+        "technical_risk": "High - Model needs improvement before deployment",
+        "business_risk": "Low - Strong financial case with high returns",
+        "implementation_complexity": "Low - Simple feature set, easy to implement"
+      },
+      "strategic_recommendation": {
+        "decision": "CONDITIONAL APPROVAL",
+        "reasoning": "Marginal returns, proceed with caution",
+        "timeline": "Pilot project in 6-12 months",
+        "investment_priority": "Medium"
+      }
+    },
+    "analysis_metadata": {
+      "model_name": "random_forest",
+      "analysis_date": "2025-09-09T18:18:12.938458",
+      "training_samples": 18830,
+      "test_samples": 4708,
+      "feature_count": 20
+    }
+  },
+  "random_forest_scaled": {
+    "performance_assessment": {
+      "performance_level": "Poor",
+      "business_confidence": "Not suitable for production deployment",
+      "deployment_recommendation": "NOT_SUITABLE",
+      "test_r2": 0.007428436242737924,
+      "test_rmse": 1.8183702809887214,
+      "rmse_acceptable": false,
+      "rmse_threshold": 0.005
+    },
+    "business_impact": {
+      "performance_metrics": {
+        "r2_score": 0.007428436242737924,
+        "rmse": 1.8183702809887214,
+        "accuracy_improvement": 0.007428436242737924
+      },
+      "cost_savings": {
+        "annual_maintenance_savings": 557.1327182053443,
+        "downtime_cost_savings": 8914.123491285509,
+        "total_annual_savings": -27637.331441380597
+      },
+      "cost_avoidance": {
+        "false_alarm_cost": 26000.0,
+        "missed_detection_cost": 11108.58765087145,
+        "total_cost_avoidance": 37108.58765087145
+      },
+      "investment": {
+        "implementation_cost": 150000.0,
+        "annual_operating_cost": 30000.0,
+        "net_annual_benefit": -57637.33144138059
+      },
+      "roi": {
+        "roi_percentage": -38.42488762758706,
+        "payback_period_months": Infinity
+      }
+    },
+    "deployment_recommendations": {
+      "model_name": "random_forest_scaled",
+      "deployment_status": "NOT_SUITABLE",
+      "recommendations": [
+        "\u274c Model not suitable for production deployment",
+        "Insufficient ROI: -38.4%",
+        "Fundamental model architecture review required",
+        "Consider alternative modeling approaches",
+        "Reassess data quality and feature engineering",
+        "\ud83c\udfaf Improve RMSE from 1.8184 to below 0.005",
+        "\ud83d\udcca Target R\u00b2 improvement from 0.007 to above 0.80"
+      ],
+      "operational_recommendations": [
+        "Monitor key performance indicators: R\u00b2 > 0.60, RMSE < 0.005",
+        "Establish automated retraining pipeline",
+        "Set up data quality monitoring",
+        "Document model assumptions and limitations"
+      ]
+    },
+    "executive_summary": {
+      "report_title": "random_forest_scaled - Business Impact Assessment",
+      "generated_date": "2025-09-09 18:18:12",
+      "model_name": "random_forest_scaled",
+      "key_metrics": {
+        "prediction_accuracy": "0.7%",
+        "performance_level": "Poor",
+        "features_analyzed": 20,
+        "data_samples_used": "18,830"
+      },
+      "business_impact": {
+        "annual_cost_savings": "$-27,637",
+        "roi_percentage": "-38.4%",
+        "payback_period": "Not achievable",
+        "net_present_value_3yr": "$-322,912"
+      },
+      "risk_assessment": {
+        "technical_risk": "Very High - Model not suitable for production",
+        "business_risk": "Very High - Negative or insufficient returns",
+        "implementation_complexity": "Low - Simple feature set, easy to implement"
+      },
+      "strategic_recommendation": {
+        "decision": "NOT RECOMMENDED",
+        "reasoning": "Insufficient returns or poor model performance",
+        "timeline": "Reassess in 12 months",
+        "investment_priority": "Low"
+      }
+    },
+    "analysis_metadata": {
+      "model_name": "random_forest_scaled",
+      "analysis_date": "2025-09-09T18:18:12.977669",
+      "training_samples": 18830,
+      "test_samples": 4708,
+      "feature_count": 20
+    }
+  },
+  "gradient_boosting": {
+    "performance_assessment": {
+      "performance_level": "Fair",
+      "business_confidence": "Requires improvement before production",
+      "deployment_recommendation": "IMPROVE_BEFORE_DEPLOY",
+      "test_r2": 0.7714263881931349,
+      "test_rmse": 0.8725984872267356,
+      "rmse_acceptable": false,
+      "rmse_threshold": 0.005
+    },
+    "business_impact": {
+      "performance_metrics": {
+        "r2_score": 0.7714263881931349,
+        "rmse": 0.8725984872267356,
+        "accuracy_improvement": 0.7714263881931349
+      },
+      "cost_savings": {
+        "annual_maintenance_savings": 57856.97911448512,
+        "downtime_cost_savings": 925711.6658317619,
+        "total_annual_savings": 956368.644946247
+      },
+      "cost_avoidance": {
+        "false_alarm_cost": 26000.0,
+        "missed_detection_cost": 1200.0000000000002,
+        "total_cost_avoidance": 27200.0
+      },
+      "investment": {
+        "implementation_cost": 150000.0,
+        "annual_operating_cost": 30000.0,
+        "net_annual_benefit": 926368.644946247
+      },
+      "roi": {
+        "roi_percentage": 617.5790966308314,
+        "payback_period_months": 1.9430709467767509
+      }
+    },
+    "deployment_recommendations": {
+      "model_name": "gradient_boosting",
+      "deployment_status": "IMPROVE_BEFORE_DEPLOY",
+      "recommendations": [
+        "\ud83d\udd04 Model requires improvement before production deployment",
+        "Current ROI: 617.6% (target: >100%)",
+        "Collect additional training data",
+        "Explore advanced feature engineering",
+        "Consider ensemble methods or hyperparameter optimization",
+        "\ud83c\udfaf Improve RMSE from 0.8726 to below 0.005",
+        "\ud83d\udcca Target R\u00b2 improvement from 0.771 to above 0.80"
+      ],
+      "operational_recommendations": [
+        "Monitor key performance indicators: R\u00b2 > 0.60, RMSE < 0.005",
+        "Establish automated retraining pipeline",
+        "Set up data quality monitoring",
+        "Document model assumptions and limitations"
+      ]
+    },
+    "executive_summary": {
+      "report_title": "gradient_boosting - Business Impact Assessment",
+      "generated_date": "2025-09-09 18:18:12",
+      "model_name": "gradient_boosting",
+      "key_metrics": {
+        "prediction_accuracy": "77.1%",
+        "performance_level": "Fair",
+        "features_analyzed": 20,
+        "data_samples_used": "18,830"
+      },
+      "business_impact": {
+        "annual_cost_savings": "$956,369",
+        "roi_percentage": "617.6%",
+        "payback_period": "1.9 months",
+        "net_present_value_3yr": "$2,629,106"
+      },
+      "risk_assessment": {
+        "technical_risk": "High - Model needs improvement before deployment",
+        "business_risk": "Low - Strong financial case with high returns",
+        "implementation_complexity": "Low - Simple feature set, easy to implement"
+      },
+      "strategic_recommendation": {
+        "decision": "CONDITIONAL APPROVAL",
+        "reasoning": "Marginal returns, proceed with caution",
+        "timeline": "Pilot project in 6-12 months",
+        "investment_priority": "Medium"
+      }
+    },
+    "analysis_metadata": {
+      "model_name": "gradient_boosting",
+      "analysis_date": "2025-09-09T18:18:12.994090",
+      "training_samples": 18830,
+      "test_samples": 4708,
+      "feature_count": 20
+    }
+  },
+  "gradient_boosting_scaled": {
+    "performance_assessment": {
+      "performance_level": "Poor",
+      "business_confidence": "Not suitable for production deployment",
+      "deployment_recommendation": "NOT_SUITABLE",
+      "test_r2": 0.05402154413345972,
+      "test_rmse": 1.7751785157246749,
+      "rmse_acceptable": false,
+      "rmse_threshold": 0.005
+    },
+    "business_impact": {
+      "performance_metrics": {
+        "r2_score": 0.05402154413345972,
+        "rmse": 1.7751785157246749,
+        "accuracy_improvement": 0.05402154413345972
+      },
+      "cost_savings": {
+        "annual_maintenance_savings": 4051.6158100094785,
+        "downtime_cost_savings": 64825.852960151664,
+        "total_annual_savings": 37360.05406617631
+      },
+      "cost_avoidance": {
+        "false_alarm_cost": 26000.0,
+        "missed_detection_cost": 5517.414703984835,
+        "total_cost_avoidance": 31517.414703984836
+      },
+      "investment": {
+        "implementation_cost": 150000.0,
+        "annual_operating_cost": 30000.0,
+        "net_annual_benefit": 7360.054066176308
+      },
+      "roi": {
+        "roi_percentage": 4.906702710784206,
+        "payback_period_months": 244.56342084116446
+      }
+    },
+    "deployment_recommendations": {
+      "model_name": "gradient_boosting_scaled",
+      "deployment_status": "NOT_SUITABLE",
+      "recommendations": [
+        "\u274c Model not suitable for production deployment",
+        "Insufficient ROI: 4.9%",
+        "Fundamental model architecture review required",
+        "Consider alternative modeling approaches",
+        "Reassess data quality and feature engineering",
+        "\ud83c\udfaf Improve RMSE from 1.7752 to below 0.005",
+        "\ud83d\udcca Target R\u00b2 improvement from 0.054 to above 0.80"
+      ],
+      "operational_recommendations": [
+        "Monitor key performance indicators: R\u00b2 > 0.60, RMSE < 0.005",
+        "Establish automated retraining pipeline",
+        "Set up data quality monitoring",
+        "Document model assumptions and limitations"
+      ]
+    },
+    "executive_summary": {
+      "report_title": "gradient_boosting_scaled - Business Impact Assessment",
+      "generated_date": "2025-09-09 18:18:13",
+      "model_name": "gradient_boosting_scaled",
+      "key_metrics": {
+        "prediction_accuracy": "5.4%",
+        "performance_level": "Poor",
+        "features_analyzed": 20,
+        "data_samples_used": "18,830"
+      },
+      "business_impact": {
+        "annual_cost_savings": "$37,360",
+        "roi_percentage": "4.9%",
+        "payback_period": "244.6 months",
+        "net_present_value_3yr": "$-127,920"
+      },
+      "risk_assessment": {
+        "technical_risk": "Very High - Model not suitable for production",
+        "business_risk": "Very High - Negative or insufficient returns",
+        "implementation_complexity": "Low - Simple feature set, easy to implement"
+      },
+      "strategic_recommendation": {
+        "decision": "NOT RECOMMENDED",
+        "reasoning": "Insufficient returns or poor model performance",
+        "timeline": "Reassess in 12 months",
+        "investment_priority": "Low"
+      }
+    },
+    "analysis_metadata": {
+      "model_name": "gradient_boosting_scaled",
+      "analysis_date": "2025-09-09T18:18:13.008083",
+      "training_samples": 18830,
+      "test_samples": 4708,
+      "feature_count": 20
+    }
+  },
+  "knn_regressor": {
+    "performance_assessment": {
+      "performance_level": "Fair",
+      "business_confidence": "Requires improvement before production",
+      "deployment_recommendation": "IMPROVE_BEFORE_DEPLOY",
+      "test_r2": 0.6404459135441187,
+      "test_rmse": 1.0944187497151763,
+      "rmse_acceptable": false,
+      "rmse_threshold": 0.005
+    },
+    "business_impact": {
+      "performance_metrics": {
+        "r2_score": 0.6404459135441187,
+        "rmse": 1.0944187497151763,
+        "accuracy_improvement": 0.6404459135441187
+      },
+      "cost_savings": {
+        "annual_maintenance_savings": 48033.4435158089,
+        "downtime_cost_savings": 768535.0962529425,
+        "total_annual_savings": 789368.5397687514
+      },
+      "cost_avoidance": {
+        "false_alarm_cost": 26000.0,
+        "missed_detection_cost": 1200.0000000000002,
+        "total_cost_avoidance": 27200.0
+      },
+      "investment": {
+        "implementation_cost": 150000.0,
+        "annual_operating_cost": 30000.0,
+        "net_annual_benefit": 759368.5397687514
+      },
+      "roi": {
+        "roi_percentage": 506.2456931791676,
+        "payback_period_months": 2.3703905359947486
+      }
+    },
+    "deployment_recommendations": {
+      "model_name": "knn_regressor",
+      "deployment_status": "IMPROVE_BEFORE_DEPLOY",
+      "recommendations": [
+        "\ud83d\udd04 Model requires improvement before production deployment",
+        "Current ROI: 506.2% (target: >100%)",
+        "Collect additional training data",
+        "Explore advanced feature engineering",
+        "Consider ensemble methods or hyperparameter optimization",
+        "\ud83c\udfaf Improve RMSE from 1.0944 to below 0.005",
+        "\ud83d\udcca Target R\u00b2 improvement from 0.640 to above 0.80"
+      ],
+      "operational_recommendations": [
+        "Monitor key performance indicators: R\u00b2 > 0.60, RMSE < 0.005",
+        "Establish automated retraining pipeline",
+        "Set up data quality monitoring",
+        "Document model assumptions and limitations"
+      ]
+    },
+    "executive_summary": {
+      "report_title": "knn_regressor - Business Impact Assessment",
+      "generated_date": "2025-09-09 18:18:13",
+      "model_name": "knn_regressor",
+      "key_metrics": {
+        "prediction_accuracy": "64.0%",
+        "performance_level": "Fair",
+        "features_analyzed": 20,
+        "data_samples_used": "18,830"
+      },
+      "business_impact": {
+        "annual_cost_savings": "$789,369",
+        "roi_percentage": "506.2%",
+        "payback_period": "2.4 months",
+        "net_present_value_3yr": "$2,128,106"
+      },
+      "risk_assessment": {
+        "technical_risk": "High - Model needs improvement before deployment",
+        "business_risk": "Low - Strong financial case with high returns",
+        "implementation_complexity": "Low - Simple feature set, easy to implement"
+      },
+      "strategic_recommendation": {
+        "decision": "CONDITIONAL APPROVAL",
+        "reasoning": "Marginal returns, proceed with caution",
+        "timeline": "Pilot project in 6-12 months",
+        "investment_priority": "Medium"
+      }
+    },
+    "analysis_metadata": {
+      "model_name": "knn_regressor",
+      "analysis_date": "2025-09-09T18:18:13.387053",
+      "training_samples": 18830,
+      "test_samples": 4708,
+      "feature_count": 20
+    }
+  },
+  "xgboost": {
+    "performance_assessment": {
+      "performance_level": "Fair",
+      "business_confidence": "Requires improvement before production",
+      "deployment_recommendation": "IMPROVE_BEFORE_DEPLOY",
+      "test_r2": 0.7733978135763445,
+      "test_rmse": 0.8688272991365772,
+      "rmse_acceptable": false,
+      "rmse_threshold": 0.005
+    },
+    "business_impact": {
+      "performance_metrics": {
+        "r2_score": 0.7733978135763445,
+        "rmse": 0.8688272991365772,
+        "accuracy_improvement": 0.7733978135763445
+      },
+      "cost_savings": {
+        "annual_maintenance_savings": 58004.83601822583,
+        "downtime_cost_savings": 928077.3762916133,
+        "total_annual_savings": 958882.2123098392
+      },
+      "cost_avoidance": {
+        "false_alarm_cost": 26000.0,
+        "missed_detection_cost": 1200.0000000000002,
+        "total_cost_avoidance": 27200.0
+      },
+      "investment": {
+        "implementation_cost": 150000.0,
+        "annual_operating_cost": 30000.0,
+        "net_annual_benefit": 928882.2123098392
+      },
+      "roi": {
+        "roi_percentage": 619.2548082065595,
+        "payback_period_months": 1.93781297148964
+      }
+    },
+    "deployment_recommendations": {
+      "model_name": "xgboost",
+      "deployment_status": "IMPROVE_BEFORE_DEPLOY",
+      "recommendations": [
+        "\ud83d\udd04 Model requires improvement before production deployment",
+        "Current ROI: 619.3% (target: >100%)",
+        "Collect additional training data",
+        "Explore advanced feature engineering",
+        "Consider ensemble methods or hyperparameter optimization",
+        "\ud83c\udfaf Improve RMSE from 0.8688 to below 0.005",
+        "\ud83d\udcca Target R\u00b2 improvement from 0.773 to above 0.80"
+      ],
+      "operational_recommendations": [
+        "Monitor key performance indicators: R\u00b2 > 0.60, RMSE < 0.005",
+        "Establish automated retraining pipeline",
+        "Set up data quality monitoring",
+        "Document model assumptions and limitations"
+      ]
+    },
+    "executive_summary": {
+      "report_title": "xgboost - Business Impact Assessment",
+      "generated_date": "2025-09-09 18:18:13",
+      "model_name": "xgboost",
+      "key_metrics": {
+        "prediction_accuracy": "77.3%",
+        "performance_level": "Fair",
+        "features_analyzed": 20,
+        "data_samples_used": "18,830"
+      },
+      "business_impact": {
+        "annual_cost_savings": "$958,882",
+        "roi_percentage": "619.3%",
+        "payback_period": "1.9 months",
+        "net_present_value_3yr": "$2,636,647"
+      },
+      "risk_assessment": {
+        "technical_risk": "High - Model needs improvement before deployment",
+        "business_risk": "Low - Strong financial case with high returns",
+        "implementation_complexity": "Low - Simple feature set, easy to implement"
+      },
+      "strategic_recommendation": {
+        "decision": "CONDITIONAL APPROVAL",
+        "reasoning": "Marginal returns, proceed with caution",
+        "timeline": "Pilot project in 6-12 months",
+        "investment_priority": "Medium"
+      }
+    },
+    "analysis_metadata": {
+      "model_name": "xgboost",
+      "analysis_date": "2025-09-09T18:18:13.411321",
+      "training_samples": 18830,
+      "test_samples": 4708,
+      "feature_count": 20
+    }
+  },
+  "xgboost_scaled": {
+    "performance_assessment": {
+      "performance_level": "Poor",
+      "business_confidence": "Not suitable for production deployment",
+      "deployment_recommendation": "NOT_SUITABLE",
+      "test_r2": 0.06337892395435796,
+      "test_rmse": 1.766376887129577,
+      "rmse_acceptable": false,
+      "rmse_threshold": 0.005
+    },
+    "business_impact": {
+      "performance_metrics": {
+        "r2_score": 0.06337892395435796,
+        "rmse": 1.766376887129577,
+        "accuracy_improvement": 0.06337892395435796
+      },
+      "cost_savings": {
+        "annual_maintenance_savings": 4753.419296576846,
+        "downtime_cost_savings": 76054.70874522955,
+        "total_annual_savings": 50413.59891632935
+      },
+      "cost_avoidance": {
+        "false_alarm_cost": 26000.0,
+        "missed_detection_cost": 4394.529125477046,
+        "total_cost_avoidance": 30394.529125477045
+      },
+      "investment": {
+        "implementation_cost": 150000.0,
+        "annual_operating_cost": 30000.0,
+        "net_annual_benefit": 20413.59891632935
+      },
+      "roi": {
+        "roi_percentage": 13.609065944219568,
+        "payback_period_months": 88.17651445870894
+      }
+    },
+    "deployment_recommendations": {
+      "model_name": "xgboost_scaled",
+      "deployment_status": "NOT_SUITABLE",
+      "recommendations": [
+        "\u274c Model not suitable for production deployment",
+        "Insufficient ROI: 13.6%",
+        "Fundamental model architecture review required",
+        "Consider alternative modeling approaches",
+        "Reassess data quality and feature engineering",
+        "\ud83c\udfaf Improve RMSE from 1.7664 to below 0.005",
+        "\ud83d\udcca Target R\u00b2 improvement from 0.063 to above 0.80"
+      ],
+      "operational_recommendations": [
+        "Monitor key performance indicators: R\u00b2 > 0.60, RMSE < 0.005",
+        "Establish automated retraining pipeline",
+        "Set up data quality monitoring",
+        "Document model assumptions and limitations"
+      ]
+    },
+    "executive_summary": {
+      "report_title": "xgboost_scaled - Business Impact Assessment",
+      "generated_date": "2025-09-09 18:18:13",
+      "model_name": "xgboost_scaled",
+      "key_metrics": {
+        "prediction_accuracy": "6.3%",
+        "performance_level": "Poor",
+        "features_analyzed": 20,
+        "data_samples_used": "18,830"
+      },
+      "business_impact": {
+        "annual_cost_savings": "$50,414",
+        "roi_percentage": "13.6%",
+        "payback_period": "88.2 months",
+        "net_present_value_3yr": "$-88,759"
+      },
+      "risk_assessment": {
+        "technical_risk": "Very High - Model not suitable for production",
+        "business_risk": "Very High - Negative or insufficient returns",
+        "implementation_complexity": "Low - Simple feature set, easy to implement"
+      },
+      "strategic_recommendation": {
+        "decision": "NOT RECOMMENDED",
+        "reasoning": "Insufficient returns or poor model performance",
+        "timeline": "Reassess in 12 months",
+        "investment_priority": "Low"
+      }
+    },
+    "analysis_metadata": {
+      "model_name": "xgboost_scaled",
+      "analysis_date": "2025-09-09T18:18:13.416699",
+      "training_samples": 18830,
+      "test_samples": 4708,
+      "feature_count": 20
+    }
+  },
+  "catboost": {
+    "performance_assessment": {
+      "performance_level": "Good",
+      "business_confidence": "Suitable for production with monitoring",
+      "deployment_recommendation": "DEPLOY_WITH_MONITORING",
+      "test_r2": 0.8415079826594156,
+      "test_rmse": 0.7266162513207381,
+      "rmse_acceptable": false,
+      "rmse_threshold": 0.005
+    },
+    "business_impact": {
+      "performance_metrics": {
+        "r2_score": 0.8415079826594156,
+        "rmse": 0.7266162513207381,
+        "accuracy_improvement": 0.8415079826594156
+      },
+      "cost_savings": {
+        "annual_maintenance_savings": 63113.09869945617,
+        "downtime_cost_savings": 1009809.5791912988,
+        "total_annual_savings": 1045722.677890755
+      },
+      "cost_avoidance": {
+        "false_alarm_cost": 26000.0,
+        "missed_detection_cost": 1200.0000000000002,
+        "total_cost_avoidance": 27200.0
+      },
+      "investment": {
+        "implementation_cost": 150000.0,
+        "annual_operating_cost": 30000.0,
+        "net_annual_benefit": 1015722.677890755
+      },
+      "roi": {
+        "roi_percentage": 677.1484519271701,
+        "payback_period_months": 1.7721372567341624
+      }
+    },
+    "deployment_recommendations": {
+      "model_name": "catboost",
+      "deployment_status": "DEPLOY_WITH_MONITORING",
+      "recommendations": [
+        "\u26a0\ufe0f Model suitable for production with enhanced monitoring",
+        "Expected ROI: 677.1% annually",
+        "Implement gradual rollout with pilot equipment",
+        "Establish performance monitoring thresholds",
+        "Plan for model retraining every 3-6 months",
+        "\ud83c\udfaf Improve RMSE from 0.7266 to below 0.005"
+      ],
+      "operational_recommendations": [
+        "Monitor key performance indicators: R\u00b2 > 0.60, RMSE < 0.005",
+        "Establish automated retraining pipeline",
+        "Set up data quality monitoring",
+        "Document model assumptions and limitations"
+      ]
+    },
+    "executive_summary": {
+      "report_title": "catboost - Business Impact Assessment",
+      "generated_date": "2025-09-09 18:18:13",
+      "model_name": "catboost",
+      "key_metrics": {
+        "prediction_accuracy": "84.2%",
+        "performance_level": "Good",
+        "features_analyzed": 20,
+        "data_samples_used": "18,830"
+      },
+      "business_impact": {
+        "annual_cost_savings": "$1,045,723",
+        "roi_percentage": "677.1%",
+        "payback_period": "1.8 months",
+        "net_present_value_3yr": "$2,897,168"
+      },
+      "risk_assessment": {
+        "technical_risk": "Medium - Good accuracy with monitoring required",
+        "business_risk": "Low - Strong financial case with high returns",
+        "implementation_complexity": "Low - Simple feature set, easy to implement"
+      },
+      "strategic_recommendation": {
+        "decision": "RECOMMEND",
+        "reasoning": "Good model performance with positive ROI",
+        "timeline": "Implement within 6 months",
+        "investment_priority": "Medium-High"
+      }
+    },
+    "analysis_metadata": {
+      "model_name": "catboost",
+      "analysis_date": "2025-09-09T18:18:13.426397",
+      "training_samples": 18830,
+      "test_samples": 4708,
+      "feature_count": 20
+    }
+  },
+  "catboost_scaled": {
+    "performance_assessment": {
+      "performance_level": "Poor",
+      "business_confidence": "Not suitable for production deployment",
+      "deployment_recommendation": "NOT_SUITABLE",
+      "test_r2": 0.4207757554782382,
+      "test_rmse": 1.389072060854784,
+      "rmse_acceptable": false,
+      "rmse_threshold": 0.005
+    },
+    "business_impact": {
+      "performance_metrics": {
+        "r2_score": 0.4207757554782382,
+        "rmse": 1.389072060854784,
+        "accuracy_improvement": 0.4207757554782382
+      },
+      "cost_savings": {
+        "annual_maintenance_savings": 31558.181660867864,
+        "downtime_cost_savings": 504930.90657388594,
+        "total_annual_savings": 509289.0882347538
+      },
+      "cost_avoidance": {
+        "false_alarm_cost": 26000.0,
+        "missed_detection_cost": 1200.0000000000002,
+        "total_cost_avoidance": 27200.0
+      },
+      "investment": {
+        "implementation_cost": 150000.0,
+        "annual_operating_cost": 30000.0,
+        "net_annual_benefit": 479289.0882347538
+      },
+      "roi": {
+        "roi_percentage": 319.5260588231692,
+        "payback_period_months": 3.7555622362059022
+      }
+    },
+    "deployment_recommendations": {
+      "model_name": "catboost_scaled",
+      "deployment_status": "NOT_SUITABLE",
+      "recommendations": [
+        "\u274c Model not suitable for production deployment",
+        "Insufficient ROI: 319.5%",
+        "Fundamental model architecture review required",
+        "Consider alternative modeling approaches",
+        "Reassess data quality and feature engineering",
+        "\ud83c\udfaf Improve RMSE from 1.3891 to below 0.005",
+        "\ud83d\udcca Target R\u00b2 improvement from 0.421 to above 0.80"
+      ],
+      "operational_recommendations": [
+        "Monitor key performance indicators: R\u00b2 > 0.60, RMSE < 0.005",
+        "Establish automated retraining pipeline",
+        "Set up data quality monitoring",
+        "Document model assumptions and limitations"
+      ]
+    },
+    "executive_summary": {
+      "report_title": "catboost_scaled - Business Impact Assessment",
+      "generated_date": "2025-09-09 18:18:13",
+      "model_name": "catboost_scaled",
+      "key_metrics": {
+        "prediction_accuracy": "42.1%",
+        "performance_level": "Poor",
+        "features_analyzed": 20,
+        "data_samples_used": "18,830"
+      },
+      "business_impact": {
+        "annual_cost_savings": "$509,289",
+        "roi_percentage": "319.5%",
+        "payback_period": "3.8 months",
+        "net_present_value_3yr": "$1,287,867"
+      },
+      "risk_assessment": {
+        "technical_risk": "Very High - Model not suitable for production",
+        "business_risk": "Low - Strong financial case with high returns",
+        "implementation_complexity": "Low - Simple feature set, easy to implement"
+      },
+      "strategic_recommendation": {
+        "decision": "CONDITIONAL APPROVAL",
+        "reasoning": "Marginal returns, proceed with caution",
+        "timeline": "Pilot project in 6-12 months",
+        "investment_priority": "Medium"
+      }
+    },
+    "analysis_metadata": {
+      "model_name": "catboost_scaled",
+      "analysis_date": "2025-09-09T18:18:13.432555",
+      "training_samples": 18830,
+      "test_samples": 4708,
+      "feature_count": 20
+    }
+  }
+}

@@ -1,0 +1,2027 @@
+{
+  "linear_regression": {
+    "model_name": "linear_regression",
+    "feature_count": 20,
+    "validation_timestamp": "2025-09-09T18:18:00.529732",
+    "validations": {
+      "basic_performance": {
+        "dataset": "test",
+        "r2_score": -1.8192485881041627,
+        "rmse": 3.064559770240831,
+        "checks": {
+          "r2_acceptable": {
+            "passed": false,
+            "actual": -1.8192485881041627,
+            "threshold": 0.8,
+            "message": "R\u00b2 score below minimum requirement"
+          },
+          "rmse_acceptable": {
+            "passed": false,
+            "actual": 3.064559770240831,
+            "threshold": 0.005,
+            "message": "RMSE exceeds acceptable limit"
+          }
+        },
+        "overall_performance_acceptable": false
+      },
+      "overfitting": {
+        "train_r2": 0.9396356126931267,
+        "test_r2": -1.8192485881041627,
+        "overfitting_r2": 2.758884200797289,
+        "train_rmse": 0.6036329204705747,
+        "test_rmse": 3.064559770240831,
+        "rmse_ratio": 5.076859903286569,
+        "checks": {
+          "overfitting_acceptable": {
+            "passed": false,
+            "actual": 2.758884200797289,
+            "threshold": 0.15,
+            "message": "Overfitting exceeds acceptable limits"
+          },
+          "rmse_degradation_acceptable": {
+            "passed": false,
+            "actual": 5.076859903286569,
+            "threshold": 1.5,
+            "message": "RMSE degradation too high"
+          }
+        },
+        "overall_overfitting_acceptable": false
+      },
+      "residual_distribution": {
+        "dataset": "test",
+        "residual_stats": {
+          "mean": -1.8197030600337536,
+          "std": 2.465807648354253,
+          "skewness": -1.4799175457314357,
+          "kurtosis": 1.8591994195951846,
+          "min": -10.387189162276883,
+          "max": 3.319740440169527
+        },
+        "checks": {
+          "residuals_centered": {
+            "passed": false,
+            "actual": -1.8197030600337536,
+            "threshold": 0.001,
+            "message": "Residuals are not centered around zero"
+          },
+          "skewness_acceptable": {
+            "passed": true,
+            "actual": -1.4799175457314357,
+            "threshold": 2.0,
+            "message": "Residual skewness acceptable"
+          }
+        },
+        "normality_test": {
+          "test": "shapiro-wilk",
+          "statistic": 0.8138543381356134,
+          "p_value": 4.991161364090891e-59,
+          "is_normal": false
+        },
+        "overall_residuals_acceptable": false
+      },
+      "prediction_accuracy": {
+        "dataset": "test",
+        "accuracy_thresholds": {
+          "0.001": 0.0,
+          "0.002": 0.10620220900594733,
+          "0.005": 0.29736618521665253
+        },
+        "checks": {
+          "accuracy_acceptable": {
+            "passed": false,
+            "actual": 0.0,
+            "threshold": 80.0,
+            "tolerance": 0.001,
+            "message": "Accuracy within \u00b10.001 below requirements"
+          }
+        }
+      },
+      "temporal_stability": {
+        "window_size": 100,
+        "checks": {
+          "temporal_stability": {
+            "passed": false,
+            "actual": 87.21649938647614,
+            "threshold": 0.1,
+            "message": "Temporal stability concerning"
+          }
+        },
+        "temporal_stats": {
+          "rolling_r2_mean": -30.49219212352501,
+          "rolling_r2_std": 87.21649938647614,
+          "rolling_r2_range": 897.1214992208556,
+          "rolling_r2_min": -896.1662956321206,
+          "rolling_r2_max": 0.9552035887349825
+        },
+        "overall_temporal_stability_acceptable": false
+      }
+    },
+    "overall_assessment": {
+      "readiness_status": "NOT_READY",
+      "readiness_message": "Model requires improvement before deployment",
+      "pass_rate": 12.5,
+      "passed_checks": 1,
+      "total_checks": 8,
+      "critical_failures": [
+        "basic_performance.r2_acceptable",
+        "overfitting.overfitting_acceptable"
+      ],
+      "warnings": [
+        "basic_performance.rmse_acceptable",
+        "overfitting.rmse_degradation_acceptable",
+        "residual_distribution.residuals_centered",
+        "prediction_accuracy.accuracy_acceptable",
+        "temporal_stability.temporal_stability"
+      ]
+    }
+  },
+  "ridge_regression": {
+    "model_name": "ridge_regression",
+    "feature_count": 20,
+    "validation_timestamp": "2025-09-09T18:18:01.320011",
+    "validations": {
+      "basic_performance": {
+        "dataset": "test",
+        "r2_score": -1.8215023785379958,
+        "rmse": 3.06578447523576,
+        "checks": {
+          "r2_acceptable": {
+            "passed": false,
+            "actual": -1.8215023785379958,
+            "threshold": 0.8,
+            "message": "R\u00b2 score below minimum requirement"
+          },
+          "rmse_acceptable": {
+            "passed": false,
+            "actual": 3.06578447523576,
+            "threshold": 0.005,
+            "message": "RMSE exceeds acceptable limit"
+          }
+        },
+        "overall_performance_acceptable": false
+      },
+      "overfitting": {
+        "train_r2": 0.9396355843618539,
+        "test_r2": -1.8215023785379958,
+        "overfitting_r2": 2.76113796289985,
+        "train_rmse": 0.6036330621243521,
+        "test_rmse": 3.06578447523576,
+        "rmse_ratio": 5.0788876017599405,
+        "checks": {
+          "overfitting_acceptable": {
+            "passed": false,
+            "actual": 2.76113796289985,
+            "threshold": 0.15,
+            "message": "Overfitting exceeds acceptable limits"
+          },
+          "rmse_degradation_acceptable": {
+            "passed": false,
+            "actual": 5.0788876017599405,
+            "threshold": 1.5,
+            "message": "RMSE degradation too high"
+          }
+        },
+        "overall_overfitting_acceptable": false
+      },
+      "residual_distribution": {
+        "dataset": "test",
+        "residual_stats": {
+          "mean": -1.8199357317448301,
+          "std": 2.467157956215008,
+          "skewness": -1.479969451272124,
+          "kurtosis": 1.858748957795008,
+          "min": -10.388836634369593,
+          "max": 3.3202697173676414
+        },
+        "checks": {
+          "residuals_centered": {
+            "passed": false,
+            "actual": -1.8199357317448301,
+            "threshold": 0.001,
+            "message": "Residuals are not centered around zero"
+          },
+          "skewness_acceptable": {
+            "passed": true,
+            "actual": -1.479969451272124,
+            "threshold": 2.0,
+            "message": "Residual skewness acceptable"
+          }
+        },
+        "normality_test": {
+          "test": "shapiro-wilk",
+          "statistic": 0.8137605296062678,
+          "p_value": 4.885474868012164e-59,
+          "is_normal": false
+        },
+        "overall_residuals_acceptable": false
+      },
+      "prediction_accuracy": {
+        "dataset": "test",
+        "accuracy_thresholds": {
+          "0.001": 0.04248088360237893,
+          "0.002": 0.08496176720475786,
+          "0.005": 0.33984706881903143
+        },
+        "checks": {
+          "accuracy_acceptable": {
+            "passed": false,
+            "actual": 0.04248088360237893,
+            "threshold": 80.0,
+            "tolerance": 0.001,
+            "message": "Accuracy within \u00b10.001 below requirements"
+          }
+        }
+      },
+      "temporal_stability": {
+        "window_size": 100,
+        "checks": {
+          "temporal_stability": {
+            "passed": false,
+            "actual": 87.20972540181931,
+            "threshold": 0.1,
+            "message": "Temporal stability concerning"
+          }
+        },
+        "temporal_stats": {
+          "rolling_r2_mean": -30.505592042203904,
+          "rolling_r2_std": 87.20972540181931,
+          "rolling_r2_range": 896.7472393162539,
+          "rolling_r2_min": -895.792054529833,
+          "rolling_r2_max": 0.9551847864208324
+        },
+        "overall_temporal_stability_acceptable": false
+      }
+    },
+    "overall_assessment": {
+      "readiness_status": "NOT_READY",
+      "readiness_message": "Model requires improvement before deployment",
+      "pass_rate": 12.5,
+      "passed_checks": 1,
+      "total_checks": 8,
+      "critical_failures": [
+        "basic_performance.r2_acceptable",
+        "overfitting.overfitting_acceptable"
+      ],
+      "warnings": [
+        "basic_performance.rmse_acceptable",
+        "overfitting.rmse_degradation_acceptable",
+        "residual_distribution.residuals_centered",
+        "prediction_accuracy.accuracy_acceptable",
+        "temporal_stability.temporal_stability"
+      ]
+    }
+  },
+  "lasso_regression": {
+    "model_name": "lasso_regression",
+    "feature_count": 20,
+    "validation_timestamp": "2025-09-09T18:18:02.107556",
+    "validations": {
+      "basic_performance": {
+        "dataset": "test",
+        "r2_score": 0.6019146460081171,
+        "rmse": 1.1515677933065882,
+        "checks": {
+          "r2_acceptable": {
+            "passed": false,
+            "actual": 0.6019146460081171,
+            "threshold": 0.8,
+            "message": "R\u00b2 score below minimum requirement"
+          },
+          "rmse_acceptable": {
+            "passed": false,
+            "actual": 1.1515677933065882,
+            "threshold": 0.005,
+            "message": "RMSE exceeds acceptable limit"
+          }
+        },
+        "overall_performance_acceptable": false
+      },
+      "overfitting": {
+        "train_r2": 0.7331090181888806,
+        "test_r2": 0.6019146460081171,
+        "overfitting_r2": 0.13119437218076357,
+        "train_rmse": 1.2692567104461856,
+        "test_rmse": 1.1515677933065882,
+        "rmse_ratio": 0.907277293733412,
+        "checks": {
+          "overfitting_acceptable": {
+            "passed": true,
+            "actual": 0.13119437218076357,
+            "threshold": 0.15,
+            "message": "Overfitting within acceptable limits"
+          },
+          "rmse_degradation_acceptable": {
+            "passed": true,
+            "actual": 0.907277293733412,
+            "threshold": 1.5,
+            "message": "RMSE degradation acceptable"
+          }
+        },
+        "overall_overfitting_acceptable": true
+      },
+      "residual_distribution": {
+        "dataset": "test",
+        "residual_stats": {
+          "mean": 0.3943343580656754,
+          "std": 1.0819467623824828,
+          "skewness": -0.3110647559712952,
+          "kurtosis": -0.2898524492013097,
+          "min": -1.9694795559488902,
+          "max": 4.558469018800002
+        },
+        "checks": {
+          "residuals_centered": {
+            "passed": false,
+            "actual": 0.3943343580656754,
+            "threshold": 0.001,
+            "message": "Residuals are not centered around zero"
+          },
+          "skewness_acceptable": {
+            "passed": true,
+            "actual": -0.3110647559712952,
+            "threshold": 2.0,
+            "message": "Residual skewness acceptable"
+          }
+        },
+        "normality_test": {
+          "test": "shapiro-wilk",
+          "statistic": 0.9818968334750425,
+          "p_value": 4.380884279685056e-24,
+          "is_normal": false
+        },
+        "overall_residuals_acceptable": false
+      },
+      "prediction_accuracy": {
+        "dataset": "test",
+        "accuracy_thresholds": {
+          "0.001": 0.04248088360237893,
+          "0.002": 0.08496176720475786,
+          "0.005": 0.29736618521665253
+        },
+        "checks": {
+          "accuracy_acceptable": {
+            "passed": false,
+            "actual": 0.04248088360237893,
+            "threshold": 80.0,
+            "tolerance": 0.001,
+            "message": "Accuracy within \u00b10.001 below requirements"
+          }
+        }
+      },
+      "temporal_stability": {
+        "window_size": 100,
+        "checks": {
+          "temporal_stability": {
+            "passed": false,
+            "actual": 289.41440795488944,
+            "threshold": 0.1,
+            "message": "Temporal stability concerning"
+          }
+        },
+        "temporal_stats": {
+          "rolling_r2_mean": -34.060189293081635,
+          "rolling_r2_std": 289.41440795488944,
+          "rolling_r2_range": 3644.5004546483415,
+          "rolling_r2_min": -3643.6589326051653,
+          "rolling_r2_max": 0.8415220431759991
+        },
+        "overall_temporal_stability_acceptable": false
+      }
+    },
+    "overall_assessment": {
+      "readiness_status": "NOT_READY",
+      "readiness_message": "Model requires improvement before deployment",
+      "pass_rate": 37.5,
+      "passed_checks": 3,
+      "total_checks": 8,
+      "critical_failures": [
+        "basic_performance.r2_acceptable"
+      ],
+      "warnings": [
+        "basic_performance.rmse_acceptable",
+        "residual_distribution.residuals_centered",
+        "prediction_accuracy.accuracy_acceptable",
+        "temporal_stability.temporal_stability"
+      ]
+    }
+  },
+  "huber_regressor": {
+    "model_name": "huber_regressor",
+    "feature_count": 20,
+    "validation_timestamp": "2025-09-09T18:18:02.912705",
+    "validations": {
+      "basic_performance": {
+        "dataset": "test",
+        "r2_score": -1.5932430860551126,
+        "rmse": 2.9391586201347004,
+        "checks": {
+          "r2_acceptable": {
+            "passed": false,
+            "actual": -1.5932430860551126,
+            "threshold": 0.8,
+            "message": "R\u00b2 score below minimum requirement"
+          },
+          "rmse_acceptable": {
+            "passed": false,
+            "actual": 2.9391586201347004,
+            "threshold": 0.005,
+            "message": "RMSE exceeds acceptable limit"
+          }
+        },
+        "overall_performance_acceptable": false
+      },
+      "overfitting": {
+        "train_r2": 0.9372107422564354,
+        "test_r2": -1.5932430860551126,
+        "overfitting_r2": 2.530453828311548,
+        "train_rmse": 0.6156376802381142,
+        "test_rmse": 2.9391586201347004,
+        "rmse_ratio": 4.774169474158734,
+        "checks": {
+          "overfitting_acceptable": {
+            "passed": false,
+            "actual": 2.530453828311548,
+            "threshold": 0.15,
+            "message": "Overfitting exceeds acceptable limits"
+          },
+          "rmse_degradation_acceptable": {
+            "passed": false,
+            "actual": 4.774169474158734,
+            "threshold": 1.5,
+            "message": "RMSE degradation too high"
+          }
+        },
+        "overall_overfitting_acceptable": false
+      },
+      "residual_distribution": {
+        "dataset": "test",
+        "residual_stats": {
+          "mean": -1.7467230581106872,
+          "std": 2.363813011339215,
+          "skewness": -1.4102378801818345,
+          "kurtosis": 1.5267779615105521,
+          "min": -9.755709114648225,
+          "max": 3.2738914774875365
+        },
+        "checks": {
+          "residuals_centered": {
+            "passed": false,
+            "actual": -1.7467230581106872,
+            "threshold": 0.001,
+            "message": "Residuals are not centered around zero"
+          },
+          "skewness_acceptable": {
+            "passed": true,
+            "actual": -1.4102378801818345,
+            "threshold": 2.0,
+            "message": "Residual skewness acceptable"
+          }
+        },
+        "normality_test": {
+          "test": "shapiro-wilk",
+          "statistic": 0.8208432552022056,
+          "p_value": 2.523452467385212e-58,
+          "is_normal": false
+        },
+        "overall_residuals_acceptable": false
+      },
+      "prediction_accuracy": {
+        "dataset": "test",
+        "accuracy_thresholds": {
+          "0.001": 0.04248088360237893,
+          "0.002": 0.10620220900594733,
+          "0.005": 0.21240441801189466
+        },
+        "checks": {
+          "accuracy_acceptable": {
+            "passed": false,
+            "actual": 0.04248088360237893,
+            "threshold": 80.0,
+            "tolerance": 0.001,
+            "message": "Accuracy within \u00b10.001 below requirements"
+          }
+        }
+      },
+      "temporal_stability": {
+        "window_size": 100,
+        "checks": {
+          "temporal_stability": {
+            "passed": false,
+            "actual": 106.82146416536195,
+            "threshold": 0.1,
+            "message": "Temporal stability concerning"
+          }
+        },
+        "temporal_stats": {
+          "rolling_r2_mean": -31.764545285339945,
+          "rolling_r2_std": 106.82146416536195,
+          "rolling_r2_range": 1189.3128196466296,
+          "rolling_r2_min": -1188.3689324921545,
+          "rolling_r2_max": 0.943887154475182
+        },
+        "overall_temporal_stability_acceptable": false
+      }
+    },
+    "overall_assessment": {
+      "readiness_status": "NOT_READY",
+      "readiness_message": "Model requires improvement before deployment",
+      "pass_rate": 12.5,
+      "passed_checks": 1,
+      "total_checks": 8,
+      "critical_failures": [
+        "basic_performance.r2_acceptable",
+        "overfitting.overfitting_acceptable"
+      ],
+      "warnings": [
+        "basic_performance.rmse_acceptable",
+        "overfitting.rmse_degradation_acceptable",
+        "residual_distribution.residuals_centered",
+        "prediction_accuracy.accuracy_acceptable",
+        "temporal_stability.temporal_stability"
+      ]
+    }
+  },
+  "decision_tree": {
+    "model_name": "decision_tree",
+    "feature_count": 20,
+    "validation_timestamp": "2025-09-09T18:18:03.732909",
+    "validations": {
+      "basic_performance": {
+        "dataset": "test",
+        "r2_score": 0.6645098768406221,
+        "rmse": 1.057161357227321,
+        "checks": {
+          "r2_acceptable": {
+            "passed": false,
+            "actual": 0.6645098768406221,
+            "threshold": 0.8,
+            "message": "R\u00b2 score below minimum requirement"
+          },
+          "rmse_acceptable": {
+            "passed": false,
+            "actual": 1.057161357227321,
+            "threshold": 0.005,
+            "message": "RMSE exceeds acceptable limit"
+          }
+        },
+        "overall_performance_acceptable": false
+      },
+      "overfitting": {
+        "train_r2": 0.9742682615925262,
+        "test_r2": 0.6645098768406221,
+        "overfitting_r2": 0.3097583847519041,
+        "train_rmse": 0.3941096621425452,
+        "test_rmse": 1.057161357227321,
+        "rmse_ratio": 2.682404058505313,
+        "checks": {
+          "overfitting_acceptable": {
+            "passed": false,
+            "actual": 0.3097583847519041,
+            "threshold": 0.15,
+            "message": "Overfitting exceeds acceptable limits"
+          },
+          "rmse_degradation_acceptable": {
+            "passed": false,
+            "actual": 2.682404058505313,
+            "threshold": 1.5,
+            "message": "RMSE degradation too high"
+          }
+        },
+        "overall_overfitting_acceptable": false
+      },
+      "residual_distribution": {
+        "dataset": "test",
+        "residual_stats": {
+          "mean": 0.08290730758051028,
+          "std": 1.0539053627173847,
+          "skewness": -0.8427373910176686,
+          "kurtosis": 1.2976029629235581,
+          "min": -3.6537954302500006,
+          "max": 4.401993316321429
+        },
+        "checks": {
+          "residuals_centered": {
+            "passed": false,
+            "actual": 0.08290730758051028,
+            "threshold": 0.001,
+            "message": "Residuals are not centered around zero"
+          },
+          "skewness_acceptable": {
+            "passed": true,
+            "actual": -0.8427373910176686,
+            "threshold": 2.0,
+            "message": "Residual skewness acceptable"
+          }
+        },
+        "normality_test": {
+          "test": "shapiro-wilk",
+          "statistic": 0.9489849656726602,
+          "p_value": 1.2375616052545196e-37,
+          "is_normal": false
+        },
+        "overall_residuals_acceptable": false
+      },
+      "prediction_accuracy": {
+        "dataset": "test",
+        "accuracy_thresholds": {
+          "0.001": 0.21240441801189466,
+          "0.002": 0.33984706881903143,
+          "0.005": 0.9558198810535259
+        },
+        "checks": {
+          "accuracy_acceptable": {
+            "passed": false,
+            "actual": 0.21240441801189466,
+            "threshold": 80.0,
+            "tolerance": 0.001,
+            "message": "Accuracy within \u00b10.001 below requirements"
+          }
+        }
+      },
+      "temporal_stability": {
+        "window_size": 100,
+        "checks": {
+          "temporal_stability": {
+            "passed": false,
+            "actual": 2.2499236214563787,
+            "threshold": 0.1,
+            "message": "Temporal stability concerning"
+          }
+        },
+        "temporal_stats": {
+          "rolling_r2_mean": -1.2259547849529628,
+          "rolling_r2_std": 2.2499236214563787,
+          "rolling_r2_range": 13.121197540593597,
+          "rolling_r2_min": -12.135447287137488,
+          "rolling_r2_max": 0.9857502534561083
+        },
+        "overall_temporal_stability_acceptable": false
+      }
+    },
+    "overall_assessment": {
+      "readiness_status": "NOT_READY",
+      "readiness_message": "Model requires improvement before deployment",
+      "pass_rate": 12.5,
+      "passed_checks": 1,
+      "total_checks": 8,
+      "critical_failures": [
+        "basic_performance.r2_acceptable",
+        "overfitting.overfitting_acceptable"
+      ],
+      "warnings": [
+        "basic_performance.rmse_acceptable",
+        "overfitting.rmse_degradation_acceptable",
+        "residual_distribution.residuals_centered",
+        "prediction_accuracy.accuracy_acceptable",
+        "temporal_stability.temporal_stability"
+      ]
+    }
+  },
+  "decision_tree_scaled": {
+    "model_name": "decision_tree_scaled",
+    "feature_count": 20,
+    "validation_timestamp": "2025-09-09T18:18:04.503388",
+    "validations": {
+      "basic_performance": {
+        "dataset": "test",
+        "r2_score": 0.16625931800579097,
+        "rmse": 1.6665444702868994,
+        "checks": {
+          "r2_acceptable": {
+            "passed": false,
+            "actual": 0.16625931800579097,
+            "threshold": 0.8,
+            "message": "R\u00b2 score below minimum requirement"
+          },
+          "rmse_acceptable": {
+            "passed": false,
+            "actual": 1.6665444702868994,
+            "threshold": 0.005,
+            "message": "RMSE exceeds acceptable limit"
+          }
+        },
+        "overall_performance_acceptable": false
+      },
+      "overfitting": {
+        "train_r2": 0.15169765406199487,
+        "test_r2": 0.16625931800579097,
+        "overfitting_r2": -0.0145616639437961,
+        "train_rmse": 2.262860869727667,
+        "test_rmse": 1.6665444702868994,
+        "rmse_ratio": 0.7364767726473022,
+        "checks": {
+          "overfitting_acceptable": {
+            "passed": true,
+            "actual": -0.0145616639437961,
+            "threshold": 0.15,
+            "message": "Overfitting within acceptable limits"
+          },
+          "rmse_degradation_acceptable": {
+            "passed": true,
+            "actual": 0.7364767726473022,
+            "threshold": 1.5,
+            "message": "RMSE degradation acceptable"
+          }
+        },
+        "overall_overfitting_acceptable": true
+      },
+      "residual_distribution": {
+        "dataset": "test",
+        "residual_stats": {
+          "mean": -0.4723539496104604,
+          "std": 1.5982028086983335,
+          "skewness": -0.9630130802656369,
+          "kurtosis": 0.29134536308853276,
+          "min": -5.31198374093,
+          "max": 4.0686112862999995
+        },
+        "checks": {
+          "residuals_centered": {
+            "passed": false,
+            "actual": -0.4723539496104604,
+            "threshold": 0.001,
+            "message": "Residuals are not centered around zero"
+          },
+          "skewness_acceptable": {
+            "passed": true,
+            "actual": -0.9630130802656369,
+            "threshold": 2.0,
+            "message": "Residual skewness acceptable"
+          }
+        },
+        "normality_test": {
+          "test": "shapiro-wilk",
+          "statistic": 0.914538625050936,
+          "p_value": 1.4462771658665627e-45,
+          "is_normal": false
+        },
+        "overall_residuals_acceptable": false
+      },
+      "prediction_accuracy": {
+        "dataset": "test",
+        "accuracy_thresholds": {
+          "0.001": 0.0637213254035684,
+          "0.002": 0.10620220900594733,
+          "0.005": 0.2548853016142736
+        },
+        "checks": {
+          "accuracy_acceptable": {
+            "passed": false,
+            "actual": 0.0637213254035684,
+            "threshold": 80.0,
+            "tolerance": 0.001,
+            "message": "Accuracy within \u00b10.001 below requirements"
+          }
+        }
+      },
+      "temporal_stability": {
+        "window_size": 100,
+        "checks": {
+          "temporal_stability": {
+            "passed": false,
+            "actual": 1445.8560357698013,
+            "threshold": 0.1,
+            "message": "Temporal stability concerning"
+          }
+        },
+        "temporal_stats": {
+          "rolling_r2_mean": -164.69704788459828,
+          "rolling_r2_std": 1445.8560357698013,
+          "rolling_r2_range": 18211.615239781084,
+          "rolling_r2_min": -18211.240521090862,
+          "rolling_r2_max": 0.3747186902213788
+        },
+        "overall_temporal_stability_acceptable": false
+      }
+    },
+    "overall_assessment": {
+      "readiness_status": "NOT_READY",
+      "readiness_message": "Model requires improvement before deployment",
+      "pass_rate": 37.5,
+      "passed_checks": 3,
+      "total_checks": 8,
+      "critical_failures": [
+        "basic_performance.r2_acceptable"
+      ],
+      "warnings": [
+        "basic_performance.rmse_acceptable",
+        "residual_distribution.residuals_centered",
+        "prediction_accuracy.accuracy_acceptable",
+        "temporal_stability.temporal_stability"
+      ]
+    }
+  },
+  "random_forest": {
+    "model_name": "random_forest",
+    "feature_count": 20,
+    "validation_timestamp": "2025-09-09T18:18:05.300192",
+    "validations": {
+      "basic_performance": {
+        "dataset": "test",
+        "r2_score": 0.7517526421508436,
+        "rmse": 0.9093765015431184,
+        "checks": {
+          "r2_acceptable": {
+            "passed": false,
+            "actual": 0.7517526421508436,
+            "threshold": 0.8,
+            "message": "R\u00b2 score below minimum requirement"
+          },
+          "rmse_acceptable": {
+            "passed": false,
+            "actual": 0.9093765015431184,
+            "threshold": 0.005,
+            "message": "RMSE exceeds acceptable limit"
+          }
+        },
+        "overall_performance_acceptable": false
+      },
+      "overfitting": {
+        "train_r2": 0.9775778349593804,
+        "test_r2": 0.7517526421508436,
+        "overfitting_r2": 0.22582519280853686,
+        "train_rmse": 0.36789280218882664,
+        "test_rmse": 0.9093765015431184,
+        "rmse_ratio": 2.471851844158579,
+        "checks": {
+          "overfitting_acceptable": {
+            "passed": false,
+            "actual": 0.22582519280853686,
+            "threshold": 0.15,
+            "message": "Overfitting exceeds acceptable limits"
+          },
+          "rmse_degradation_acceptable": {
+            "passed": false,
+            "actual": 2.471851844158579,
+            "threshold": 1.5,
+            "message": "RMSE degradation too high"
+          }
+        },
+        "overall_overfitting_acceptable": false
+      },
+      "residual_distribution": {
+        "dataset": "test",
+        "residual_stats": {
+          "mean": -0.03232301174561611,
+          "std": 0.9088018730562202,
+          "skewness": -0.6222571833370696,
+          "kurtosis": 0.7833348455891809,
+          "min": -3.07616049538374,
+          "max": 4.370076423703089
+        },
+        "checks": {
+          "residuals_centered": {
+            "passed": false,
+            "actual": -0.03232301174561611,
+            "threshold": 0.001,
+            "message": "Residuals are not centered around zero"
+          },
+          "skewness_acceptable": {
+            "passed": true,
+            "actual": -0.6222571833370696,
+            "threshold": 2.0,
+            "message": "Residual skewness acceptable"
+          }
+        },
+        "normality_test": {
+          "test": "shapiro-wilk",
+          "statistic": 0.9577069836599509,
+          "p_value": 6.02438251543467e-35,
+          "is_normal": false
+        },
+        "overall_residuals_acceptable": false
+      },
+      "prediction_accuracy": {
+        "dataset": "test",
+        "accuracy_thresholds": {
+          "0.001": 0.16992353440951571,
+          "0.002": 0.4248088360237893,
+          "0.005": 1.040781648258284
+        },
+        "checks": {
+          "accuracy_acceptable": {
+            "passed": false,
+            "actual": 0.16992353440951571,
+            "threshold": 80.0,
+            "tolerance": 0.001,
+            "message": "Accuracy within \u00b10.001 below requirements"
+          }
+        }
+      },
+      "temporal_stability": {
+        "window_size": 100,
+        "checks": {
+          "temporal_stability": {
+            "passed": false,
+            "actual": 1.4399244206197495,
+            "threshold": 0.1,
+            "message": "Temporal stability concerning"
+          }
+        },
+        "temporal_stats": {
+          "rolling_r2_mean": -0.4708814890211814,
+          "rolling_r2_std": 1.4399244206197495,
+          "rolling_r2_range": 10.50012089159959,
+          "rolling_r2_min": -9.511267222769613,
+          "rolling_r2_max": 0.9888536688299773
+        },
+        "overall_temporal_stability_acceptable": false
+      }
+    },
+    "overall_assessment": {
+      "readiness_status": "NOT_READY",
+      "readiness_message": "Model requires improvement before deployment",
+      "pass_rate": 12.5,
+      "passed_checks": 1,
+      "total_checks": 8,
+      "critical_failures": [
+        "basic_performance.r2_acceptable",
+        "overfitting.overfitting_acceptable"
+      ],
+      "warnings": [
+        "basic_performance.rmse_acceptable",
+        "overfitting.rmse_degradation_acceptable",
+        "residual_distribution.residuals_centered",
+        "prediction_accuracy.accuracy_acceptable",
+        "temporal_stability.temporal_stability"
+      ]
+    }
+  },
+  "random_forest_scaled": {
+    "model_name": "random_forest_scaled",
+    "feature_count": 20,
+    "validation_timestamp": "2025-09-09T18:18:06.082235",
+    "validations": {
+      "basic_performance": {
+        "dataset": "test",
+        "r2_score": 0.0074284362427375905,
+        "rmse": 1.8183702809887219,
+        "checks": {
+          "r2_acceptable": {
+            "passed": false,
+            "actual": 0.0074284362427375905,
+            "threshold": 0.8,
+            "message": "R\u00b2 score below minimum requirement"
+          },
+          "rmse_acceptable": {
+            "passed": false,
+            "actual": 1.8183702809887219,
+            "threshold": 0.005,
+            "message": "RMSE exceeds acceptable limit"
+          }
+        },
+        "overall_performance_acceptable": false
+      },
+      "overfitting": {
+        "train_r2": -0.057361612196353606,
+        "test_r2": 0.0074284362427375905,
+        "overfitting_r2": -0.0647900484390912,
+        "train_rmse": 2.5263544828801017,
+        "test_rmse": 1.8183702809887219,
+        "rmse_ratio": 0.7197605456047238,
+        "checks": {
+          "overfitting_acceptable": {
+            "passed": true,
+            "actual": -0.0647900484390912,
+            "threshold": 0.15,
+            "message": "Overfitting within acceptable limits"
+          },
+          "rmse_degradation_acceptable": {
+            "passed": true,
+            "actual": 0.7197605456047238,
+            "threshold": 1.5,
+            "message": "RMSE degradation acceptable"
+          }
+        },
+        "overall_overfitting_acceptable": true
+      },
+      "residual_distribution": {
+        "dataset": "test",
+        "residual_stats": {
+          "mean": 0.13596456620013447,
+          "std": 1.8132799330277198,
+          "skewness": -1.2806818253737375,
+          "kurtosis": 1.0801693584294982,
+          "min": -4.841272508659065,
+          "max": 4.767552795632636
+        },
+        "checks": {
+          "residuals_centered": {
+            "passed": false,
+            "actual": 0.13596456620013447,
+            "threshold": 0.001,
+            "message": "Residuals are not centered around zero"
+          },
+          "skewness_acceptable": {
+            "passed": true,
+            "actual": -1.2806818253737375,
+            "threshold": 2.0,
+            "message": "Residual skewness acceptable"
+          }
+        },
+        "normality_test": {
+          "test": "shapiro-wilk",
+          "statistic": 0.8660867688719623,
+          "p_value": 4.100388849141885e-53,
+          "is_normal": false
+        },
+        "overall_residuals_acceptable": false
+      },
+      "prediction_accuracy": {
+        "dataset": "test",
+        "accuracy_thresholds": {
+          "0.001": 0.0637213254035684,
+          "0.002": 0.10620220900594733,
+          "0.005": 0.29736618521665253
+        },
+        "checks": {
+          "accuracy_acceptable": {
+            "passed": false,
+            "actual": 0.0637213254035684,
+            "threshold": 80.0,
+            "tolerance": 0.001,
+            "message": "Accuracy within \u00b10.001 below requirements"
+          }
+        }
+      },
+      "temporal_stability": {
+        "window_size": 100,
+        "checks": {
+          "temporal_stability": {
+            "passed": false,
+            "actual": 1626.2856885969943,
+            "threshold": 0.1,
+            "message": "Temporal stability concerning"
+          }
+        },
+        "temporal_stats": {
+          "rolling_r2_mean": -186.03952705101773,
+          "rolling_r2_std": 1626.2856885969943,
+          "rolling_r2_range": 20707.453552232142,
+          "rolling_r2_min": -20707.444118327265,
+          "rolling_r2_max": 0.009433904876357202
+        },
+        "overall_temporal_stability_acceptable": false
+      }
+    },
+    "overall_assessment": {
+      "readiness_status": "NOT_READY",
+      "readiness_message": "Model requires improvement before deployment",
+      "pass_rate": 37.5,
+      "passed_checks": 3,
+      "total_checks": 8,
+      "critical_failures": [
+        "basic_performance.r2_acceptable"
+      ],
+      "warnings": [
+        "basic_performance.rmse_acceptable",
+        "residual_distribution.residuals_centered",
+        "prediction_accuracy.accuracy_acceptable",
+        "temporal_stability.temporal_stability"
+      ]
+    }
+  },
+  "gradient_boosting": {
+    "model_name": "gradient_boosting",
+    "feature_count": 20,
+    "validation_timestamp": "2025-09-09T18:18:06.899485",
+    "validations": {
+      "basic_performance": {
+        "dataset": "test",
+        "r2_score": 0.7714263881931349,
+        "rmse": 0.8725984872267356,
+        "checks": {
+          "r2_acceptable": {
+            "passed": false,
+            "actual": 0.7714263881931349,
+            "threshold": 0.8,
+            "message": "R\u00b2 score below minimum requirement"
+          },
+          "rmse_acceptable": {
+            "passed": false,
+            "actual": 0.8725984872267356,
+            "threshold": 0.005,
+            "message": "RMSE exceeds acceptable limit"
+          }
+        },
+        "overall_performance_acceptable": false
+      },
+      "overfitting": {
+        "train_r2": 0.9813172041267787,
+        "test_r2": 0.7714263881931349,
+        "overfitting_r2": 0.20989081593364378,
+        "train_rmse": 0.3358175995099907,
+        "test_rmse": 0.8725984872267356,
+        "rmse_ratio": 2.5984298872363762,
+        "checks": {
+          "overfitting_acceptable": {
+            "passed": false,
+            "actual": 0.20989081593364378,
+            "threshold": 0.15,
+            "message": "Overfitting exceeds acceptable limits"
+          },
+          "rmse_degradation_acceptable": {
+            "passed": false,
+            "actual": 2.5984298872363762,
+            "threshold": 1.5,
+            "message": "RMSE degradation too high"
+          }
+        },
+        "overall_overfitting_acceptable": false
+      },
+      "residual_distribution": {
+        "dataset": "test",
+        "residual_stats": {
+          "mean": -0.08645397127248847,
+          "std": 0.8683051484136226,
+          "skewness": -0.6125262803327179,
+          "kurtosis": 0.4967007600719793,
+          "min": -2.794810930932945,
+          "max": 4.0835650840596776
+        },
+        "checks": {
+          "residuals_centered": {
+            "passed": false,
+            "actual": -0.08645397127248847,
+            "threshold": 0.001,
+            "message": "Residuals are not centered around zero"
+          },
+          "skewness_acceptable": {
+            "passed": true,
+            "actual": -0.6125262803327179,
+            "threshold": 2.0,
+            "message": "Residual skewness acceptable"
+          }
+        },
+        "normality_test": {
+          "test": "shapiro-wilk",
+          "statistic": 0.9582800345740082,
+          "p_value": 9.362232611957049e-35,
+          "is_normal": false
+        },
+        "overall_residuals_acceptable": false
+      },
+      "prediction_accuracy": {
+        "dataset": "test",
+        "accuracy_thresholds": {
+          "0.001": 0.04248088360237893,
+          "0.002": 0.16992353440951571,
+          "0.005": 0.6796941376380629
+        },
+        "checks": {
+          "accuracy_acceptable": {
+            "passed": false,
+            "actual": 0.04248088360237893,
+            "threshold": 80.0,
+            "tolerance": 0.001,
+            "message": "Accuracy within \u00b10.001 below requirements"
+          }
+        }
+      },
+      "temporal_stability": {
+        "window_size": 100,
+        "checks": {
+          "temporal_stability": {
+            "passed": false,
+            "actual": 1.4514564475234608,
+            "threshold": 0.1,
+            "message": "Temporal stability concerning"
+          }
+        },
+        "temporal_stats": {
+          "rolling_r2_mean": -0.39178488296020314,
+          "rolling_r2_std": 1.4514564475234608,
+          "rolling_r2_range": 9.387337938686555,
+          "rolling_r2_min": -8.406604681482174,
+          "rolling_r2_max": 0.980733257204382
+        },
+        "overall_temporal_stability_acceptable": false
+      }
+    },
+    "overall_assessment": {
+      "readiness_status": "NOT_READY",
+      "readiness_message": "Model requires improvement before deployment",
+      "pass_rate": 12.5,
+      "passed_checks": 1,
+      "total_checks": 8,
+      "critical_failures": [
+        "basic_performance.r2_acceptable",
+        "overfitting.overfitting_acceptable"
+      ],
+      "warnings": [
+        "basic_performance.rmse_acceptable",
+        "overfitting.rmse_degradation_acceptable",
+        "residual_distribution.residuals_centered",
+        "prediction_accuracy.accuracy_acceptable",
+        "temporal_stability.temporal_stability"
+      ]
+    }
+  },
+  "gradient_boosting_scaled": {
+    "model_name": "gradient_boosting_scaled",
+    "feature_count": 20,
+    "validation_timestamp": "2025-09-09T18:18:07.791323",
+    "validations": {
+      "basic_performance": {
+        "dataset": "test",
+        "r2_score": 0.05402154413345972,
+        "rmse": 1.7751785157246749,
+        "checks": {
+          "r2_acceptable": {
+            "passed": false,
+            "actual": 0.05402154413345972,
+            "threshold": 0.8,
+            "message": "R\u00b2 score below minimum requirement"
+          },
+          "rmse_acceptable": {
+            "passed": false,
+            "actual": 1.7751785157246749,
+            "threshold": 0.005,
+            "message": "RMSE exceeds acceptable limit"
+          }
+        },
+        "overall_performance_acceptable": false
+      },
+      "overfitting": {
+        "train_r2": -0.05692555336812655,
+        "test_r2": 0.05402154413345972,
+        "overfitting_r2": -0.11094709750158627,
+        "train_rmse": 2.525833491401896,
+        "test_rmse": 1.7751785157246749,
+        "rmse_ratio": 0.7028090021640381,
+        "checks": {
+          "overfitting_acceptable": {
+            "passed": true,
+            "actual": -0.11094709750158627,
+            "threshold": 0.15,
+            "message": "Overfitting within acceptable limits"
+          },
+          "rmse_degradation_acceptable": {
+            "passed": true,
+            "actual": 0.7028090021640381,
+            "threshold": 1.5,
+            "message": "RMSE degradation acceptable"
+          }
+        },
+        "overall_overfitting_acceptable": true
+      },
+      "residual_distribution": {
+        "dataset": "test",
+        "residual_stats": {
+          "mean": -0.1369657724543913,
+          "std": 1.7698867590516725,
+          "skewness": -1.284012997473539,
+          "kurtosis": 1.164291291094882,
+          "min": -5.579654306531507,
+          "max": 4.449324604343118
+        },
+        "checks": {
+          "residuals_centered": {
+            "passed": false,
+            "actual": -0.1369657724543913,
+            "threshold": 0.001,
+            "message": "Residuals are not centered around zero"
+          },
+          "skewness_acceptable": {
+            "passed": true,
+            "actual": -1.284012997473539,
+            "threshold": 2.0,
+            "message": "Residual skewness acceptable"
+          }
+        },
+        "normality_test": {
+          "test": "shapiro-wilk",
+          "statistic": 0.8743043476377542,
+          "p_value": 5.167327299176865e-52,
+          "is_normal": false
+        },
+        "overall_residuals_acceptable": false
+      },
+      "prediction_accuracy": {
+        "dataset": "test",
+        "accuracy_thresholds": {
+          "0.001": 0.021240441801189464,
+          "0.002": 0.0637213254035684,
+          "0.005": 0.2548853016142736
+        },
+        "checks": {
+          "accuracy_acceptable": {
+            "passed": false,
+            "actual": 0.021240441801189464,
+            "threshold": 80.0,
+            "tolerance": 0.001,
+            "message": "Accuracy within \u00b10.001 below requirements"
+          }
+        }
+      },
+      "temporal_stability": {
+        "window_size": 100,
+        "checks": {
+          "temporal_stability": {
+            "passed": false,
+            "actual": 1837.8194099222394,
+            "threshold": 0.1,
+            "message": "Temporal stability concerning"
+          }
+        },
+        "temporal_stats": {
+          "rolling_r2_mean": -208.20489861394063,
+          "rolling_r2_std": 1837.8194099222394,
+          "rolling_r2_range": 23722.684431954684,
+          "rolling_r2_min": -23722.537538525026,
+          "rolling_r2_max": 0.14689342965698537
+        },
+        "overall_temporal_stability_acceptable": false
+      }
+    },
+    "overall_assessment": {
+      "readiness_status": "NOT_READY",
+      "readiness_message": "Model requires improvement before deployment",
+      "pass_rate": 37.5,
+      "passed_checks": 3,
+      "total_checks": 8,
+      "critical_failures": [
+        "basic_performance.r2_acceptable"
+      ],
+      "warnings": [
+        "basic_performance.rmse_acceptable",
+        "residual_distribution.residuals_centered",
+        "prediction_accuracy.accuracy_acceptable",
+        "temporal_stability.temporal_stability"
+      ]
+    }
+  },
+  "knn_regressor": {
+    "model_name": "knn_regressor",
+    "feature_count": 20,
+    "validation_timestamp": "2025-09-09T18:18:08.917939",
+    "validations": {
+      "basic_performance": {
+        "dataset": "test",
+        "r2_score": 0.6404459135441187,
+        "rmse": 1.0944187497151763,
+        "checks": {
+          "r2_acceptable": {
+            "passed": false,
+            "actual": 0.6404459135441187,
+            "threshold": 0.8,
+            "message": "R\u00b2 score below minimum requirement"
+          },
+          "rmse_acceptable": {
+            "passed": false,
+            "actual": 1.0944187497151763,
+            "threshold": 0.005,
+            "message": "RMSE exceeds acceptable limit"
+          }
+        },
+        "overall_performance_acceptable": false
+      },
+      "overfitting": {
+        "train_r2": 0.9999999999988487,
+        "test_r2": 0.6404459135441187,
+        "overfitting_r2": 0.35955408645472997,
+        "train_rmse": 2.6362268805802273e-06,
+        "test_rmse": 1.0944187497151763,
+        "rmse_ratio": 415145.88815447374,
+        "checks": {
+          "overfitting_acceptable": {
+            "passed": false,
+            "actual": 0.35955408645472997,
+            "threshold": 0.15,
+            "message": "Overfitting exceeds acceptable limits"
+          },
+          "rmse_degradation_acceptable": {
+            "passed": false,
+            "actual": 415145.88815447374,
+            "threshold": 1.5,
+            "message": "RMSE degradation too high"
+          }
+        },
+        "overall_overfitting_acceptable": false
+      },
+      "residual_distribution": {
+        "dataset": "test",
+        "residual_stats": {
+          "mean": -0.11185825101600926,
+          "std": 1.0886873432752715,
+          "skewness": -1.015191661953911,
+          "kurtosis": 1.2400199503578566,
+          "min": -5.132808089151251,
+          "max": 3.1785967730752525
+        },
+        "checks": {
+          "residuals_centered": {
+            "passed": false,
+            "actual": -0.11185825101600926,
+            "threshold": 0.001,
+            "message": "Residuals are not centered around zero"
+          },
+          "skewness_acceptable": {
+            "passed": true,
+            "actual": -1.015191661953911,
+            "threshold": 2.0,
+            "message": "Residual skewness acceptable"
+          }
+        },
+        "normality_test": {
+          "test": "shapiro-wilk",
+          "statistic": 0.9312592398940551,
+          "p_value": 4.01588458088429e-42,
+          "is_normal": false
+        },
+        "overall_residuals_acceptable": false
+      },
+      "prediction_accuracy": {
+        "dataset": "test",
+        "accuracy_thresholds": {
+          "0.001": 0.08496176720475786,
+          "0.002": 0.21240441801189466,
+          "0.005": 0.7434154630416313
+        },
+        "checks": {
+          "accuracy_acceptable": {
+            "passed": false,
+            "actual": 0.08496176720475786,
+            "threshold": 80.0,
+            "tolerance": 0.001,
+            "message": "Accuracy within \u00b10.001 below requirements"
+          }
+        }
+      },
+      "temporal_stability": {
+        "window_size": 100,
+        "checks": {
+          "temporal_stability": {
+            "passed": false,
+            "actual": 2.705041621615122,
+            "threshold": 0.1,
+            "message": "Temporal stability concerning"
+          }
+        },
+        "temporal_stats": {
+          "rolling_r2_mean": -1.2821082372821941,
+          "rolling_r2_std": 2.705041621615122,
+          "rolling_r2_range": 22.918047662982175,
+          "rolling_r2_min": -21.927488881956254,
+          "rolling_r2_max": 0.9905587810259205
+        },
+        "overall_temporal_stability_acceptable": false
+      }
+    },
+    "overall_assessment": {
+      "readiness_status": "NOT_READY",
+      "readiness_message": "Model requires improvement before deployment",
+      "pass_rate": 12.5,
+      "passed_checks": 1,
+      "total_checks": 8,
+      "critical_failures": [
+        "basic_performance.r2_acceptable",
+        "overfitting.overfitting_acceptable"
+      ],
+      "warnings": [
+        "basic_performance.rmse_acceptable",
+        "overfitting.rmse_degradation_acceptable",
+        "residual_distribution.residuals_centered",
+        "prediction_accuracy.accuracy_acceptable",
+        "temporal_stability.temporal_stability"
+      ]
+    }
+  },
+  "xgboost": {
+    "model_name": "xgboost",
+    "feature_count": 20,
+    "validation_timestamp": "2025-09-09T18:18:09.698299",
+    "validations": {
+      "basic_performance": {
+        "dataset": "test",
+        "r2_score": 0.7733978135763445,
+        "rmse": 0.8688272991365772,
+        "checks": {
+          "r2_acceptable": {
+            "passed": false,
+            "actual": 0.7733978135763445,
+            "threshold": 0.8,
+            "message": "R\u00b2 score below minimum requirement"
+          },
+          "rmse_acceptable": {
+            "passed": false,
+            "actual": 0.8688272991365772,
+            "threshold": 0.005,
+            "message": "RMSE exceeds acceptable limit"
+          }
+        },
+        "overall_performance_acceptable": false
+      },
+      "overfitting": {
+        "train_r2": 0.9626366876576402,
+        "test_r2": 0.7733978135763445,
+        "overfitting_r2": 0.1892388740812957,
+        "train_rmse": 0.4749033178421898,
+        "test_rmse": 0.8688272991365772,
+        "rmse_ratio": 1.8294824788427528,
+        "checks": {
+          "overfitting_acceptable": {
+            "passed": false,
+            "actual": 0.1892388740812957,
+            "threshold": 0.15,
+            "message": "Overfitting exceeds acceptable limits"
+          },
+          "rmse_degradation_acceptable": {
+            "passed": false,
+            "actual": 1.8294824788427528,
+            "threshold": 1.5,
+            "message": "RMSE degradation too high"
+          }
+        },
+        "overall_overfitting_acceptable": false
+      },
+      "residual_distribution": {
+        "dataset": "test",
+        "residual_stats": {
+          "mean": -0.006607057211835097,
+          "std": 0.8688021768618901,
+          "skewness": -0.4500646250224603,
+          "kurtosis": 0.3024952553194855,
+          "min": -2.6835375635219725,
+          "max": 3.8312356072644036
+        },
+        "checks": {
+          "residuals_centered": {
+            "passed": false,
+            "actual": -0.006607057211835097,
+            "threshold": 0.001,
+            "message": "Residuals are not centered around zero"
+          },
+          "skewness_acceptable": {
+            "passed": true,
+            "actual": -0.4500646250224603,
+            "threshold": 2.0,
+            "message": "Residual skewness acceptable"
+          }
+        },
+        "normality_test": {
+          "test": "shapiro-wilk",
+          "statistic": 0.9763306512381151,
+          "p_value": 2.7527845301517927e-27,
+          "is_normal": false
+        },
+        "overall_residuals_acceptable": false
+      },
+      "prediction_accuracy": {
+        "dataset": "test",
+        "accuracy_thresholds": {
+          "0.001": 0.021240441801189464,
+          "0.002": 0.10620220900594733,
+          "0.005": 0.33984706881903143
+        },
+        "checks": {
+          "accuracy_acceptable": {
+            "passed": false,
+            "actual": 0.021240441801189464,
+            "threshold": 80.0,
+            "tolerance": 0.001,
+            "message": "Accuracy within \u00b10.001 below requirements"
+          }
+        }
+      },
+      "temporal_stability": {
+        "window_size": 100,
+        "checks": {
+          "temporal_stability": {
+            "passed": false,
+            "actual": 8.843090522798423,
+            "threshold": 0.1,
+            "message": "Temporal stability concerning"
+          }
+        },
+        "temporal_stats": {
+          "rolling_r2_mean": -1.3278960105444177,
+          "rolling_r2_std": 8.843090522798423,
+          "rolling_r2_range": 111.86564989306504,
+          "rolling_r2_min": -110.89566136236095,
+          "rolling_r2_max": 0.9699885307040816
+        },
+        "overall_temporal_stability_acceptable": false
+      }
+    },
+    "overall_assessment": {
+      "readiness_status": "NOT_READY",
+      "readiness_message": "Model requires improvement before deployment",
+      "pass_rate": 12.5,
+      "passed_checks": 1,
+      "total_checks": 8,
+      "critical_failures": [
+        "basic_performance.r2_acceptable",
+        "overfitting.overfitting_acceptable"
+      ],
+      "warnings": [
+        "basic_performance.rmse_acceptable",
+        "overfitting.rmse_degradation_acceptable",
+        "residual_distribution.residuals_centered",
+        "prediction_accuracy.accuracy_acceptable",
+        "temporal_stability.temporal_stability"
+      ]
+    }
+  },
+  "xgboost_scaled": {
+    "model_name": "xgboost_scaled",
+    "feature_count": 20,
+    "validation_timestamp": "2025-09-09T18:18:10.513554",
+    "validations": {
+      "basic_performance": {
+        "dataset": "test",
+        "r2_score": 0.06337892395435796,
+        "rmse": 1.766376887129577,
+        "checks": {
+          "r2_acceptable": {
+            "passed": false,
+            "actual": 0.06337892395435796,
+            "threshold": 0.8,
+            "message": "R\u00b2 score below minimum requirement"
+          },
+          "rmse_acceptable": {
+            "passed": false,
+            "actual": 1.766376887129577,
+            "threshold": 0.005,
+            "message": "RMSE exceeds acceptable limit"
+          }
+        },
+        "overall_performance_acceptable": false
+      },
+      "overfitting": {
+        "train_r2": -0.01263064196463115,
+        "test_r2": 0.06337892395435796,
+        "overfitting_r2": -0.07600956591898911,
+        "train_rmse": 2.472339177847236,
+        "test_rmse": 1.766376887129577,
+        "rmse_ratio": 0.7144557279829347,
+        "checks": {
+          "overfitting_acceptable": {
+            "passed": true,
+            "actual": -0.07600956591898911,
+            "threshold": 0.15,
+            "message": "Overfitting within acceptable limits"
+          },
+          "rmse_degradation_acceptable": {
+            "passed": true,
+            "actual": 0.7144557279829347,
+            "threshold": 1.5,
+            "message": "RMSE degradation acceptable"
+          }
+        },
+        "overall_overfitting_acceptable": true
+      },
+      "residual_distribution": {
+        "dataset": "test",
+        "residual_stats": {
+          "mean": -0.3408779508340597,
+          "std": 1.7331732544730625,
+          "skewness": -1.1684251938146144,
+          "kurtosis": 0.7822272954796516,
+          "min": -5.1245757133005565,
+          "max": 4.2580353814343255
+        },
+        "checks": {
+          "residuals_centered": {
+            "passed": false,
+            "actual": -0.3408779508340597,
+            "threshold": 0.001,
+            "message": "Residuals are not centered around zero"
+          },
+          "skewness_acceptable": {
+            "passed": true,
+            "actual": -1.1684251938146144,
+            "threshold": 2.0,
+            "message": "Residual skewness acceptable"
+          }
+        },
+        "normality_test": {
+          "test": "shapiro-wilk",
+          "statistic": 0.8834366381610467,
+          "p_value": 1.0196311220692482e-50,
+          "is_normal": false
+        },
+        "overall_residuals_acceptable": false
+      },
+      "prediction_accuracy": {
+        "dataset": "test",
+        "accuracy_thresholds": {
+          "0.001": 0.14868309260832627,
+          "0.002": 0.2548853016142736,
+          "0.005": 0.5522514868309261
+        },
+        "checks": {
+          "accuracy_acceptable": {
+            "passed": false,
+            "actual": 0.14868309260832627,
+            "threshold": 80.0,
+            "tolerance": 0.001,
+            "message": "Accuracy within \u00b10.001 below requirements"
+          }
+        }
+      },
+      "temporal_stability": {
+        "window_size": 100,
+        "checks": {
+          "temporal_stability": {
+            "passed": false,
+            "actual": 1783.6521832848457,
+            "threshold": 0.1,
+            "message": "Temporal stability concerning"
+          }
+        },
+        "temporal_stats": {
+          "rolling_r2_mean": -202.99345182880091,
+          "rolling_r2_std": 1783.6521832848457,
+          "rolling_r2_range": 22463.390472930587,
+          "rolling_r2_min": -22463.222410583596,
+          "rolling_r2_max": 0.16806234699261868
+        },
+        "overall_temporal_stability_acceptable": false
+      }
+    },
+    "overall_assessment": {
+      "readiness_status": "NOT_READY",
+      "readiness_message": "Model requires improvement before deployment",
+      "pass_rate": 37.5,
+      "passed_checks": 3,
+      "total_checks": 8,
+      "critical_failures": [
+        "basic_performance.r2_acceptable"
+      ],
+      "warnings": [
+        "basic_performance.rmse_acceptable",
+        "residual_distribution.residuals_centered",
+        "prediction_accuracy.accuracy_acceptable",
+        "temporal_stability.temporal_stability"
+      ]
+    }
+  },
+  "catboost": {
+    "model_name": "catboost",
+    "feature_count": 20,
+    "validation_timestamp": "2025-09-09T18:18:11.293194",
+    "validations": {
+      "basic_performance": {
+        "dataset": "test",
+        "r2_score": 0.8415079826594156,
+        "rmse": 0.7266162513207381,
+        "checks": {
+          "r2_acceptable": {
+            "passed": true,
+            "actual": 0.8415079826594156,
+            "threshold": 0.8,
+            "message": "R\u00b2 score meets minimum requirement"
+          },
+          "rmse_acceptable": {
+            "passed": false,
+            "actual": 0.7266162513207381,
+            "threshold": 0.005,
+            "message": "RMSE exceeds acceptable limit"
+          }
+        },
+        "overall_performance_acceptable": false
+      },
+      "overfitting": {
+        "train_r2": 0.9704827343279704,
+        "test_r2": 0.8415079826594156,
+        "overfitting_r2": 0.12897475166855477,
+        "train_rmse": 0.4221050816684073,
+        "test_rmse": 0.7266162513207381,
+        "rmse_ratio": 1.7214108118497975,
+        "checks": {
+          "overfitting_acceptable": {
+            "passed": true,
+            "actual": 0.12897475166855477,
+            "threshold": 0.15,
+            "message": "Overfitting within acceptable limits"
+          },
+          "rmse_degradation_acceptable": {
+            "passed": false,
+            "actual": 1.7214108118497975,
+            "threshold": 1.5,
+            "message": "RMSE degradation too high"
+          }
+        },
+        "overall_overfitting_acceptable": false
+      },
+      "residual_distribution": {
+        "dataset": "test",
+        "residual_stats": {
+          "mean": -0.17476964911152656,
+          "std": 0.705284868994675,
+          "skewness": -0.2381795701721278,
+          "kurtosis": 0.6544471023408454,
+          "min": -2.811886064839269,
+          "max": 3.860041167138627
+        },
+        "checks": {
+          "residuals_centered": {
+            "passed": false,
+            "actual": -0.17476964911152656,
+            "threshold": 0.001,
+            "message": "Residuals are not centered around zero"
+          },
+          "skewness_acceptable": {
+            "passed": true,
+            "actual": -0.2381795701721278,
+            "threshold": 2.0,
+            "message": "Residual skewness acceptable"
+          }
+        },
+        "normality_test": {
+          "test": "shapiro-wilk",
+          "statistic": 0.9888354139223339,
+          "p_value": 7.5563735569773075e-19,
+          "is_normal": false
+        },
+        "overall_residuals_acceptable": false
+      },
+      "prediction_accuracy": {
+        "dataset": "test",
+        "accuracy_thresholds": {
+          "0.001": 0.16992353440951571,
+          "0.002": 0.29736618521665253,
+          "0.005": 0.6159728122344945
+        },
+        "checks": {
+          "accuracy_acceptable": {
+            "passed": false,
+            "actual": 0.16992353440951571,
+            "threshold": 80.0,
+            "tolerance": 0.001,
+            "message": "Accuracy within \u00b10.001 below requirements"
+          }
+        }
+      },
+      "temporal_stability": {
+        "window_size": 100,
+        "checks": {
+          "temporal_stability": {
+            "passed": false,
+            "actual": 2.3214000551226546,
+            "threshold": 0.1,
+            "message": "Temporal stability concerning"
+          }
+        },
+        "temporal_stats": {
+          "rolling_r2_mean": -0.14269791220844105,
+          "rolling_r2_std": 2.3214000551226546,
+          "rolling_r2_range": 27.438418169551444,
+          "rolling_r2_min": -26.453892495179474,
+          "rolling_r2_max": 0.9845256743719691
+        },
+        "overall_temporal_stability_acceptable": false
+      }
+    },
+    "overall_assessment": {
+      "readiness_status": "NOT_READY",
+      "readiness_message": "Model requires improvement before deployment",
+      "pass_rate": 37.5,
+      "passed_checks": 3,
+      "total_checks": 8,
+      "critical_failures": [],
+      "warnings": [
+        "basic_performance.rmse_acceptable",
+        "overfitting.rmse_degradation_acceptable",
+        "residual_distribution.residuals_centered",
+        "prediction_accuracy.accuracy_acceptable",
+        "temporal_stability.temporal_stability"
+      ]
+    }
+  },
+  "catboost_scaled": {
+    "model_name": "catboost_scaled",
+    "feature_count": 20,
+    "validation_timestamp": "2025-09-09T18:18:12.100657",
+    "validations": {
+      "basic_performance": {
+        "dataset": "test",
+        "r2_score": 0.4207757554782382,
+        "rmse": 1.389072060854784,
+        "checks": {
+          "r2_acceptable": {
+            "passed": false,
+            "actual": 0.4207757554782382,
+            "threshold": 0.8,
+            "message": "R\u00b2 score below minimum requirement"
+          },
+          "rmse_acceptable": {
+            "passed": false,
+            "actual": 1.389072060854784,
+            "threshold": 0.005,
+            "message": "RMSE exceeds acceptable limit"
+          }
+        },
+        "overall_performance_acceptable": false
+      },
+      "overfitting": {
+        "train_r2": 0.5295920261698006,
+        "test_r2": 0.4207757554782382,
+        "overfitting_r2": 0.10881627069156241,
+        "train_rmse": 1.68507740759807,
+        "test_rmse": 1.389072060854784,
+        "rmse_ratio": 0.8243372408836603,
+        "checks": {
+          "overfitting_acceptable": {
+            "passed": true,
+            "actual": 0.10881627069156241,
+            "threshold": 0.15,
+            "message": "Overfitting within acceptable limits"
+          },
+          "rmse_degradation_acceptable": {
+            "passed": true,
+            "actual": 0.8243372408836603,
+            "threshold": 1.5,
+            "message": "RMSE degradation acceptable"
+          }
+        },
+        "overall_overfitting_acceptable": true
+      },
+      "residual_distribution": {
+        "dataset": "test",
+        "residual_stats": {
+          "mean": -0.17857283474617347,
+          "std": 1.3775459821501685,
+          "skewness": -0.7359510019901877,
+          "kurtosis": 0.12599901916468204,
+          "min": -4.82418384276293,
+          "max": 4.222893874037069
+        },
+        "checks": {
+          "residuals_centered": {
+            "passed": false,
+            "actual": -0.17857283474617347,
+            "threshold": 0.001,
+            "message": "Residuals are not centered around zero"
+          },
+          "skewness_acceptable": {
+            "passed": true,
+            "actual": -0.7359510019901877,
+            "threshold": 2.0,
+            "message": "Residual skewness acceptable"
+          }
+        },
+        "normality_test": {
+          "test": "shapiro-wilk",
+          "statistic": 0.9555305651058992,
+          "p_value": 1.1773311049780341e-35,
+          "is_normal": false
+        },
+        "overall_residuals_acceptable": false
+      },
+      "prediction_accuracy": {
+        "dataset": "test",
+        "accuracy_thresholds": {
+          "0.001": 0.1274426508071368,
+          "0.002": 0.16992353440951571,
+          "0.005": 0.4035683942225999
+        },
+        "checks": {
+          "accuracy_acceptable": {
+            "passed": false,
+            "actual": 0.1274426508071368,
+            "threshold": 80.0,
+            "tolerance": 0.001,
+            "message": "Accuracy within \u00b10.001 below requirements"
+          }
+        }
+      },
+      "temporal_stability": {
+        "window_size": 100,
+        "checks": {
+          "temporal_stability": {
+            "passed": false,
+            "actual": 537.960848468441,
+            "threshold": 0.1,
+            "message": "Temporal stability concerning"
+          }
+        },
+        "temporal_stats": {
+          "rolling_r2_mean": -60.086479854661604,
+          "rolling_r2_std": 537.960848468441,
+          "rolling_r2_range": 7654.826018493518,
+          "rolling_r2_min": -7654.297210396858,
+          "rolling_r2_max": 0.5288080966600988
+        },
+        "overall_temporal_stability_acceptable": false
+      }
+    },
+    "overall_assessment": {
+      "readiness_status": "NOT_READY",
+      "readiness_message": "Model requires improvement before deployment",
+      "pass_rate": 37.5,
+      "passed_checks": 3,
+      "total_checks": 8,
+      "critical_failures": [
+        "basic_performance.r2_acceptable"
+      ],
+      "warnings": [
+        "basic_performance.rmse_acceptable",
+        "residual_distribution.residuals_centered",
+        "prediction_accuracy.accuracy_acceptable",
+        "temporal_stability.temporal_stability"
+      ]
+    }
+  }
+}

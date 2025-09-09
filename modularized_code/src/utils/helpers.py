@@ -12,11 +12,12 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+import logging
 from pathlib import Path
 from typing import Optional, Union, Dict, Any, Tuple
 from datetime import datetime
 
-from ..config.settings import SYSTEM_CONFIG, VISUALIZATION_CONFIG
+from config.settings import SYSTEM_CONFIG, VISUALIZATION_CONFIG
 
 
 def setup_warnings(suppress: bool = True, categories: Optional[list] = None) -> None:
@@ -296,6 +297,11 @@ class Timer:
         self.duration = time.time() - self.start_time
         if self.verbose:
             print(f"✅ {self.description} completed in {format_duration(self.duration)}")
+    
+    @property
+    def elapsed_time(self) -> float:
+        """Get elapsed time. Alias for duration attribute."""
+        return self.duration if self.duration is not None else 0.0
 
 
 def log_dataframe_info(df: pd.DataFrame, name: str = "DataFrame") -> None:
@@ -336,3 +342,43 @@ def log_dataframe_info(df: pd.DataFrame, name: str = "DataFrame") -> None:
     if isinstance(df.index, pd.DatetimeIndex):
         print(f"  • Time range: {df.index.min()} to {df.index.max()}")
         print(f"  • Duration: {(df.index.max() - df.index.min()).days} days")
+
+
+def setup_logging(level: str = "INFO", quiet: bool = False) -> None:
+    """
+    Setup logging configuration.
+    
+    Parameters:
+    -----------
+    level : str
+        Logging level (DEBUG, INFO, WARNING, ERROR)
+    quiet : bool
+        If True, suppress console output
+    """
+    log_level = getattr(logging, level.upper())
+    
+    # Create formatter
+    formatter = logging.Formatter(
+        '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+    )
+    
+    # Setup root logger
+    logger = logging.getLogger()
+    logger.setLevel(log_level)
+    
+    # Clear existing handlers
+    for handler in logger.handlers[:]:
+        logger.removeHandler(handler)
+    
+    # Add console handler if not quiet
+    if not quiet:
+        console_handler = logging.StreamHandler()
+        console_handler.setLevel(log_level)
+        console_handler.setFormatter(formatter)
+        logger.addHandler(console_handler)
+    
+    # Add file handler
+    file_handler = logging.FileHandler('pipeline.log')
+    file_handler.setLevel(log_level)
+    file_handler.setFormatter(formatter)
+    logger.addHandler(file_handler)

@@ -1,0 +1,485 @@
+{
+  "recommended_model": "catboost",
+  "recommendation_score": 70.76282,
+  "model_scores": {
+    "linear_regression": {
+      "composite_score": -72.76996,
+      "performance_score": -181.92489999999998,
+      "robustness_score": 0,
+      "business_score": 0.0,
+      "deployment_score": 0,
+      "test_r2": -1.819249,
+      "test_rmse": 3.06456,
+      "roi_percentage": -1737.2345202702047,
+      "deployment_status": "NOT_READY"
+    },
+    "ridge_regression": {
+      "composite_score": -72.86008,
+      "performance_score": -182.15019999999998,
+      "robustness_score": 0,
+      "business_score": 0.0,
+      "deployment_score": 0,
+      "test_r2": -1.821502,
+      "test_rmse": 3.065784,
+      "roi_percentage": -1739.330545373669,
+      "deployment_status": "NOT_READY"
+    },
+    "lasso_regression": {
+      "composite_score": 60.9572,
+      "performance_score": 60.1915,
+      "robustness_score": 34.40299999999999,
+      "business_score": 100.0,
+      "deployment_score": 0,
+      "test_r2": 0.601915,
+      "test_rmse": 1.151568,
+      "roi_percentage": 473.4941157735661,
+      "deployment_status": "NOT_READY"
+    },
+    "huber_regressor": {
+      "composite_score": -63.72972,
+      "performance_score": -159.3243,
+      "robustness_score": 0,
+      "business_score": 0.0,
+      "deployment_score": 0,
+      "test_r2": -1.593243,
+      "test_rmse": 2.939159,
+      "roi_percentage": -1527.0494033645882,
+      "deployment_status": "NOT_READY"
+    },
+    "decision_tree": {
+      "composite_score": 56.580400000000004,
+      "performance_score": 66.45100000000001,
+      "robustness_score": 0,
+      "business_score": 100.0,
+      "deployment_score": 0,
+      "test_r2": 0.66451,
+      "test_rmse": 1.057161,
+      "roi_percentage": 526.7000619811955,
+      "deployment_status": "NOT_READY"
+    },
+    "decision_tree_scaled": {
+      "composite_score": 43.58452304573835,
+      "performance_score": 16.625899999999998,
+      "robustness_score": 107.2805,
+      "business_score": 51.5935434857945,
+      "deployment_score": 0,
+      "test_r2": 0.166259,
+      "test_rmse": 1.666544,
+      "roi_percentage": 103.187086971589,
+      "deployment_status": "NOT_READY"
+    },
+    "random_forest": {
+      "composite_score": 60.07012,
+      "performance_score": 75.17530000000001,
+      "robustness_score": 0,
+      "business_score": 100.0,
+      "deployment_score": 0,
+      "test_r2": 0.751753,
+      "test_rmse": 0.909377,
+      "roi_percentage": 600.8564124948838,
+      "deployment_status": "NOT_READY"
+    },
+    "random_forest_scaled": {
+      "composite_score": 26.776120000000002,
+      "performance_score": 0.7428,
+      "robustness_score": 132.395,
+      "business_score": 0.0,
+      "deployment_score": 0,
+      "test_r2": 0.007428,
+      "test_rmse": 1.81837,
+      "roi_percentage": -38.42488762758706,
+      "deployment_status": "NOT_READY"
+    },
+    "gradient_boosting": {
+      "composite_score": 60.85704,
+      "performance_score": 77.14259999999999,
+      "robustness_score": 0,
+      "business_score": 100.0,
+      "deployment_score": 0,
+      "test_r2": 0.771426,
+      "test_rmse": 0.872598,
+      "roi_percentage": 617.5790966308314,
+      "deployment_status": "NOT_READY"
+    },
+    "gradient_boosting_scaled": {
+      "composite_score": 33.99168540661763,
+      "performance_score": 5.4022,
+      "robustness_score": 155.474,
+      "business_score": 2.453351355392103,
+      "deployment_score": 0,
+      "test_r2": 0.054022,
+      "test_rmse": 1.775179,
+      "roi_percentage": 4.906702710784206,
+      "deployment_status": "NOT_READY"
+    },
+    "knn_regressor": {
+      "composite_score": 55.61784,
+      "performance_score": 64.0446,
+      "robustness_score": 0,
+      "business_score": 100.0,
+      "deployment_score": 0,
+      "test_r2": 0.640446,
+      "test_rmse": 1.094419,
+      "roi_percentage": 506.2456931791676,
+      "deployment_status": "NOT_READY"
+    },
+    "xgboost": {
+      "composite_score": 62.01202,
+      "performance_score": 77.3398,
+      "robustness_score": 5.380499999999998,
+      "business_score": 100.0,
+      "deployment_score": 0,
+      "test_r2": 0.773398,
+      "test_rmse": 0.868827,
+      "roi_percentage": 619.2548082065595,
+      "deployment_status": "NOT_READY"
+    },
+    "xgboost_scaled": {
+      "composite_score": 32.17751989163293,
+      "performance_score": 6.3379,
+      "robustness_score": 138.005,
+      "business_score": 6.804532972109784,
+      "deployment_score": 0,
+      "test_r2": 0.063379,
+      "test_rmse": 1.766377,
+      "roi_percentage": 13.609065944219568,
+      "deployment_status": "NOT_READY"
+    },
+    "catboost": {
+      "composite_score": 70.76282,
+      "performance_score": 84.1508,
+      "robustness_score": 35.5125,
+      "business_score": 100.0,
+      "deployment_score": 0,
+      "test_r2": 0.841508,
+      "test_rmse": 0.726616,
+      "roi_percentage": 677.1484519271701,
+      "deployment_status": "NOT_READY"
+    },
+    "catboost_scaled": {
+      "composite_score": 55.949439999999996,
+      "performance_score": 42.0776,
+      "robustness_score": 45.592,
+      "business_score": 100.0,
+      "deployment_score": 0,
+      "test_r2": 0.420776,
+      "test_rmse": 1.389072,
+      "roi_percentage": 319.5260588231692,
+      "deployment_status": "NOT_READY"
+    }
+  },
+  "detailed_analysis": {
+    "evaluation": {
+      "train_metrics": {
+        "train_r2": 0.970483,
+        "train_rmse": 0.422105,
+        "train_mse": 0.178173,
+        "train_mae": 0.300324,
+        "train_explained_variance": 0.970483,
+        "train_max_error": 2.883687,
+        "train_mape": 117.112445,
+        "train_smape": 18.061005,
+        "train_rmse_percent": 10.078397,
+        "train_residual_mean": 6.3e-05,
+        "train_residual_std": 0.422105,
+        "train_residual_min": -2.176501,
+        "train_residual_max": 2.883687,
+        "train_residual_q25": -0.213463,
+        "train_residual_q75": 0.185404,
+        "train_residual_iqr": 0.398866,
+        "train_residual_skewness": 0.445212,
+        "train_residual_kurtosis": 2.115903,
+        "train_target_mean": 4.188216,
+        "train_target_std": 2.456872,
+        "train_target_min": 1.1e-05,
+        "train_target_max": 8.92498,
+        "train_target_median": 5.176069,
+        "train_target_range": 8.924969,
+        "train_sample_count": 18830,
+        "train_accuracy_within_0p001": 0.27,
+        "train_accuracy_within_0p002": 0.54,
+        "train_accuracy_within_0p005": 1.63,
+        "train_accuracy_within_0p01": 3.25
+      },
+      "test_metrics": {
+        "test_r2": 0.841508,
+        "test_rmse": 0.726616,
+        "test_mse": 0.527971,
+        "test_mae": 0.547654,
+        "test_explained_variance": 0.850677,
+        "test_max_error": 3.860041,
+        "test_mape": 157.540774,
+        "test_smape": 19.165854,
+        "test_rmse_percent": 15.06951,
+        "test_residual_mean": -0.17477,
+        "test_residual_std": 0.705285,
+        "test_residual_min": -2.811886,
+        "test_residual_max": 3.860041,
+        "test_residual_q25": -0.576742,
+        "test_residual_q75": 0.2585,
+        "test_residual_iqr": 0.835242,
+        "test_residual_skewness": -0.23818,
+        "test_residual_kurtosis": 0.654447,
+        "test_target_mean": 4.821764,
+        "test_target_std": 1.825162,
+        "test_target_min": 0.000121,
+        "test_target_max": 9.458052,
+        "test_target_median": 5.309937,
+        "test_target_range": 9.45793,
+        "test_sample_count": 4708,
+        "test_accuracy_within_0p001": 0.17,
+        "test_accuracy_within_0p002": 0.3,
+        "test_accuracy_within_0p005": 0.62,
+        "test_accuracy_within_0p01": 1.19
+      },
+      "overfitting_metrics": {
+        "overfitting_r2": 0.128975,
+        "rmse_ratio": 1.721411,
+        "performance_degradation_pct": 13.29
+      },
+      "summary": {
+        "total_metric_sets": 2,
+        "metric_prefixes": [
+          "train",
+          "test"
+        ],
+        "total_metrics": 58
+      },
+      "plots": [
+        "predictions_vs_actual",
+        "residuals_analysis",
+        "time_series",
+        "feature_importance"
+      ]
+    },
+    "validation": {
+      "model_name": "catboost",
+      "feature_count": 20,
+      "validation_timestamp": "2025-09-09T18:18:11.293194",
+      "validations": {
+        "basic_performance": {
+          "dataset": "test",
+          "r2_score": 0.8415079826594156,
+          "rmse": 0.7266162513207381,
+          "checks": {
+            "r2_acceptable": {
+              "passed": true,
+              "actual": 0.8415079826594156,
+              "threshold": 0.8,
+              "message": "R\u00b2 score meets minimum requirement"
+            },
+            "rmse_acceptable": {
+              "passed": false,
+              "actual": 0.7266162513207381,
+              "threshold": 0.005,
+              "message": "RMSE exceeds acceptable limit"
+            }
+          },
+          "overall_performance_acceptable": false
+        },
+        "overfitting": {
+          "train_r2": 0.9704827343279704,
+          "test_r2": 0.8415079826594156,
+          "overfitting_r2": 0.12897475166855477,
+          "train_rmse": 0.4221050816684073,
+          "test_rmse": 0.7266162513207381,
+          "rmse_ratio": 1.7214108118497975,
+          "checks": {
+            "overfitting_acceptable": {
+              "passed": true,
+              "actual": 0.12897475166855477,
+              "threshold": 0.15,
+              "message": "Overfitting within acceptable limits"
+            },
+            "rmse_degradation_acceptable": {
+              "passed": false,
+              "actual": 1.7214108118497975,
+              "threshold": 1.5,
+              "message": "RMSE degradation too high"
+            }
+          },
+          "overall_overfitting_acceptable": false
+        },
+        "residual_distribution": {
+          "dataset": "test",
+          "residual_stats": {
+            "mean": -0.17476964911152656,
+            "std": 0.705284868994675,
+            "skewness": -0.2381795701721278,
+            "kurtosis": 0.6544471023408454,
+            "min": -2.811886064839269,
+            "max": 3.860041167138627
+          },
+          "checks": {
+            "residuals_centered": {
+              "passed": false,
+              "actual": -0.17476964911152656,
+              "threshold": 0.001,
+              "message": "Residuals are not centered around zero"
+            },
+            "skewness_acceptable": {
+              "passed": true,
+              "actual": -0.2381795701721278,
+              "threshold": 2.0,
+              "message": "Residual skewness acceptable"
+            }
+          },
+          "normality_test": {
+            "test": "shapiro-wilk",
+            "statistic": 0.9888354139223339,
+            "p_value": 7.5563735569773075e-19,
+            "is_normal": false
+          },
+          "overall_residuals_acceptable": false
+        },
+        "prediction_accuracy": {
+          "dataset": "test",
+          "accuracy_thresholds": {
+            "0.001": 0.16992353440951571,
+            "0.002": 0.29736618521665253,
+            "0.005": 0.6159728122344945
+          },
+          "checks": {
+            "accuracy_acceptable": {
+              "passed": false,
+              "actual": 0.16992353440951571,
+              "threshold": 80.0,
+              "tolerance": 0.001,
+              "message": "Accuracy within \u00b10.001 below requirements"
+            }
+          }
+        },
+        "temporal_stability": {
+          "window_size": 100,
+          "checks": {
+            "temporal_stability": {
+              "passed": false,
+              "actual": 2.3214000551226546,
+              "threshold": 0.1,
+              "message": "Temporal stability concerning"
+            }
+          },
+          "temporal_stats": {
+            "rolling_r2_mean": -0.14269791220844105,
+            "rolling_r2_std": 2.3214000551226546,
+            "rolling_r2_range": 27.438418169551444,
+            "rolling_r2_min": -26.453892495179474,
+            "rolling_r2_max": 0.9845256743719691
+          },
+          "overall_temporal_stability_acceptable": false
+        }
+      },
+      "overall_assessment": {
+        "readiness_status": "NOT_READY",
+        "readiness_message": "Model requires improvement before deployment",
+        "pass_rate": 37.5,
+        "passed_checks": 3,
+        "total_checks": 8,
+        "critical_failures": [],
+        "warnings": [
+          "basic_performance.rmse_acceptable",
+          "overfitting.rmse_degradation_acceptable",
+          "residual_distribution.residuals_centered",
+          "prediction_accuracy.accuracy_acceptable",
+          "temporal_stability.temporal_stability"
+        ]
+      }
+    },
+    "business_insights": {
+      "performance_assessment": {
+        "performance_level": "Good",
+        "business_confidence": "Suitable for production with monitoring",
+        "deployment_recommendation": "DEPLOY_WITH_MONITORING",
+        "test_r2": 0.8415079826594156,
+        "test_rmse": 0.7266162513207381,
+        "rmse_acceptable": false,
+        "rmse_threshold": 0.005
+      },
+      "business_impact": {
+        "performance_metrics": {
+          "r2_score": 0.8415079826594156,
+          "rmse": 0.7266162513207381,
+          "accuracy_improvement": 0.8415079826594156
+        },
+        "cost_savings": {
+          "annual_maintenance_savings": 63113.09869945617,
+          "downtime_cost_savings": 1009809.5791912988,
+          "total_annual_savings": 1045722.677890755
+        },
+        "cost_avoidance": {
+          "false_alarm_cost": 26000.0,
+          "missed_detection_cost": 1200.0000000000002,
+          "total_cost_avoidance": 27200.0
+        },
+        "investment": {
+          "implementation_cost": 150000.0,
+          "annual_operating_cost": 30000.0,
+          "net_annual_benefit": 1015722.677890755
+        },
+        "roi": {
+          "roi_percentage": 677.1484519271701,
+          "payback_period_months": 1.7721372567341624
+        }
+      },
+      "deployment_recommendations": {
+        "model_name": "catboost",
+        "deployment_status": "DEPLOY_WITH_MONITORING",
+        "recommendations": [
+          "\u26a0\ufe0f Model suitable for production with enhanced monitoring",
+          "Expected ROI: 677.1% annually",
+          "Implement gradual rollout with pilot equipment",
+          "Establish performance monitoring thresholds",
+          "Plan for model retraining every 3-6 months",
+          "\ud83c\udfaf Improve RMSE from 0.7266 to below 0.005"
+        ],
+        "operational_recommendations": [
+          "Monitor key performance indicators: R\u00b2 > 0.60, RMSE < 0.005",
+          "Establish automated retraining pipeline",
+          "Set up data quality monitoring",
+          "Document model assumptions and limitations"
+        ]
+      },
+      "executive_summary": {
+        "report_title": "catboost - Business Impact Assessment",
+        "generated_date": "2025-09-09 18:18:13",
+        "model_name": "catboost",
+        "key_metrics": {
+          "prediction_accuracy": "84.2%",
+          "performance_level": "Good",
+          "features_analyzed": 20,
+          "data_samples_used": "18,830"
+        },
+        "business_impact": {
+          "annual_cost_savings": "$1,045,723",
+          "roi_percentage": "677.1%",
+          "payback_period": "1.8 months",
+          "net_present_value_3yr": "$2,897,168"
+        },
+        "risk_assessment": {
+          "technical_risk": "Medium - Good accuracy with monitoring required",
+          "business_risk": "Low - Strong financial case with high returns",
+          "implementation_complexity": "Low - Simple feature set, easy to implement"
+        },
+        "strategic_recommendation": {
+          "decision": "RECOMMEND",
+          "reasoning": "Good model performance with positive ROI",
+          "timeline": "Implement within 6 months",
+          "investment_priority": "Medium-High"
+        }
+      },
+      "analysis_metadata": {
+        "model_name": "catboost",
+        "analysis_date": "2025-09-09T18:18:13.426397",
+        "training_samples": 18830,
+        "test_samples": 4708,
+        "feature_count": 20
+      }
+    }
+  },
+  "recommendation_summary": {
+    "performance": "R\u00b2 = 0.8415, RMSE = 0.7266",
+    "business_impact": "ROI = 677.1%",
+    "deployment_readiness": "NOT_READY",
+    "overall_assessment": "Good model - suitable for production with monitoring"
+  }
+}

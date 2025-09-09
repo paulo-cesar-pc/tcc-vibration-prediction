@@ -1,0 +1,57 @@
+{
+  "steps_completed": 5,
+  "total_steps": 6,
+  "execution_summary": {
+    "steps_completed": [
+      "load_data",
+      "clean_data",
+      "preprocess_data",
+      "engineer_features",
+      "select_features"
+    ],
+    "execution_times": {
+      "load_data": 2.6137983798980713,
+      "clean_data": 0.5950314998626709,
+      "preprocess_data": 1.084831714630127,
+      "engineer_features": 0.15517449378967285,
+      "select_features": 36.602569818496704
+    },
+    "data_shapes": {
+      "load_data": [
+        236160,
+        89
+      ],
+      "clean_data": [
+        235100,
+        89
+      ],
+      "preprocess_data": [
+        23538,
+        89
+      ],
+      "train": [
+        18830,
+        88
+      ],
+      "test": [
+        4708,
+        88
+      ],
+      "engineer_features": [
+        23538,
+        158
+      ]
+    },
+    "feature_counts": {
+      "load_data": 89,
+      "clean_data": 89,
+      "preprocess_data": 89,
+      "engineer_features": 158,
+      "selected": 20
+    },
+    "total_execution_time": 41.060914754867554
+  },
+  "final_feature_count": 20,
+  "train_samples": 18830,
+  "test_samples": 4708
+}

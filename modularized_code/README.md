@@ -33,20 +33,39 @@ pip install -r requirements.txt
 pip install xgboost catboost
 ```
 
-### Basic Usage
+### Command Line Usage (Recommended)
+
+```bash
+# Run complete pipeline
+python scripts/run_complete_pipeline.py data/vibration_data.csv
+
+# Run only data processing
+python scripts/run_data_pipeline.py data/vibration_data.csv --save-data
+
+# Custom configuration
+python scripts/run_complete_pipeline.py data/vibration_data.csv \
+  --output-dir results/ \
+  --models random_forest xgboost \
+  --equipment-count 20 \
+  --maintenance-budget 1000000
+```
+
+### Programmatic Usage
 
 ```python
-from src.pipeline.ml_pipeline import VibrationPredictionPipeline
+from src.pipeline.orchestrator import run_complete_pipeline
 
-# Initialize pipeline
-pipeline = VibrationPredictionPipeline(data_path="full_data/")
+# Run complete end-to-end workflow
+results = run_complete_pipeline(
+    data_path="data/vibration_data.csv",
+    output_dir="results/",
+    annual_equipment_count=10,
+    annual_maintenance_budget=500000
+)
 
-# Run complete analysis
-results = pipeline.run_full_pipeline()
-
-# Get best model
-best_model = results['best_model']
-performance = results['performance_metrics']
+# Access results
+best_model = results['ml_pipeline_results']['recommendation']['recommended_model']
+business_insights = results['ml_pipeline_results']['business_analysis']
 ```
 
 ## 📁 Project Structure
@@ -101,51 +120,55 @@ MODEL_CONFIG = {
 
 ## 🔍 Usage Examples
 
-### Data Processing
+### Data Processing Pipeline
 ```python
-from src.data.loader import DataLoader
-from src.data.cleaner import DataCleaner
+from src.pipeline.data_pipeline import DataPipeline
+
+# Initialize data pipeline
+data_pipeline = DataPipeline()
+
+# Run complete data processing
+X_train, X_test, y_train, y_test = data_pipeline.run_complete_pipeline(
+    data_path="data/vibration_data.csv",
+    target_column="vibration",
+    test_size=0.2,
+    selection_strategy="balanced"
+)
+```
+
+### Machine Learning Pipeline
+```python
+from src.pipeline.ml_pipeline import MLPipeline
+
+# Initialize ML pipeline
+ml_pipeline = MLPipeline()
+ml_pipeline.setup_data(X_train, y_train, X_test, y_test)
+
+# Train and evaluate models
+training_results = ml_pipeline.train_models()
+evaluation_results = ml_pipeline.evaluate_models()
+business_analysis = ml_pipeline.generate_business_analysis()
+
+# Get best model recommendation
+recommendation = ml_pipeline.get_best_model_recommendation()
+```
+
+### Individual Components
+```python
 from src.features.engineer import FeatureEngineer
-
-# Load and clean data
-loader = DataLoader("full_data/")
-df_raw = loader.load_data()
-
-cleaner = DataCleaner()
-df_clean, target_col = cleaner.clean_data(df_raw)
-
-# Engineer features
-engineer = FeatureEngineer()
-df_features = engineer.engineer_features(df_clean, target_col)
-```
-
-### Model Training
-```python
 from src.models.trainer import ModelTrainer
-from src.models.registry import get_model_config
-
-# Initialize trainer
-trainer = ModelTrainer()
-
-# Train multiple models
-models = ["random_forest", "xgboost", "linear_regression"]
-results = trainer.train_multiple_models(X_train, y_train, X_test, y_test, models)
-
-# Get best performing model
-best_model = trainer.get_best_model(results)
-```
-
-### Evaluation
-```python
-from src.evaluation.metrics import ModelEvaluator
 from src.evaluation.visualizer import create_evaluation_plots
 
-# Evaluate model
-evaluator = ModelEvaluator()
-metrics = evaluator.calculate_comprehensive_metrics(y_true, y_pred)
+# Feature engineering
+engineer = FeatureEngineer()
+df_features = engineer.engineer_features(df_clean, "vibration")
 
-# Create visualizations
-create_evaluation_plots(y_true, y_pred, save_dir="results/plots/")
+# Model training
+trainer = ModelTrainer()
+models = trainer.train_multiple_models(X_train, y_train, X_test, y_test)
+
+# Create evaluation plots
+plots = create_evaluation_plots(y_train, train_pred, y_test, test_pred)
 ```
 
 ## 🧪 Testing
@@ -163,13 +186,15 @@ pytest tests/ --cov=src --cov-report=html
 This project follows a modular development approach:
 
 1. **PR 1**: Foundation & Configuration ✅
-2. **PR 2**: Data Layer (loading, cleaning, preprocessing)
-3. **PR 3**: Feature Engineering
-4. **PR 4**: Feature Analysis (importance, selection)
-5. **PR 5**: Model Infrastructure
-6. **PR 6**: Evaluation System
-7. **PR 7**: Pipeline Integration
-8. **PR 8**: Advanced Features & Documentation
+2. **PR 2**: Data Layer (loading, cleaning, preprocessing) ✅
+3. **PR 3**: Feature Engineering ✅
+4. **PR 4**: Feature Analysis (importance, selection) ✅
+5. **PR 5**: Model Infrastructure ✅
+6. **PR 6**: Evaluation System ✅
+7. **PR 7**: Pipeline Integration ✅
+8. **PR 8**: Advanced Features & Documentation ✅
+
+**Status**: 🎉 **COMPLETE** - All 8 PRs successfully implemented!
 
 ## 📊 Results
 

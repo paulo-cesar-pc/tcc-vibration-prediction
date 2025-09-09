@@ -14,7 +14,7 @@ from pathlib import Path
 from typing import Optional, Union, List, Dict, Any, Tuple
 from math import ceil
 
-from ..config.settings import VISUALIZATION_CONFIG
+from config.settings import VISUALIZATION_CONFIG
 
 
 def setup_matplotlib_style(
@@ -543,3 +543,7 @@ def create_subplot_grid(
             axes[row, col].set_visible(False)
     
     return fig, axes
+
+
+# Alias for backward compatibility
+setup_plot_style = setup_matplotlib_style

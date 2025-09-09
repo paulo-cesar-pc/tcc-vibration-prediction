@@ -1,0 +1,23 @@
+{
+  "steps_completed": [
+    "setup_data",
+    "train_models",
+    "evaluate_models",
+    "validate_models",
+    "generate_business_analysis"
+  ],
+  "execution_times": {
+    "setup_data": 0.008498907089233398,
+    "train_models": 21.634034395217896,
+    "evaluate_models": 5.951886177062988,
+    "validate_models": 12.330049753189087,
+    "generate_business_analysis": 0.576303243637085
+  },
+  "model_count": 15,
+  "best_model_metrics": {
+    "name": "catboost_scaled",
+    "test_r2": 0.8439687893481149,
+    "test_rmse": 0.7209533255088177
+  },
+  "total_execution_time": 40.50342082977295
+}

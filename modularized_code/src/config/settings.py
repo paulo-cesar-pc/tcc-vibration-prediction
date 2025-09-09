@@ -273,3 +273,34 @@ def load_environment_config(env: str = "development") -> None:
 # Initialize default environment
 ENV = os.getenv("VIBRATION_ENV", "development")
 load_environment_config(ENV)
+
+
+class Settings:
+    """Settings object providing access to all configurations."""
+    
+    def __init__(self):
+        self.data = DATA_CONFIG
+        self.features = FEATURE_CONFIG
+        self.models = MODEL_CONFIG
+        self.evaluation = EVALUATION_CONFIG
+        self.visualization = VISUALIZATION_CONFIG
+        self.system = SYSTEM_CONFIG
+        self.env = ENV
+        
+    def get_config(self, config_name: str) -> Dict[str, Any]:
+        """Get configuration by name."""
+        return get_config(config_name)
+        
+    def update(self, config_name: str, updates: Dict[str, Any]) -> None:
+        """Update configuration."""
+        update_config(config_name, updates)
+
+
+_settings_instance = None
+
+def get_settings() -> Settings:
+    """Get singleton settings instance."""
+    global _settings_instance
+    if _settings_instance is None:
+        _settings_instance = Settings()
+    return _settings_instance

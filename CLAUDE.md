@@ -213,3 +213,118 @@ Because `simple_vibration_prediction.ipynb` is too large and exceeds Claude Code
 9. **`9-extra_visualizations.ipynb`** - Additional plots and visualizations
 
 This structure allows Claude to consult only the relevant sections needed for specific TCC writing tasks, making the analysis more efficient and focused.
+
+---
+
+## **SOLUÇÃO DE PROBLEMAS LATEX - CITAÇÕES E BIBLIOGRAFIA**
+
+### **Problema: Citações Aparecem como "(??)" no PDF**
+
+**Diagnóstico Típico:**
+- Citações mostram "(??)" em vez do formato ABNT correto
+- Erro "Citation 'xxx' undefined" no log de compilação
+- Erro UTF-8 no arquivo `.bbl` ou `.bib`
+
+### **Sequência de Diagnóstico e Correção**
+
+#### **1. Verificar Arquivo Bibliografia (.bib)**
+```bash
+# Verificar se todas as citações estão presentes no arquivo .bib
+grep "citation_key" 3-pos-textuais/referencias.bib
+```
+
+#### **2. Identificar Erros UTF-8**
+**Sintomas:**
+- Erro "Invalid UTF-8 byte sequence" no log
+- Caracteres especiais (ą, ć, ę, ł, ń, ó, ś, ź, ż) não processados
+
+**Correção de Caracteres Especiais:**
+```latex
+% Converter de UTF-8 para notação LaTeX
+Łukasz → {\L}ukasz
+Michał → Micha{\l}
+Józef → J{\'o}zef
+Kraków → Krak{\'o}w
+Łączek → {\L}aczek
+```
+
+#### **3. Sequência Correta de Compilação**
+
+**Para resolver citações undefined, SEMPRE executar esta sequência:**
+
+```bash
+# 1. Limpar arquivos auxiliares
+rm -f documento.aux documento.bbl documento.blg documento.log
+
+# 2. Primeira passada pdflatex (identifica citações)
+pdflatex -interaction=nonstopmode documento.tex
+
+# 3. Processar bibliografia com BibTeX
+bibtex documento
+
+# 4. Segunda passada pdflatex (incorpora bibliografia)
+pdflatex -interaction=nonstopmode documento.tex
+
+# 5. Terceira passada pdflatex (resolve referências cruzadas)
+pdflatex -interaction=nonstopmode documento.tex
+```
+
+#### **4. Verificar Sucesso**
+- Arquivo `.bbl` deve ser gerado sem erros UTF-8
+- Log deve mostrar `Bibliography processed successfully`
+- PDF deve mostrar citações no formato `(AUTOR, ANO)`
+
+#### **5. Configuração LaTeX Workshop (VS Code)**
+**Usar `Ctrl+Alt+B` que executa automaticamente:**
+- `pdflatex → bibtex → pdflatex → pdflatex`
+
+#### **6. Estrutura de Referências para Fundamentação Teórica**
+
+**Organização por seções (55+ referências):**
+- **Seção 2.1**: Análise de Vibração (9 referências)
+- **Seção 2.2**: Moinhos de Rolos (8 referências)  
+- **Seção 2.3**: Machine Learning (9 referências)
+- **Seção 2.4**: Algoritmos ML (10 referências)
+- **Seção 2.5**: Métricas de Avaliação (10 referências)
+- **Seção 2.6**: Trabalhos Relacionados (9 referências)
+
+#### **7. Template de Entrada .bib Compatível**
+```latex
+@article{exemplo2024,
+ title = {T{\'i}tulo do Artigo},
+ author = {Autor, Nome and Co-Autor, Segundo},
+ journal = {Nome do Peri{\'o}dico},
+ volume = {10},
+ number = {2},
+ pages = {100--120},
+ year = {2024},
+ publisher = {Editora}
+}
+
+@book{exemplo2023book,
+ title = {T{\'i}tulo do Livro},
+ author = {Autor, Nome},
+ edition = {2nd},
+ year = {2023},
+ publisher = {Editora},
+ address = {Cidade},
+ isbn = {978-0-123-45678-9}
+}
+```
+
+#### **8. Verificação Final**
+- ✅ PDF gerado sem erros de compilação
+- ✅ Bibliografia aparece nas páginas finais
+- ✅ Todas as citações no formato ABNT: `(AUTOR, ANO)`
+- ✅ Nenhuma citação mostra "(??)"
+
+### **Comandos de Emergência**
+```bash
+# Se tudo falhar, resetar completamente:
+rm -f documento.*aux documento.bbl documento.blg documento.log documento.fls documento.fdb_latexmk
+
+# Recompilar do zero:
+pdflatex documento.tex && bibtex documento && pdflatex documento.tex && pdflatex documento.tex
+```
+
+**Esta solução resolve 99% dos problemas de citação em projetos abnTeX2 com LaTeX Workshop.**

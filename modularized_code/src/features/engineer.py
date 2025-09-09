@@ -12,8 +12,8 @@ import numpy as np
 from typing import List, Optional, Dict, Any, Tuple
 from math import ceil
 
-from ..config.settings import FEATURE_CONFIG
-from ..utils.helpers import Timer, log_dataframe_info
+from config.settings import FEATURE_CONFIG
+from utils.helpers import Timer, log_dataframe_info
 
 
 class FeatureEngineer:
@@ -505,6 +505,13 @@ class FeatureEngineer:
             self.engineering_stats['final_shape'] = df_engineered.shape
             self.engineering_stats['features_added'] = df_engineered.shape[1] - df.shape[1]
             
+            # Store for feature types categorization
+            self._last_engineered_df = df_engineered
+            self._last_target_col = target_col
+            
+            # Add feature types to stats
+            self.engineering_stats['feature_types'] = self.get_feature_types(df_engineered, target_col)
+            
             # Log final results
             self._log_engineering_summary()
             
@@ -587,7 +594,26 @@ class FeatureEngineer:
     
     def get_engineering_stats(self) -> Dict[str, Any]:
         """Get comprehensive feature engineering statistics."""
-        return self.engineering_stats.copy()
+        stats = self.engineering_stats.copy()
+        
+        # Add feature_types categorization if available
+        if hasattr(self, '_last_engineered_df') and hasattr(self, '_last_target_col'):
+            stats['feature_types'] = self.get_feature_types(self._last_engineered_df, self._last_target_col)
+        else:
+            # Provide empty categorization as fallback
+            stats['feature_types'] = {
+                'original': [],
+                'rolling_mean': [],
+                'rolling_std': [],
+                'rolling_other': [],
+                'temporal': [],
+                'lag': [],
+                'rate_of_change': [],
+                'interaction': [],
+                'other': []
+            }
+        
+        return stats
 
 
 # Convenience function for direct usage

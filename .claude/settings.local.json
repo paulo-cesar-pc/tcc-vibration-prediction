@@ -2,7 +2,15 @@
   "permissions": {
     "allow": [
       "Bash(mkdir:*)",
-      "Bash(python:*)"
+      "Bash(python:*)",
+      "Bash(bibtex:*)",
+      "Bash(pdflatex:*)",
+      "Bash(source:*)",
+      "Bash(timeout 300 python modularized_code/scripts/run_complete_pipeline.py full_data/ --target CM2_PV_VRM01_VIBRATION --log-level INFO)",
+      "Bash(timeout 600 python modularized_code/scripts/run_complete_pipeline.py full_data/ --target CM2_PV_VRM01_VIBRATION --log-level INFO)",
+      "Bash(timeout 120 python modularized_code/scripts/run_complete_pipeline.py full_data/ --target CM2_PV_VRM01_VIBRATION --log-level DEBUG --quiet)",
+      "Bash(find:*)",
+      "Bash(timeout 120 python3 modularized_code/scripts/run_complete_pipeline.py full_data/ --target CM2_PV_VRM01_VIBRATION --log-level DEBUG --quiet)"
     ],
     "deny": [],
     "ask": []

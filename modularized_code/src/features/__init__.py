@@ -19,7 +19,7 @@ Key Components:
 
 from .engineer import FeatureEngineer, engineer_features
 from .importance import FeatureImportanceAnalyzer, analyze_feature_importance
-from .selector import FeatureSelector, select_features
+from .selector import FeatureSelector, select_features_for_modeling
 
 __all__ = [
     # Classes
@@ -30,5 +30,5 @@ __all__ = [
     # Convenience functions
     "engineer_features",
     "analyze_feature_importance",
-    "select_features",
+    "select_features_for_modeling",
 ]
