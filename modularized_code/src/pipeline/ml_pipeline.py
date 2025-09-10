@@ -559,6 +559,28 @@ class MLPipeline:
             # Step 6: Get best model recommendation
             recommendation = self.get_best_model_recommendation()
             
+            # Step 7: Generate enhanced visualization plots
+            enhanced_plots = None
+            try:
+                from evaluation.enhanced_plotter import create_enhanced_evaluation_plots
+                
+                logger.info("Creating enhanced evaluation plots")
+                enhanced_plots = create_enhanced_evaluation_plots(
+                    evaluation_results=evaluation_results,
+                    y_train=y_train,
+                    y_test=y_test,
+                    X_train=X_train,
+                    X_test=X_test,
+                    model_registry=self.registry,
+                    output_dir=None,  # Will use default plots directory
+                    top_n=5,
+                    save_plots=True
+                )
+                logger.info("Enhanced evaluation plots created successfully")
+            except Exception as e:
+                logger.warning(f"Failed to create enhanced plots: {e}")
+                enhanced_plots = {'error': str(e)}
+            
             # Compile complete results
             complete_results = {
                 'training_results': training_results,
@@ -566,6 +588,7 @@ class MLPipeline:
                 'validation_results': validation_results,
                 'business_analysis': business_results,
                 'recommendation': recommendation,
+                'enhanced_plots': enhanced_plots,
                 'pipeline_metadata': self.get_pipeline_summary()
             }
             

@@ -10,11 +10,11 @@
       "select_features"
     ],
     "execution_times": {
-      "load_data": 2.3601295948028564,
-      "clean_data": 0.5793881416320801,
-      "preprocess_data": 0.948214054107666,
-      "engineer_features": 0.1586780548095703,
-      "select_features": 28.019575595855713
+      "load_data": 2.401952028274536,
+      "clean_data": 0.574185848236084,
+      "preprocess_data": 1.0123095512390137,
+      "engineer_features": 0.1520247459411621,
+      "select_features": 32.53092336654663
     },
     "data_shapes": {
       "load_data": [
@@ -49,7 +49,7 @@
       "engineer_features": 158,
       "selected": 20
     },
-    "total_execution_time": 32.082345724105835
+    "total_execution_time": 36.682066440582275
   },
   "final_feature_count": 20,
   "train_samples": 18830,

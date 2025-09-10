@@ -12,7 +12,10 @@
       "Bash(find:*)",
       "Bash(timeout 120 python3 modularized_code/scripts/run_complete_pipeline.py full_data/ --target CM2_PV_VRM01_VIBRATION --log-level DEBUG --quiet)",
       "Bash(timeout 120 python modularized_code/scripts/run_complete_pipeline.py full_data/ --target CM2_PV_VRM01_VIBRATION --log-level INFO --quiet)",
-      "Bash(timeout 120 python3 modularized_code/scripts/run_complete_pipeline.py full_data/ --target CM2_PV_VRM01_VIBRATION --log-level INFO --quiet)"
+      "Bash(timeout 120 python3 modularized_code/scripts/run_complete_pipeline.py full_data/ --target CM2_PV_VRM01_VIBRATION --log-level INFO --quiet)",
+      "Bash(timeout 180 python3 modularized_code/scripts/run_complete_pipeline.py full_data/ --target CM2_PV_VRM01_VIBRATION --log-level INFO --quiet)",
+      "Bash(tree:*)",
+      "Bash(sed:*)"
     ],
     "deny": [],
     "ask": []

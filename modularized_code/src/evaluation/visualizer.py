@@ -113,7 +113,7 @@ class ModelVisualizer:
         
         if self.save_plots:
             filename = f"{model_name}_{dataset_name}_predictions_vs_actual.png"
-            save_plot(self.output_dir / filename)
+            save_plot(fig, self.output_dir / filename)
         
         return ax
     
@@ -192,7 +192,7 @@ class ModelVisualizer:
         
         if self.save_plots:
             filename = f"{model_name}_{dataset_name}_residuals_analysis.png"
-            save_plot(self.output_dir / filename)
+            save_plot(fig, self.output_dir / filename)
         
         return fig
     
@@ -298,7 +298,226 @@ class ModelVisualizer:
         
         if self.save_plots:
             filename = f"model_comparison_{metric}.png"
-            save_plot(self.output_dir / filename)
+            save_plot(fig, self.output_dir / filename)
+        
+        return fig
+    
+    def plot_multi_model_predictions(self,
+                                    y_true: Union[pd.Series, np.ndarray],
+                                    model_predictions: Dict[str, np.ndarray],
+                                    model_scores: Dict[str, float],
+                                    dataset_name: str = "Test",
+                                    top_n: int = 5,
+                                    time_index: Optional[pd.DatetimeIndex] = None,
+                                    chunk_size: int = 2000,
+                                    fig: Optional[plt.Figure] = None) -> plt.Figure:
+        """
+        Create multi-model predictions vs actual plot inspired by evaluation notebook.
+        
+        Parameters:
+        -----------
+        y_true : Union[pd.Series, np.ndarray]
+            True target values
+        model_predictions : Dict[str, np.ndarray]
+            Dictionary of model predictions {model_name: predictions}
+        model_scores : Dict[str, float]
+            Dictionary of model R² scores {model_name: r2_score}
+        dataset_name : str, default="Test"
+            Name of the dataset
+        top_n : int, default=5
+            Number of top models to show
+        time_index : Optional[pd.DatetimeIndex], default=None
+            Time index for the data
+        chunk_size : int, default=2000
+            Size of chunks for visualization
+        fig : Optional[plt.Figure], default=None
+            Matplotlib figure to plot on
+            
+        Returns:
+        --------
+        plt.Figure
+            The matplotlib figure object
+        """
+        y_true = np.array(y_true)
+        
+        if time_index is None:
+            time_index = pd.RangeIndex(len(y_true))
+        
+        # Sort models by R² score and select top_n
+        sorted_models = sorted(model_scores.items(), key=lambda x: x[1], reverse=True)[:top_n]
+        top_model_names = [name for name, _ in sorted_models]
+        
+        # Filter predictions to top models
+        top_predictions = {name: model_predictions[name] for name in top_model_names 
+                          if name in model_predictions}
+        
+        # Determine number of chunks
+        n_chunks = (len(y_true) + chunk_size - 1) // chunk_size
+        n_cols = 2
+        n_rows = (n_chunks + n_cols - 1) // n_cols
+        
+        if fig is None:
+            fig, axes = plt.subplots(n_rows, n_cols, figsize=(20, 6*n_rows))
+            if n_rows == 1:
+                axes = axes.reshape(1, -1)
+            elif n_cols == 1:
+                axes = axes.reshape(-1, 1)
+        else:
+            axes = fig.get_axes()
+        
+        axes_flat = axes.flatten() if hasattr(axes, 'flatten') else [axes]
+        
+        # Define distinct colors for better visibility
+        distinct_colors = ['#e41a1c', '#377eb8', '#4daf4a', '#ff7f00', '#984ea3', '#ffff33', '#a65628', '#f781bf', '#999999']
+        model_colors = {}
+        for i, model_name in enumerate(top_model_names):
+            model_colors[model_name] = distinct_colors[i % len(distinct_colors)]
+        
+        # Plot each chunk
+        for i in range(n_chunks):
+            if i >= len(axes_flat):
+                break
+                
+            start_idx = i * chunk_size
+            end_idx = min((i + 1) * chunk_size, len(y_true))
+            
+            chunk_time = time_index[start_idx:end_idx]
+            chunk_true = y_true[start_idx:end_idx]
+            
+            ax = axes_flat[i]
+            
+            # Plot actual values
+            ax.plot(chunk_time, chunk_true, label='Actual', alpha=0.9, linewidth=2.5, color='black')
+            
+            # Plot predictions from top models
+            for model_name in top_model_names:
+                if model_name in top_predictions:
+                    predictions = top_predictions[model_name]
+                    pred_chunk = predictions[start_idx:end_idx]
+                    r2_score = model_scores.get(model_name, 0)
+                    
+                    ax.plot(chunk_time, pred_chunk, 
+                           label=f'{model_name} (R²={r2_score:.3f})', 
+                           alpha=0.7, linewidth=1.5, color=model_colors[model_name])
+            
+            ax.set_ylabel('Vibration (mm/s)')
+            ax.set_xlabel('Time')
+            ax.set_title(f'Chunk {i+1}/{n_chunks} (n={len(chunk_time)})')
+            
+            # Only show legend for first subplot to avoid clutter
+            if i == 0:
+                ax.legend(bbox_to_anchor=(1.05, 1), loc='upper left', fontsize=9)
+            
+            ax.grid(True, alpha=0.3)
+        
+        # Hide unused subplots
+        for i in range(n_chunks, len(axes_flat)):
+            axes_flat[i].set_visible(False)
+        
+        fig.suptitle(f'{dataset_name} Period Analysis - Top {len(top_predictions)} Model Predictions', 
+                     fontsize=16, fontweight='bold')
+        plt.tight_layout()
+        
+        if self.save_plots:
+            filename = f"multi_model_predictions_{dataset_name.lower()}.png"
+            save_plot(fig, self.output_dir / filename)
+        
+        return fig
+    
+    def plot_models_predictions_vs_actual(self,
+                                         y_true: Union[pd.Series, np.ndarray],
+                                         model_predictions: Dict[str, np.ndarray],
+                                         model_scores: Dict[str, float],
+                                         dataset_name: str = "Test",
+                                         top_n: int = 5,
+                                         fig: Optional[plt.Figure] = None) -> plt.Figure:
+        """
+        Create predictions vs actual scatter plots for multiple models.
+        
+        Parameters:
+        -----------
+        y_true : Union[pd.Series, np.ndarray]
+            True target values
+        model_predictions : Dict[str, np.ndarray]
+            Dictionary of model predictions {model_name: predictions}
+        model_scores : Dict[str, float]
+            Dictionary of model R² scores {model_name: r2_score}
+        dataset_name : str, default="Test"
+            Name of the dataset
+        top_n : int, default=5
+            Number of top models to show
+        fig : Optional[plt.Figure], default=None
+            Matplotlib figure to plot on
+            
+        Returns:
+        --------
+        plt.Figure
+            The matplotlib figure object
+        """
+        y_true = np.array(y_true)
+        
+        # Sort models by R² score and select top_n
+        sorted_models = sorted(model_scores.items(), key=lambda x: x[1], reverse=True)[:top_n]
+        top_model_names = [name for name, _ in sorted_models]
+        
+        # Filter predictions to top models
+        top_predictions = {name: model_predictions[name] for name in top_model_names 
+                          if name in model_predictions}
+        
+        n_models = len(top_predictions)
+        n_cols = 3 if n_models > 2 else n_models
+        n_rows = (n_models + n_cols - 1) // n_cols
+        
+        if fig is None:
+            fig, axes = plt.subplots(n_rows, n_cols, figsize=(6*n_cols, 6*n_rows))
+            if n_models == 1:
+                axes = [axes]
+            elif n_rows == 1 and n_cols > 1:
+                axes = axes.flatten()
+            elif n_rows > 1:
+                axes = axes.flatten()
+        else:
+            axes = fig.get_axes()
+        
+        # Ensure axes is always a list
+        if not isinstance(axes, (list, np.ndarray)):
+            axes = [axes]
+        
+        for i, (model_name, predictions) in enumerate(top_predictions.items()):
+            if i >= len(axes):
+                break
+                
+            ax = axes[i]
+            r2_score = model_scores.get(model_name, 0)
+            
+            # Create scatter plot
+            ax.scatter(y_true, predictions, alpha=0.6, s=20)
+            
+            # Perfect prediction line
+            min_val = min(np.min(y_true), np.min(predictions))
+            max_val = max(np.max(y_true), np.max(predictions))
+            ax.plot([min_val, max_val], [min_val, max_val], 'r--', alpha=0.8, label='Perfect Prediction')
+            
+            ax.set_xlabel('Actual Values')
+            ax.set_ylabel('Predicted Values')
+            ax.set_title(f'{model_name}\nR² = {r2_score:.4f}')
+            ax.grid(True, alpha=0.3)
+            ax.legend()
+            
+            # Ensure equal aspect ratio
+            ax.set_aspect('equal', adjustable='box')
+        
+        # Hide unused subplots
+        for i in range(n_models, len(axes)):
+            axes[i].set_visible(False)
+        
+        fig.suptitle(f'Top {n_models} Models: {dataset_name} Set Predictions vs Actual', 
+                     fontsize=16, fontweight='bold')
+        plt.tight_layout()
+        
+        if self.save_plots:
+            filename = f"top_models_predictions_vs_actual_{dataset_name.lower()}.png"
+            save_plot(fig, self.output_dir / filename)
         
         return fig
     
@@ -393,7 +612,7 @@ class ModelVisualizer:
         
         if self.save_plots:
             filename = f"{model_name}_{dataset_name}_time_series.png"
-            save_plot(self.output_dir / filename)
+            save_plot(fig, self.output_dir / filename)
         
         return fig
     
@@ -442,7 +661,7 @@ class ModelVisualizer:
         
         if self.save_plots:
             filename = f"{model_name}_feature_importance.png"
-            save_plot(self.output_dir / filename)
+            save_plot(fig, self.output_dir / filename)
         
         return ax
 

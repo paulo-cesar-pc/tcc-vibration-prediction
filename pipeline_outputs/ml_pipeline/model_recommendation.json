@@ -87,7 +87,7 @@
       "deployment_score": 0,
       "test_r2": 0.007428,
       "test_rmse": 1.81837,
-      "roi_percentage": -38.42488762758706,
+      "roi_percentage": -38.424887627587374,
       "deployment_status": "NOT_READY"
     },
     "gradient_boosting": {
@@ -255,7 +255,7 @@
     "validation": {
       "model_name": "catboost",
       "feature_count": 20,
-      "validation_timestamp": "2025-09-09T21:37:44.105687",
+      "validation_timestamp": "2025-09-10T10:33:25.289144",
       "validations": {
         "basic_performance": {
           "dataset": "test",
@@ -441,7 +441,7 @@
       },
       "executive_summary": {
         "report_title": "catboost - Business Impact Assessment",
-        "generated_date": "2025-09-09 21:37:46",
+        "generated_date": "2025-09-10 10:33:28",
         "model_name": "catboost",
         "key_metrics": {
           "prediction_accuracy": "84.2%",
@@ -469,7 +469,7 @@
       },
       "analysis_metadata": {
         "model_name": "catboost",
-        "analysis_date": "2025-09-09T21:37:46.324651",
+        "analysis_date": "2025-09-10T10:33:28.066514",
         "training_samples": 18830,
         "test_samples": 4708,
         "feature_count": 20

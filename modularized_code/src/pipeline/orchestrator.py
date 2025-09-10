@@ -186,8 +186,19 @@ class PipelineOrchestrator:
             
             self._log_step("Results compilation completed")
             
-            # Phase 4: Save Final Results
-            logger.info("\nPHASE 4: SAVING RESULTS")
+            # Phase 4: Generate Comprehensive Visualizations
+            logger.info("\nPHASE 4: GENERATING COMPREHENSIVE VISUALIZATIONS")
+            logger.info("-" * 40)
+            
+            self._log_step("Generating methodology and evaluation plots")
+            visualization_results = self._generate_comprehensive_visualizations(
+                ml_results, X_train, X_test, y_train, y_test
+            )
+            self.complete_results['visualization_results'] = visualization_results
+            self._log_step("All visualizations generated")
+            
+            # Phase 5: Save Final Results
+            logger.info("\nPHASE 5: SAVING RESULTS")
             logger.info("-" * 40)
             
             self._log_step("Saving final results")
@@ -326,6 +337,59 @@ class PipelineOrchestrator:
                 categories['other'] += 1
         
         return categories
+    
+    def _generate_comprehensive_visualizations(self, 
+                                             ml_results: Dict[str, Any],
+                                             X_train: pd.DataFrame,
+                                             X_test: pd.DataFrame,
+                                             y_train: pd.Series,
+                                             y_test: pd.Series) -> Dict[str, Any]:
+        """Generate comprehensive visualizations for methodology and evaluation."""
+        visualization_results = {}
+        
+        try:
+            # Centralized plots directory
+            centralized_plots_dir = self.output_dir / "plots"
+            centralized_plots_dir.mkdir(exist_ok=True)
+            
+            # 1. Generate Enhanced Evaluation Plots
+            logger.info("Creating enhanced evaluation plots...")
+            from evaluation.enhanced_plotter import create_enhanced_evaluation_plots
+            
+            enhanced_plots = create_enhanced_evaluation_plots(
+                evaluation_results=ml_results.get('evaluation_results', {}),
+                y_train=y_train,
+                y_test=y_test,
+                X_train=X_train,
+                X_test=X_test,
+                model_registry=self.ml_pipeline.registry,
+                output_dir=str(centralized_plots_dir / "evaluation"),
+                top_n=5,
+                save_plots=True
+            )
+            visualization_results['enhanced_plots'] = enhanced_plots
+            
+            # 2. Generate TCC Methodology Plots
+            logger.info("Creating TCC methodology plots...")
+            from evaluation.methodology_plotter import generate_methodology_plots
+            
+            methodology_plots = generate_methodology_plots(
+                raw_data=self.data_pipeline.raw_data.copy() if self.data_pipeline.raw_data is not None else pd.DataFrame(),
+                complete_results=self.complete_results,
+                evaluation_results=ml_results.get('evaluation_results', {}),
+                business_insights=ml_results.get('business_analysis', {}),
+                selected_features=self.data_pipeline.selected_features or [],
+                output_dir=str(centralized_plots_dir / "methodology")
+            )
+            visualization_results['methodology_plots'] = methodology_plots
+            
+            logger.info("✅ All comprehensive visualizations generated successfully")
+            
+        except Exception as e:
+            logger.error(f"Failed to generate comprehensive visualizations: {e}")
+            visualization_results['error'] = str(e)
+        
+        return visualization_results
     
     def _create_model_comparison_summary(self, ml_results: Dict[str, Any]) -> Dict[str, Any]:
         """Create a summary comparison of all models."""

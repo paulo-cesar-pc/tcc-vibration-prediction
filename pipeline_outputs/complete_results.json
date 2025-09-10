@@ -1,19 +1,21 @@
 {
   "workflow_metadata": {
     "execution_metadata": {
-      "start_time": "2025-09-09T21:36:35.940340",
+      "start_time": "2025-09-10T10:32:05.474790",
       "end_time": null,
       "total_duration": null,
       "status": "running"
     },
     "execution_log": [
-      "[21:36:35] Starting data processing pipeline",
-      "[21:37:08] Data processing pipeline completed",
-      "[21:37:08] Starting ML pipeline",
-      "[21:37:46] ML pipeline completed",
-      "[21:37:46] Compiling complete results",
-      "[21:37:46] Results compilation completed",
-      "[21:37:46] Saving final results"
+      "[10:32:05] Starting data processing pipeline",
+      "[10:32:42] Data processing pipeline completed",
+      "[10:32:42] Starting ML pipeline",
+      "[10:33:36] ML pipeline completed",
+      "[10:33:36] Compiling complete results",
+      "[10:33:36] Results compilation completed",
+      "[10:33:36] Generating methodology and evaluation plots",
+      "[10:34:02] All visualizations generated",
+      "[10:34:02] Saving final results"
     ],
     "configuration": {}
   },
@@ -30,11 +32,11 @@
           "select_features"
         ],
         "execution_times": {
-          "load_data": 2.3601295948028564,
-          "clean_data": 0.5793881416320801,
-          "preprocess_data": 0.948214054107666,
-          "engineer_features": 0.1586780548095703,
-          "select_features": 28.019575595855713
+          "load_data": 2.401952028274536,
+          "clean_data": 0.574185848236084,
+          "preprocess_data": 1.0123095512390137,
+          "engineer_features": 0.1520247459411621,
+          "select_features": 32.53092336654663
         },
         "data_shapes": {
           "load_data": [
@@ -69,7 +71,7 @@
           "engineer_features": 158,
           "selected": 20
         },
-        "total_execution_time": 32.082345724105835
+        "total_execution_time": 36.682066440582275
       },
       "final_feature_count": 20,
       "train_samples": 18830,
@@ -105,7 +107,7 @@
         "model_type": "CatBoostRegressor",
         "requires_scaling": false,
         "is_fitted": true,
-        "training_time": 0.2729477882385254,
+        "training_time": 0.2068026065826416,
         "training_samples": 18830,
         "n_features": 20,
         "hyperparameters": {
@@ -135,7 +137,7 @@
         "model_type": "CatBoostRegressor",
         "requires_scaling": false,
         "is_fitted": true,
-        "training_time": 0.17887496948242188,
+        "training_time": 0.1983339786529541,
         "training_samples": 18830,
         "n_features": 20,
         "hyperparameters": {
@@ -165,7 +167,7 @@
         "model_type": "XGBRegressor",
         "requires_scaling": false,
         "is_fitted": true,
-        "training_time": 0.20657944679260254,
+        "training_time": 0.309598445892334,
         "training_samples": 18830,
         "n_features": 20,
         "hyperparameters": {
@@ -196,7 +198,7 @@
         "model_type": "XGBRegressor",
         "requires_scaling": false,
         "is_fitted": true,
-        "training_time": 0.05021929740905762,
+        "training_time": 0.11571788787841797,
         "training_samples": 18830,
         "n_features": 20,
         "hyperparameters": {
@@ -227,7 +229,7 @@
         "model_type": "GradientBoostingRegressor",
         "requires_scaling": false,
         "is_fitted": true,
-        "training_time": 6.980163812637329,
+        "training_time": 7.90378999710083,
         "training_samples": 18830,
         "n_features": 20,
         "hyperparameters": {
@@ -257,7 +259,7 @@
         "model_type": "GradientBoostingRegressor",
         "requires_scaling": false,
         "is_fitted": true,
-        "training_time": 6.582046031951904,
+        "training_time": 7.692297458648682,
         "training_samples": 18830,
         "n_features": 20,
         "hyperparameters": {
@@ -287,7 +289,7 @@
         "model_type": "RandomForestRegressor",
         "requires_scaling": false,
         "is_fitted": true,
-        "training_time": 0.7852864265441895,
+        "training_time": 0.9431378841400146,
         "training_samples": 18830,
         "n_features": 20,
         "hyperparameters": {
@@ -306,8 +308,8 @@
         "test_r2": 0.7517526421508436,
         "test_rmse": 0.9093765015431183,
         "test_mse": 0.8269656215588012,
-        "test_mae": 0.6673903799031524,
-        "test_mape": 53.37563543804814,
+        "test_mae": 0.6673903799031525,
+        "test_mape": 53.37563543804813,
         "overfitting": 0.22582519280853686,
         "model_alias": "random_forest",
         "rank": 7
@@ -317,7 +319,7 @@
         "model_type": "RandomForestRegressor",
         "requires_scaling": false,
         "is_fitted": true,
-        "training_time": 0.7963666915893555,
+        "training_time": 0.9169785976409912,
         "training_samples": 18830,
         "n_features": 20,
         "hyperparameters": {
@@ -330,9 +332,9 @@
         },
         "train_r2": 0.9775788469480732,
         "train_rmse": 0.36788449996742645,
-        "train_mse": 0.13533900531628337,
-        "train_mae": 0.24670109198809873,
-        "train_mape": 24.829029225089897,
+        "train_mse": 0.1353390053162834,
+        "train_mae": 0.24670109198809878,
+        "train_mape": 24.8290292250899,
         "test_r2": 0.7517315380502299,
         "test_rmse": 0.9094151548554589,
         "test_mse": 0.8270359238807783,
@@ -347,7 +349,7 @@
         "model_type": "DecisionTreeRegressor",
         "requires_scaling": false,
         "is_fitted": true,
-        "training_time": 0.15574884414672852,
+        "training_time": 0.1415116786956787,
         "training_samples": 18830,
         "n_features": 20,
         "hyperparameters": {
@@ -375,7 +377,7 @@
         "model_type": "DecisionTreeRegressor",
         "requires_scaling": false,
         "is_fitted": true,
-        "training_time": 0.1144261360168457,
+        "training_time": 0.13495373725891113,
         "training_samples": 18830,
         "n_features": 20,
         "hyperparameters": {
@@ -403,7 +405,7 @@
         "model_type": "Pipeline",
         "requires_scaling": true,
         "is_fitted": true,
-        "training_time": 0.005229473114013672,
+        "training_time": 0.0076143741607666016,
         "training_samples": 18830,
         "n_features": 20,
         "hyperparameters": {
@@ -430,7 +432,7 @@
         "model_type": "Pipeline",
         "requires_scaling": true,
         "is_fitted": true,
-        "training_time": 0.08940482139587402,
+        "training_time": 0.12072873115539551,
         "training_samples": 18830,
         "n_features": 20,
         "hyperparameters": {
@@ -457,7 +459,7 @@
         "model_type": "Pipeline",
         "requires_scaling": true,
         "is_fitted": true,
-        "training_time": 2.123241662979126,
+        "training_time": 3.1671481132507324,
         "training_samples": 18830,
         "n_features": 20,
         "hyperparameters": {
@@ -484,7 +486,7 @@
         "model_type": "Pipeline",
         "requires_scaling": true,
         "is_fitted": true,
-        "training_time": 0.010401487350463867,
+        "training_time": 0.010816574096679688,
         "training_samples": 18830,
         "n_features": 20,
         "hyperparameters": {},
@@ -507,7 +509,7 @@
         "model_type": "Pipeline",
         "requires_scaling": true,
         "is_fitted": true,
-        "training_time": 0.010458946228027344,
+        "training_time": 0.030838727951049805,
         "training_samples": 18830,
         "n_features": 20,
         "hyperparameters": {
@@ -1772,7 +1774,7 @@
       "linear_regression": {
         "model_name": "linear_regression",
         "feature_count": 20,
-        "validation_timestamp": "2025-09-09T21:37:33.238767",
+        "validation_timestamp": "2025-09-10T10:33:12.282267",
         "validations": {
           "basic_performance": {
             "dataset": "test",
@@ -1908,7 +1910,7 @@
       "ridge_regression": {
         "model_name": "ridge_regression",
         "feature_count": 20,
-        "validation_timestamp": "2025-09-09T21:37:34.040332",
+        "validation_timestamp": "2025-09-10T10:33:13.216374",
         "validations": {
           "basic_performance": {
             "dataset": "test",
@@ -2044,7 +2046,7 @@
       "lasso_regression": {
         "model_name": "lasso_regression",
         "feature_count": 20,
-        "validation_timestamp": "2025-09-09T21:37:34.846565",
+        "validation_timestamp": "2025-09-10T10:33:14.199128",
         "validations": {
           "basic_performance": {
             "dataset": "test",
@@ -2178,7 +2180,7 @@
       "huber_regressor": {
         "model_name": "huber_regressor",
         "feature_count": 20,
-        "validation_timestamp": "2025-09-09T21:37:35.711639",
+        "validation_timestamp": "2025-09-10T10:33:15.152314",
         "validations": {
           "basic_performance": {
             "dataset": "test",
@@ -2314,7 +2316,7 @@
       "decision_tree": {
         "model_name": "decision_tree",
         "feature_count": 20,
-        "validation_timestamp": "2025-09-09T21:37:36.494141",
+        "validation_timestamp": "2025-09-10T10:33:16.140947",
         "validations": {
           "basic_performance": {
             "dataset": "test",
@@ -2450,7 +2452,7 @@
       "decision_tree_scaled": {
         "model_name": "decision_tree_scaled",
         "feature_count": 20,
-        "validation_timestamp": "2025-09-09T21:37:37.261961",
+        "validation_timestamp": "2025-09-10T10:33:17.044123",
         "validations": {
           "basic_performance": {
             "dataset": "test",
@@ -2584,7 +2586,7 @@
       "random_forest": {
         "model_name": "random_forest",
         "feature_count": 20,
-        "validation_timestamp": "2025-09-09T21:37:38.060574",
+        "validation_timestamp": "2025-09-10T10:33:17.961237",
         "validations": {
           "basic_performance": {
             "dataset": "test",
@@ -2632,23 +2634,23 @@
           "residual_distribution": {
             "dataset": "test",
             "residual_stats": {
-              "mean": -0.03232301174561606,
-              "std": 0.9088018730562202,
-              "skewness": -0.6222571833370695,
-              "kurtosis": 0.7833348455891809,
+              "mean": -0.03232301174561609,
+              "std": 0.9088018730562201,
+              "skewness": -0.6222571833370698,
+              "kurtosis": 0.7833348455891822,
               "min": -3.07616049538374,
               "max": 4.370076423703089
             },
             "checks": {
               "residuals_centered": {
                 "passed": false,
-                "actual": -0.03232301174561606,
+                "actual": -0.03232301174561609,
                 "threshold": 0.001,
                 "message": "Residuals are not centered around zero"
               },
               "skewness_acceptable": {
                 "passed": true,
-                "actual": -0.6222571833370695,
+                "actual": -0.6222571833370698,
                 "threshold": 2.0,
                 "message": "Residual skewness acceptable"
               }
@@ -2720,22 +2722,22 @@
       "random_forest_scaled": {
         "model_name": "random_forest_scaled",
         "feature_count": 20,
-        "validation_timestamp": "2025-09-09T21:37:38.923096",
+        "validation_timestamp": "2025-09-10T10:33:18.960804",
         "validations": {
           "basic_performance": {
             "dataset": "test",
-            "r2_score": 0.0074284362427378126,
-            "rmse": 1.8183702809887214,
+            "r2_score": 0.0074284362427375905,
+            "rmse": 1.8183702809887219,
             "checks": {
               "r2_acceptable": {
                 "passed": false,
-                "actual": 0.0074284362427378126,
+                "actual": 0.0074284362427375905,
                 "threshold": 0.8,
                 "message": "R\u00b2 score below minimum requirement"
               },
               "rmse_acceptable": {
                 "passed": false,
-                "actual": 1.8183702809887214,
+                "actual": 1.8183702809887219,
                 "threshold": 0.005,
                 "message": "RMSE exceeds acceptable limit"
               }
@@ -2744,21 +2746,21 @@
           },
           "overfitting": {
             "train_r2": -0.057361612196353606,
-            "test_r2": 0.0074284362427378126,
-            "overfitting_r2": -0.06479004843909142,
+            "test_r2": 0.0074284362427375905,
+            "overfitting_r2": -0.0647900484390912,
             "train_rmse": 2.5263544828801017,
-            "test_rmse": 1.8183702809887214,
-            "rmse_ratio": 0.7197605456047237,
+            "test_rmse": 1.8183702809887219,
+            "rmse_ratio": 0.7197605456047238,
             "checks": {
               "overfitting_acceptable": {
                 "passed": true,
-                "actual": -0.06479004843909142,
+                "actual": -0.0647900484390912,
                 "threshold": 0.15,
                 "message": "Overfitting within acceptable limits"
               },
               "rmse_degradation_acceptable": {
                 "passed": true,
-                "actual": 0.7197605456047237,
+                "actual": 0.7197605456047238,
                 "threshold": 1.5,
                 "message": "RMSE degradation acceptable"
               }
@@ -2768,31 +2770,31 @@
           "residual_distribution": {
             "dataset": "test",
             "residual_stats": {
-              "mean": 0.13596456620013367,
+              "mean": 0.1359645662001345,
               "std": 1.8132799330277196,
-              "skewness": -1.280681825373737,
+              "skewness": -1.2806818253737373,
               "kurtosis": 1.0801693584294982,
-              "min": -4.841272508659066,
-              "max": 4.767552795632635
+              "min": -4.841272508659065,
+              "max": 4.767552795632636
             },
             "checks": {
               "residuals_centered": {
                 "passed": false,
-                "actual": 0.13596456620013367,
+                "actual": 0.1359645662001345,
                 "threshold": 0.001,
                 "message": "Residuals are not centered around zero"
               },
               "skewness_acceptable": {
                 "passed": true,
-                "actual": -1.280681825373737,
+                "actual": -1.2806818253737373,
                 "threshold": 2.0,
                 "message": "Residual skewness acceptable"
               }
             },
             "normality_test": {
               "test": "shapiro-wilk",
-              "statistic": 0.8660867688719628,
-              "p_value": 4.10038884914247e-53,
+              "statistic": 0.8660867688719623,
+              "p_value": 4.100388849141885e-53,
               "is_normal": false
             },
             "overall_residuals_acceptable": false
@@ -2819,17 +2821,17 @@
             "checks": {
               "temporal_stability": {
                 "passed": false,
-                "actual": 1626.2856885969943,
+                "actual": 1626.285688596994,
                 "threshold": 0.1,
                 "message": "Temporal stability concerning"
               }
             },
             "temporal_stats": {
               "rolling_r2_mean": -186.03952705101773,
-              "rolling_r2_std": 1626.2856885969943,
+              "rolling_r2_std": 1626.285688596994,
               "rolling_r2_range": 20707.453552232142,
               "rolling_r2_min": -20707.444118327265,
-              "rolling_r2_max": 0.009433904876357424
+              "rolling_r2_max": 0.009433904876357202
             },
             "overall_temporal_stability_acceptable": false
           }
@@ -2854,7 +2856,7 @@
       "gradient_boosting": {
         "model_name": "gradient_boosting",
         "feature_count": 20,
-        "validation_timestamp": "2025-09-09T21:37:39.704058",
+        "validation_timestamp": "2025-09-10T10:33:19.967831",
         "validations": {
           "basic_performance": {
             "dataset": "test",
@@ -2990,7 +2992,7 @@
       "gradient_boosting_scaled": {
         "model_name": "gradient_boosting_scaled",
         "feature_count": 20,
-        "validation_timestamp": "2025-09-09T21:37:40.482519",
+        "validation_timestamp": "2025-09-10T10:33:20.964962",
         "validations": {
           "basic_performance": {
             "dataset": "test",
@@ -3124,7 +3126,7 @@
       "knn_regressor": {
         "model_name": "knn_regressor",
         "feature_count": 20,
-        "validation_timestamp": "2025-09-09T21:37:41.650040",
+        "validation_timestamp": "2025-09-10T10:33:22.390347",
         "validations": {
           "basic_performance": {
             "dataset": "test",
@@ -3260,7 +3262,7 @@
       "xgboost": {
         "model_name": "xgboost",
         "feature_count": 20,
-        "validation_timestamp": "2025-09-09T21:37:42.482723",
+        "validation_timestamp": "2025-09-10T10:33:23.368684",
         "validations": {
           "basic_performance": {
             "dataset": "test",
@@ -3396,7 +3398,7 @@
       "xgboost_scaled": {
         "model_name": "xgboost_scaled",
         "feature_count": 20,
-        "validation_timestamp": "2025-09-09T21:37:43.309482",
+        "validation_timestamp": "2025-09-10T10:33:24.318198",
         "validations": {
           "basic_performance": {
             "dataset": "test",
@@ -3530,7 +3532,7 @@
       "catboost": {
         "model_name": "catboost",
         "feature_count": 20,
-        "validation_timestamp": "2025-09-09T21:37:44.105687",
+        "validation_timestamp": "2025-09-10T10:33:25.289144",
         "validations": {
           "basic_performance": {
             "dataset": "test",
@@ -3663,7 +3665,7 @@
       "catboost_scaled": {
         "model_name": "catboost_scaled",
         "feature_count": 20,
-        "validation_timestamp": "2025-09-09T21:37:44.975675",
+        "validation_timestamp": "2025-09-10T10:33:26.239814",
         "validations": {
           "basic_performance": {
             "dataset": "test",
@@ -3853,7 +3855,7 @@
         },
         "executive_summary": {
           "report_title": "linear_regression - Business Impact Assessment",
-          "generated_date": "2025-09-09 21:37:45",
+          "generated_date": "2025-09-10 10:33:27",
           "model_name": "linear_regression",
           "key_metrics": {
             "prediction_accuracy": "-181.9%",
@@ -3881,7 +3883,7 @@
         },
         "analysis_metadata": {
           "model_name": "linear_regression",
-          "analysis_date": "2025-09-09T21:37:45.747792",
+          "analysis_date": "2025-09-10T10:33:27.252597",
           "training_samples": 18830,
           "test_samples": 4708,
           "feature_count": 20
@@ -3944,7 +3946,7 @@
         },
         "executive_summary": {
           "report_title": "ridge_regression - Business Impact Assessment",
-          "generated_date": "2025-09-09 21:37:45",
+          "generated_date": "2025-09-10 10:33:27",
           "model_name": "ridge_regression",
           "key_metrics": {
             "prediction_accuracy": "-182.2%",
@@ -3972,7 +3974,7 @@
         },
         "analysis_metadata": {
           "model_name": "ridge_regression",
-          "analysis_date": "2025-09-09T21:37:45.752197",
+          "analysis_date": "2025-09-10T10:33:27.257091",
           "training_samples": 18830,
           "test_samples": 4708,
           "feature_count": 20
@@ -4035,7 +4037,7 @@
         },
         "executive_summary": {
           "report_title": "lasso_regression - Business Impact Assessment",
-          "generated_date": "2025-09-09 21:37:45",
+          "generated_date": "2025-09-10 10:33:27",
           "model_name": "lasso_regression",
           "key_metrics": {
             "prediction_accuracy": "60.2%",
@@ -4063,7 +4065,7 @@
         },
         "analysis_metadata": {
           "model_name": "lasso_regression",
-          "analysis_date": "2025-09-09T21:37:45.756137",
+          "analysis_date": "2025-09-10T10:33:27.265124",
           "training_samples": 18830,
           "test_samples": 4708,
           "feature_count": 20
@@ -4126,7 +4128,7 @@
         },
         "executive_summary": {
           "report_title": "huber_regressor - Business Impact Assessment",
-          "generated_date": "2025-09-09 21:37:45",
+          "generated_date": "2025-09-10 10:33:27",
           "model_name": "huber_regressor",
           "key_metrics": {
             "prediction_accuracy": "-159.3%",
@@ -4154,7 +4156,7 @@
         },
         "analysis_metadata": {
           "model_name": "huber_regressor",
-          "analysis_date": "2025-09-09T21:37:45.759867",
+          "analysis_date": "2025-09-10T10:33:27.275701",
           "training_samples": 18830,
           "test_samples": 4708,
           "feature_count": 20
@@ -4217,7 +4219,7 @@
         },
         "executive_summary": {
           "report_title": "decision_tree - Business Impact Assessment",
-          "generated_date": "2025-09-09 21:37:45",
+          "generated_date": "2025-09-10 10:33:27",
           "model_name": "decision_tree",
           "key_metrics": {
             "prediction_accuracy": "66.5%",
@@ -4245,7 +4247,7 @@
         },
         "analysis_metadata": {
           "model_name": "decision_tree",
-          "analysis_date": "2025-09-09T21:37:45.763957",
+          "analysis_date": "2025-09-10T10:33:27.284727",
           "training_samples": 18830,
           "test_samples": 4708,
           "feature_count": 20
@@ -4308,7 +4310,7 @@
         },
         "executive_summary": {
           "report_title": "decision_tree_scaled - Business Impact Assessment",
-          "generated_date": "2025-09-09 21:37:45",
+          "generated_date": "2025-09-10 10:33:27",
           "model_name": "decision_tree_scaled",
           "key_metrics": {
             "prediction_accuracy": "16.6%",
@@ -4336,7 +4338,7 @@
         },
         "analysis_metadata": {
           "model_name": "decision_tree_scaled",
-          "analysis_date": "2025-09-09T21:37:45.767791",
+          "analysis_date": "2025-09-10T10:33:27.293330",
           "training_samples": 18830,
           "test_samples": 4708,
           "feature_count": 20
@@ -4348,14 +4350,14 @@
           "business_confidence": "Requires improvement before production",
           "deployment_recommendation": "IMPROVE_BEFORE_DEPLOY",
           "test_r2": 0.7517526421508436,
-          "test_rmse": 0.9093765015431184,
+          "test_rmse": 0.9093765015431183,
           "rmse_acceptable": false,
           "rmse_threshold": 0.005
         },
         "business_impact": {
           "performance_metrics": {
             "r2_score": 0.7517526421508436,
-            "rmse": 0.9093765015431184,
+            "rmse": 0.9093765015431183,
             "accuracy_improvement": 0.7517526421508436
           },
           "cost_savings": {
@@ -4399,7 +4401,7 @@
         },
         "executive_summary": {
           "report_title": "random_forest - Business Impact Assessment",
-          "generated_date": "2025-09-09 21:37:45",
+          "generated_date": "2025-09-10 10:33:27",
           "model_name": "random_forest",
           "key_metrics": {
             "prediction_accuracy": "75.2%",
@@ -4427,7 +4429,7 @@
         },
         "analysis_metadata": {
           "model_name": "random_forest",
-          "analysis_date": "2025-09-09T21:37:45.820472",
+          "analysis_date": "2025-09-10T10:33:27.358345",
           "training_samples": 18830,
           "test_samples": 4708,
           "feature_count": 20
@@ -4438,34 +4440,34 @@
           "performance_level": "Poor",
           "business_confidence": "Not suitable for production deployment",
           "deployment_recommendation": "NOT_SUITABLE",
-          "test_r2": 0.007428436242737924,
-          "test_rmse": 1.8183702809887214,
+          "test_r2": 0.0074284362427375905,
+          "test_rmse": 1.8183702809887219,
           "rmse_acceptable": false,
           "rmse_threshold": 0.005
         },
         "business_impact": {
           "performance_metrics": {
-            "r2_score": 0.007428436242737924,
-            "rmse": 1.8183702809887214,
-            "accuracy_improvement": 0.007428436242737924
+            "r2_score": 0.0074284362427375905,
+            "rmse": 1.8183702809887219,
+            "accuracy_improvement": 0.0074284362427375905
           },
           "cost_savings": {
-            "annual_maintenance_savings": 557.1327182053443,
-            "downtime_cost_savings": 8914.123491285509,
-            "total_annual_savings": -27637.331441380597
+            "annual_maintenance_savings": 557.1327182053192,
+            "downtime_cost_savings": 8914.123491285109,
+            "total_annual_savings": -27637.33144138106
           },
           "cost_avoidance": {
             "false_alarm_cost": 26000.0,
-            "missed_detection_cost": 11108.58765087145,
-            "total_cost_avoidance": 37108.58765087145
+            "missed_detection_cost": 11108.587650871488,
+            "total_cost_avoidance": 37108.58765087149
           },
           "investment": {
             "implementation_cost": 150000.0,
             "annual_operating_cost": 30000.0,
-            "net_annual_benefit": -57637.33144138059
+            "net_annual_benefit": -57637.33144138106
           },
           "roi": {
-            "roi_percentage": -38.42488762758706,
+            "roi_percentage": -38.424887627587374,
             "payback_period_months": Infinity
           }
         },
@@ -4490,7 +4492,7 @@
         },
         "executive_summary": {
           "report_title": "random_forest_scaled - Business Impact Assessment",
-          "generated_date": "2025-09-09 21:37:45",
+          "generated_date": "2025-09-10 10:33:27",
           "model_name": "random_forest_scaled",
           "key_metrics": {
             "prediction_accuracy": "0.7%",
@@ -4518,7 +4520,7 @@
         },
         "analysis_metadata": {
           "model_name": "random_forest_scaled",
-          "analysis_date": "2025-09-09T21:37:45.859585",
+          "analysis_date": "2025-09-10T10:33:27.387809",
           "training_samples": 18830,
           "test_samples": 4708,
           "feature_count": 20
@@ -4581,7 +4583,7 @@
         },
         "executive_summary": {
           "report_title": "gradient_boosting - Business Impact Assessment",
-          "generated_date": "2025-09-09 21:37:45",
+          "generated_date": "2025-09-10 10:33:27",
           "model_name": "gradient_boosting",
           "key_metrics": {
             "prediction_accuracy": "77.1%",
@@ -4609,7 +4611,7 @@
         },
         "analysis_metadata": {
           "model_name": "gradient_boosting",
-          "analysis_date": "2025-09-09T21:37:45.876322",
+          "analysis_date": "2025-09-10T10:33:27.406212",
           "training_samples": 18830,
           "test_samples": 4708,
           "feature_count": 20
@@ -4672,7 +4674,7 @@
         },
         "executive_summary": {
           "report_title": "gradient_boosting_scaled - Business Impact Assessment",
-          "generated_date": "2025-09-09 21:37:45",
+          "generated_date": "2025-09-10 10:33:27",
           "model_name": "gradient_boosting_scaled",
           "key_metrics": {
             "prediction_accuracy": "5.4%",
@@ -4700,7 +4702,7 @@
         },
         "analysis_metadata": {
           "model_name": "gradient_boosting_scaled",
-          "analysis_date": "2025-09-09T21:37:45.890540",
+          "analysis_date": "2025-09-10T10:33:27.426545",
           "training_samples": 18830,
           "test_samples": 4708,
           "feature_count": 20
@@ -4763,7 +4765,7 @@
         },
         "executive_summary": {
           "report_title": "knn_regressor - Business Impact Assessment",
-          "generated_date": "2025-09-09 21:37:46",
+          "generated_date": "2025-09-10 10:33:27",
           "model_name": "knn_regressor",
           "key_metrics": {
             "prediction_accuracy": "64.0%",
@@ -4791,7 +4793,7 @@
         },
         "analysis_metadata": {
           "model_name": "knn_regressor",
-          "analysis_date": "2025-09-09T21:37:46.284697",
+          "analysis_date": "2025-09-10T10:33:27.917197",
           "training_samples": 18830,
           "test_samples": 4708,
           "feature_count": 20
@@ -4854,7 +4856,7 @@
         },
         "executive_summary": {
           "report_title": "xgboost - Business Impact Assessment",
-          "generated_date": "2025-09-09 21:37:46",
+          "generated_date": "2025-09-10 10:33:27",
           "model_name": "xgboost",
           "key_metrics": {
             "prediction_accuracy": "77.3%",
@@ -4882,7 +4884,7 @@
         },
         "analysis_metadata": {
           "model_name": "xgboost",
-          "analysis_date": "2025-09-09T21:37:46.290295",
+          "analysis_date": "2025-09-10T10:33:27.973195",
           "training_samples": 18830,
           "test_samples": 4708,
           "feature_count": 20
@@ -4945,7 +4947,7 @@
         },
         "executive_summary": {
           "report_title": "xgboost_scaled - Business Impact Assessment",
-          "generated_date": "2025-09-09 21:37:46",
+          "generated_date": "2025-09-10 10:33:28",
           "model_name": "xgboost_scaled",
           "key_metrics": {
             "prediction_accuracy": "6.3%",
@@ -4973,7 +4975,7 @@
         },
         "analysis_metadata": {
           "model_name": "xgboost_scaled",
-          "analysis_date": "2025-09-09T21:37:46.312490",
+          "analysis_date": "2025-09-10T10:33:28.044780",
           "training_samples": 18830,
           "test_samples": 4708,
           "feature_count": 20
@@ -5035,7 +5037,7 @@
         },
         "executive_summary": {
           "report_title": "catboost - Business Impact Assessment",
-          "generated_date": "2025-09-09 21:37:46",
+          "generated_date": "2025-09-10 10:33:28",
           "model_name": "catboost",
           "key_metrics": {
             "prediction_accuracy": "84.2%",
@@ -5063,7 +5065,7 @@
         },
         "analysis_metadata": {
           "model_name": "catboost",
-          "analysis_date": "2025-09-09T21:37:46.324651",
+          "analysis_date": "2025-09-10T10:33:28.066514",
           "training_samples": 18830,
           "test_samples": 4708,
           "feature_count": 20
@@ -5126,7 +5128,7 @@
         },
         "executive_summary": {
           "report_title": "catboost_scaled - Business Impact Assessment",
-          "generated_date": "2025-09-09 21:37:46",
+          "generated_date": "2025-09-10 10:33:28",
           "model_name": "catboost_scaled",
           "key_metrics": {
             "prediction_accuracy": "42.1%",
@@ -5154,7 +5156,7 @@
         },
         "analysis_metadata": {
           "model_name": "catboost_scaled",
-          "analysis_date": "2025-09-09T21:37:46.330495",
+          "analysis_date": "2025-09-10T10:33:28.077574",
           "training_samples": 18830,
           "test_samples": 4708,
           "feature_count": 20
@@ -5250,7 +5252,7 @@
           "deployment_score": 0,
           "test_r2": 0.007428,
           "test_rmse": 1.81837,
-          "roi_percentage": -38.42488762758706,
+          "roi_percentage": -38.424887627587374,
           "deployment_status": "NOT_READY"
         },
         "gradient_boosting": {
@@ -5418,7 +5420,7 @@
         "validation": {
           "model_name": "catboost",
           "feature_count": 20,
-          "validation_timestamp": "2025-09-09T21:37:44.105687",
+          "validation_timestamp": "2025-09-10T10:33:25.289144",
           "validations": {
             "basic_performance": {
               "dataset": "test",
@@ -5604,7 +5606,7 @@
           },
           "executive_summary": {
             "report_title": "catboost - Business Impact Assessment",
-            "generated_date": "2025-09-09 21:37:46",
+            "generated_date": "2025-09-10 10:33:28",
             "model_name": "catboost",
             "key_metrics": {
               "prediction_accuracy": "84.2%",
@@ -5632,7 +5634,7 @@
           },
           "analysis_metadata": {
             "model_name": "catboost",
-            "analysis_date": "2025-09-09T21:37:46.324651",
+            "analysis_date": "2025-09-10T10:33:28.066514",
             "training_samples": 18830,
             "test_samples": 4708,
             "feature_count": 20
@@ -5644,6 +5646,42 @@
         "business_impact": "ROI = 677.1%",
         "deployment_readiness": "NOT_READY",
         "overall_assessment": "Good model - suitable for production with monitoring"
+      }
+    },
+    "enhanced_plots": {
+      "plots": {
+        "predictions_vs_actual": "Figure(1800x1200)",
+        "time_series_comparison": "Figure(2000x1200)",
+        "model_comparison": "Figure(1600x1200)"
+      },
+      "summary": {
+        "plots_created": [
+          "predictions_vs_actual",
+          "time_series_comparison",
+          "model_comparison"
+        ],
+        "total_plots": 3,
+        "top_models_analyzed": 5,
+        "models_with_predictions": 15,
+        "output_directory": "pipeline_outputs/plots",
+        "save_enabled": true
+      },
+      "model_scores": {
+        "linear_regression": -1.819249,
+        "ridge_regression": -1.821502,
+        "lasso_regression": 0.601915,
+        "huber_regressor": -1.593243,
+        "decision_tree": 0.66451,
+        "decision_tree_scaled": 0.166259,
+        "random_forest": 0.751753,
+        "random_forest_scaled": 0.007428,
+        "gradient_boosting": 0.771426,
+        "gradient_boosting_scaled": 0.054022,
+        "knn_regressor": 0.640446,
+        "xgboost": 0.773398,
+        "xgboost_scaled": 0.063379,
+        "catboost": 0.841508,
+        "catboost_scaled": 0.420776
       }
     },
     "pipeline_metadata": {
@@ -5658,11 +5696,11 @@
           "generate_business_analysis"
         ],
         "execution_times": {
-          "setup_data": 0.007517099380493164,
-          "train_models": 19.119998931884766,
-          "evaluate_models": 6.051846742630005,
-          "validate_models": 12.508652448654175,
-          "generate_business_analysis": 0.5863721370697021
+          "setup_data": 0.009577751159667969,
+          "train_models": 22.734814882278442,
+          "evaluate_models": 7.3215649127960205,
+          "validate_models": 14.96888542175293,
+          "generate_business_analysis": 0.8313846588134766
         },
         "model_count": 15,
         "best_model_metrics": {
@@ -5900,7 +5938,7 @@
         "model_name": "random_forest_scaled",
         "composite_score": 26.776120000000002,
         "test_r2": 0.007428,
-        "roi_percentage": -38.42488762758706,
+        "roi_percentage": -38.424887627587374,
         "deployment_status": "NOT_READY"
       },
       {
@@ -5956,7 +5994,7 @@
   },
   "executive_report": {
     "project_title": "Industrial Vibration Prediction System",
-    "execution_date": "2025-09-09",
+    "execution_date": "2025-09-10",
     "total_execution_time": "0.0 seconds",
     "key_results": {
       "recommended_model": "catboost",
@@ -6029,5 +6067,73 @@
       "Establish performance monitoring thresholds",
       "Plan for model retraining every 3-6 months"
     ]
+  },
+  "visualization_results": {
+    "enhanced_plots": {
+      "plots": {
+        "predictions_vs_actual": "Figure(1800x1200)",
+        "time_series_comparison": "Figure(2000x1200)",
+        "model_comparison": "Figure(1600x1200)"
+      },
+      "summary": {
+        "plots_created": [
+          "predictions_vs_actual",
+          "time_series_comparison",
+          "model_comparison"
+        ],
+        "total_plots": 3,
+        "top_models_analyzed": 5,
+        "models_with_predictions": 15,
+        "output_directory": "pipeline_outputs/plots/evaluation",
+        "save_enabled": true
+      },
+      "model_scores": {
+        "linear_regression": -1.819249,
+        "ridge_regression": -1.821502,
+        "lasso_regression": 0.601915,
+        "huber_regressor": -1.593243,
+        "decision_tree": 0.66451,
+        "decision_tree_scaled": 0.166259,
+        "random_forest": 0.751753,
+        "random_forest_scaled": 0.007428,
+        "gradient_boosting": 0.771426,
+        "gradient_boosting_scaled": 0.054022,
+        "knn_regressor": 0.640446,
+        "xgboost": 0.773398,
+        "xgboost_scaled": 0.063379,
+        "catboost": 0.841508,
+        "catboost_scaled": 0.420776
+      }
+    },
+    "methodology_plots": {
+      "total_sections": 6,
+      "plots_by_section": {
+        "data_analysis": [
+          "1.1_dataset_overview.png",
+          "1.2_data_quality_assessment.png",
+          "1.3_correlation_matrix.png"
+        ],
+        "feature_engineering": [
+          "2.1_feature_engineering_overview.png",
+          "2.2_selected_features_detail.png"
+        ],
+        "model_training": [
+          "3.1_model_training_comparison.png",
+          "4.1_model_comparison_detailed.png",
+          "4/3.1_model_training_comparison.png",
+          "4/4.1_model_comparison_detailed.png"
+        ],
+        "results_analysis": [
+          "5.1_results_analysis_performance.png",
+          "5.2_validation_analysis.png"
+        ],
+        "business_impact": [
+          "6.1_business_impact_roi.png",
+          "6.2_implementation_roadmap.png"
+        ]
+      },
+      "output_directory": "pipeline_outputs/plots/methodology",
+      "generation_time": "2025-09-10T10:34:02.026541"
+    }
   }
 }

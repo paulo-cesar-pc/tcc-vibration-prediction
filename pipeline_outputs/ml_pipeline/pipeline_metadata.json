@@ -7,11 +7,11 @@
     "generate_business_analysis"
   ],
   "execution_times": {
-    "setup_data": 0.007517099380493164,
-    "train_models": 19.119998931884766,
-    "evaluate_models": 6.051846742630005,
-    "validate_models": 12.508652448654175,
-    "generate_business_analysis": 0.5863721370697021
+    "setup_data": 0.009577751159667969,
+    "train_models": 22.734814882278442,
+    "evaluate_models": 7.3215649127960205,
+    "validate_models": 14.96888542175293,
+    "generate_business_analysis": 0.8313846588134766
   },
   "model_count": 15,
   "best_model_metrics": {
@@ -19,5 +19,5 @@
     "test_r2": 0.8439687893481149,
     "test_rmse": 0.7209533255088177
   },
-  "total_execution_time": 38.27735877037048
+  "total_execution_time": 54.18507623672485
 }
